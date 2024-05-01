@@ -78,7 +78,7 @@ const titles=[
   },
   {
     label: 'Modo de exibição',
-    name: 'visibility',
+    name: 'title_order',
     widget: 'select',
     required: false,
     default:'d-block d-md-block',
