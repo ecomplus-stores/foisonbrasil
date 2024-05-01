@@ -706,7 +706,7 @@ export default options => {
     },
     {
     label: '[alpix.dev]  - Estante de produtos',
-    name: 'collection-shelf',
+    name: 'apx-collection-shelf',
     widget: 'object',
     icon: 'https://api.iconify.design/bi:bag-check.svg',
     fields: [
