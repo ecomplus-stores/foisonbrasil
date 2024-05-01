@@ -558,7 +558,7 @@ const bannerFields = [
 
 
 export default options => {
-  let state_routes = options.state.routes;
+  let state_routes = [...options.state.routes];
   options.sections = getSections(options).concat([
     {
       label: '[ALPIX] - Banner Responsivo',
