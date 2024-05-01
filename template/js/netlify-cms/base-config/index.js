@@ -643,9 +643,20 @@ export default options => {
           widget: 'list',
           fields: [
             {
+              label: 'Imagem',
+              name: 'img',
+              widget: 'image'
+            },
+            {
               label: 'Título',
               required: false,
               name: 'title',
+              widget: 'string'
+            },     
+            {
+              label: 'Descrição',
+              required: false,
+              name: 'description',
               widget: 'string'
             },                     
             {
@@ -655,9 +666,22 @@ export default options => {
               widget: 'string'
             },
             {
-              label: 'Imagem',
-              name: 'img',
-              widget: 'image'
+              label: 'Características',
+              name: 'props',
+              widget: 'list',
+              fields: [
+                {
+                  label: 'Ícone',
+                  name: 'img',
+                  widget: 'image'
+                },
+                {
+                  label: 'Texto',
+                  required: false,
+                  name: 'text',
+                  widget: 'string'
+                }
+              ]
             }
             
           ]
@@ -773,6 +797,77 @@ export default options => {
         widget: 'number'
       },
       ...spacer
+    ]
+  },
+  {
+    label: '[alpix.dev] - Blog',
+    name: 'apx-blog',
+    widget: 'object',
+    icon: 'https://api.iconify.design/la:blog.svg',
+    fields: [
+      ...titles,
+      {
+        label: 'Listar posts do blog',
+        name: 'enabled',
+        widget: 'boolean',
+        default: true
+      }
+      ,...spacer
+    ]
+  },
+  {
+    label: '[alpix.dev] - Sessão com Imagem',
+    name: 'apx-image-section',
+    widget: 'object',
+    icon: 'https://api.iconify.design/la:blog.svg',
+    fields: [
+      ...titles,
+      {
+        label: 'Imagem em destaque',
+        name: 'img',
+        widget: 'image',
+        required:false,
+      },  
+      {
+        label: 'Imagem de fundo',
+        name: 'background_image',
+        widget: 'image',
+        required:false,
+      },  
+      {
+        label: 'Cor de fundo',
+        hint:'Aparece caso não tenha imagem',
+        required: false,
+        name: 'background_color',
+        widget: 'color'
+      },
+      {
+        label: 'Posição da imagem',
+        name: 'title_order',
+        hint:'Serve apenas para desktop. No mobile a imagem será sempre acima do texto',
+        widget: 'select',
+        required: false,
+        default:'d-flex flex-column flex-md-row',
+        options: [
+          {
+            label: 'Esquerda do texto',
+            value: "d-flex flex-column flex-md-row"
+          },
+          {
+            label: 'Direita do texto',
+            value: "d-flex flex-md-row-reverse flex-column"
+          }          
+        ]
+      },
+      {
+        label: 'Recuo da Imagem',
+        hint:'Recuo da imagem em relação ao fundo. Dá sensaão da imagem saindo do bloco',
+        name: 'image_negative_margin',
+        widget: 'select',
+        required: false,
+        options: ["0","1","2","3","4","5"]
+      },  
+      ,...spacer
     ]
   },
 ])
