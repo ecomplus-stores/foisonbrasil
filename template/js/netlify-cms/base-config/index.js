@@ -50,7 +50,76 @@ const animations = [
   "slideInUp"
 ]
 
-
+const titles=[
+  {
+    label: 'Título',
+    required: false,
+    name: 'title',
+    widget: 'string'
+  },
+  {
+    label: 'Cor do título',
+    required: false,
+    name: 'title_color',
+    widget: 'color'
+  },
+  {
+    label: 'Descrição',
+    required: false,
+    name: 'description',
+    widget: 'string'
+  },
+  
+  {
+    label: 'Cor da descrição',
+    required: false,
+    name: 'description_color',
+    widget: 'color'
+  },
+  {
+    label: 'Modo de exibição',
+    name: 'visibility',
+    widget: 'select',
+    required: false,
+    default:'d-block d-md-block',
+    options: [
+      {
+        label: 'Título a esquerda da descrição',
+        value: "d-flex flex-column flex-md-row"
+      },
+      {
+        label: 'Descrição à esquerda do título',
+        value: "d-flex flex-md-row-reverse flex-column-reverse"
+      },
+      {
+        label: 'Título acima da descrição',
+        value: "d-flex flex-column"
+      },      
+      {
+        label: 'Descrição acima do título',
+        value: "d-flex flex-column-reverse"
+      },
+    ]
+  },
+  {
+    label: 'Cor de destaque',
+    required: false,
+    name: 'section_secondary_color',
+    widget: 'color'
+  },
+  {
+    label: 'Texto CTA',
+    required: false,
+    name: 'cta_text',
+    widget: 'string'
+  },
+  {
+    label: 'Link CTA',
+    required: false,
+    name: 'cta_link',
+    widget: 'string'
+  },
+]
 const spacer = [
   {
     label: 'Visível em...',
@@ -529,18 +598,8 @@ export default options => {
       widget: 'object',
       fields: [
         ...spacer, 
-        {
-          label: 'Título da Sessão',
-          required: false,
-          name: 'title',
-          widget: 'string'
-        },
-        {
-          label: 'Link da Sessão',
-          required: false,
-          name: 'link',
-          widget: 'string'
-        },        
+        ...titles,       
+                
         {
           label: 'Itens',
           name: 'banners',
