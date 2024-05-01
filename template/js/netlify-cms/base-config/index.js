@@ -54,7 +54,7 @@ const titles=[
   {
     label: 'Título',
     required: false,
-    name: 'title',
+    name: 'title_text',
     widget: 'string'
   },
   {
@@ -66,7 +66,7 @@ const titles=[
   {
     label: 'Descrição',
     required: false,
-    name: 'description',
+    name: 'description_text',
     widget: 'string'
   },
   
