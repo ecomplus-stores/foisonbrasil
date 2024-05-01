@@ -1,6 +1,7 @@
 <%
 // load header options and contacts from content
 const header = _.cms('header') || {}
+const apx_header = _.cms('apx_header') || {}
 const contacts = _.cms('contacts') || {}
 const themeCustom = _.settings.theme.custom || ''
 
@@ -122,6 +123,29 @@ const hasAllDepartments = header.menu_all_departments
 </div>
 
 <header class="header" id="header">
+  <% if(apx_header?.topbar_1?.list?.length > 0){ %>
+    <div class="apx_topbar first py-md-2 py-1" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-me" data-carrossel_md="Sim" data-carrossel_sm="Sim" data-num_col_md="1" data-num_col_sm="1"  data-carrossel_dots_md="Não" data-carrossel_dots_sm="Não" data-carrossel_arrows_md="Não" data-carrossel_arrows_sm="Não" data-carrossel_autoplay_md="Sim" data-carrossel_autoplay_sm="Sim" >
+            <% apx_header.topbar_1.list.forEach(({ url, title })=> { %>
+              <div>
+                  <% if(url){ %> 
+                  <a href="<%= url %>"> 
+                  <% } %>
+                    <%- title %>
+                  <% if(url){ %> 
+                  </a>
+                  <% } %>
+              </div>
+            <% }) %>
+            </div>
+          </div>
+        </div>
+      </div>           
+    </div>
+  <%  } %>
   <div class="header__container container-fluid">
     <div class="header__row row<%= isCentralizedLogo ? ' header__row--centralized-logo' : '' %><%= isCentralizedLogo && isCategoriesNavFull ? ' header__row--full-width' : '' %>">
       <div class="col-auto p-0 header__toggler-block">
