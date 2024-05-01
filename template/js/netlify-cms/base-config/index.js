@@ -155,7 +155,7 @@ const searchOrderField = {
       value: 'slug'
     }
   ]
-};
+}
 const spacer = [
   {
     label: 'Visível em...',
@@ -558,6 +558,7 @@ const bannerFields = [
 
 
 export default options => {
+  let state_routes = options.state.routes;
   options.sections = getSections(options).concat([
     {
       label: '[ALPIX] - Banner Responsivo',
@@ -725,7 +726,7 @@ export default options => {
           resource: 'brands',
           label: 'Marca: '
         }].reduce((options, shelf) => {
-          options.state.routes.forEach(({ _id, resource, name, path }) => {
+          state_routes.forEach(({ _id, resource, name, path }) => {
             if (resource === shelf.resource) {
               options.push({
                 label: shelf.label + name,
