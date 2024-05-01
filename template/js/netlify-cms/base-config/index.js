@@ -119,7 +119,43 @@ const titles=[
     name: 'cta_link',
     widget: 'string'
   },
-]
+];
+const searchOrderField = {
+  label: 'Ordenação',
+  required: false,
+  name: 'sort',
+  widget: 'select',
+  options: [
+    {
+      label: 'Relevância',
+      value: 'views'
+    },
+    {
+      label: 'Mais vendidos',
+      value: 'sales'
+    },
+    {
+      label: 'Lançamento',
+      value: 'news'
+    },
+    {
+      label: 'Ofertas',
+      value: 'offers'
+    },
+    {
+      label: 'Menor preço',
+      value: 'lowest_price'
+    },
+    {
+      label: 'Maior preço',
+      value: 'highest_price'
+    },
+    {
+      label: 'Alfabética (slug)',
+      value: 'slug'
+    }
+  ]
+};
 const spacer = [
   {
     label: 'Visível em...',
@@ -666,7 +702,78 @@ export default options => {
           widget: 'number'
         }
       ]
-    }
+    },
+    {
+    label: '[alpix.dev]  - Estante de produtos',
+    name: 'collection-shelf',
+    widget: 'object',
+    icon: 'https://api.iconify.design/bi:bag-check.svg',
+    fields: [
+      {
+        label: 'Coleção de produtos',
+        required: false,
+        name: 'collection_id',
+        hint: 'Se este campo não for preenchido, serão listados os produtos mais populares da loja',
+        widget: 'select',
+        options: [{
+          resource: 'collections',
+          label: ''
+        }, {
+          resource: 'categories',
+          label: 'Categoria: '
+        }, {
+          resource: 'brands',
+          label: 'Marca: '
+        }].reduce((options, shelf) => {
+          state.routes.forEach(({ _id, resource, name, path }) => {
+            if (resource === shelf.resource) {
+              options.push({
+                label: shelf.label + name,
+                value: `${_id}:${resource}:${name}:${path}`
+              })
+            }
+          })
+          return options
+        }, [])
+      },
+      searchOrderField,
+      ...titles,       
+      {
+        label: 'Embaralhar produtos',
+        name: 'shuffle',
+        widget: 'boolean',
+        default: false
+      },
+      {
+        label: 'Limite de itens',
+        required: false,
+        name: 'limit',
+        widget: 'number',
+        min: 1,
+        max: 24,
+        default: 12
+      },
+      {
+        label: 'Paginação',
+        required: false,
+        name: 'page',
+        hint: 'Aumente o número da página para pular os itens iniciais e repetir estantes com a mesma coleção',
+        widget: 'number',
+        min: 1,
+        default: 1
+      },
+      {
+        label: 'Carousel autoplay',
+        required: false,
+        name: 'autoplay',
+        hint: 'Exibição de cada página em milisegundos, 0 desativa o autoplay',
+        min: 0,
+        step: 1000,
+        widget: 'number'
+      },
+      ...spacer
+    ]
+  },
 ])
 
   return {
