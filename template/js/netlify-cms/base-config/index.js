@@ -905,6 +905,288 @@ export default options => {
       getExtraPages(options),
       getWidgets(options),
       {
+        label: "[alpix.dev]",
+        name: "alpix",
+        editor: {
+            preview: false
+        },
+        files: [
+            {
+                name: "apx_header",
+                label: "Cabeçalho",
+                file: "content/apx_header.json",
+                fields: [
+                    {
+                        label: "Tarja Topo (Acima)",
+                        name: "topbar_1",
+                        widget: "object",
+                        required: false,
+                        fields: [
+                            {
+                                label: "Cor do Texto",
+                                name: "color",
+                                widget: "color"
+                            },
+                            {
+                                label: "Cor do Fundo",
+                                name: "background",
+                                widget: "color"
+                            },
+                            {
+                                label: "Itens",
+                                name: "topbar_1",
+                                widget: "list",
+                                required: false,
+                                fields: [
+                                    {
+                                        label: "Texto ou HTML",
+                                        name: "title",
+                                        widget: "string"
+                                    },
+                                    {
+                                        label: "URL",
+                                        name: "url",
+                                        widget: "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        label: "Links do Menu",
+                        name: "links",
+                        widget: "list",
+                        required: false,
+                        fields: [
+                            {
+                                label: "Título",
+                                name: "title",
+                                widget: "string"
+                            },
+                            {
+                                label: "URL do título",
+                                name: "url",
+                                widget: "string"
+                            },
+                            {
+                                label: "Itens do Dropdown",
+                                name: "list",
+                                widget: "list",
+                                required: false,
+                                fields: [
+                                    {
+                                        label: "Item do Dropdown",
+                                        name: "item",
+                                        widget: "object",
+                                        required: false,
+                                        fields: [
+                                            {
+                                                label: "Texto do Item",
+                                                name: "title",
+                                                widget: "string"
+                                            },
+                                            {
+                                                label: "URL do Item",
+                                                name: "url",
+                                                widget: "string"
+                                            },
+                                            {
+                                                label: "Imagem",
+                                                name: "image",
+                                                widget: "image",
+                                                required: false
+                                            },
+                                            {
+                                                label: "Links",
+                                                name: "list",
+                                                widget: "list",
+                                                required: false,
+                                                fields: [
+                                                    {
+                                                        label: "Item",
+                                                        name: "item",
+                                                        widget: "object",
+                                                        required: false,
+                                                        fields: [
+                                                            {
+                                                                label: "Texto do Item",
+                                                                name: "title",
+                                                                widget: "string"
+                                                            },
+                                                            {
+                                                                label: "URL do Item",
+                                                                name: "url",
+                                                                widget: "string"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        label: "Tarja Topo (Abaixo)",
+                        name: "topbar_2",
+                        widget: "object",
+                        required: false,
+                        fields: [
+                            {
+                                label: "Cor do Texto",
+                                name: "color",
+                                widget: "color"
+                            },
+                            {
+                                label: "Cor do Fundo",
+                                name: "background",
+                                widget: "color"
+                            },
+                            {
+                                label: "Itens",
+                                name: "topbar_1",
+                                widget: "list",
+                                required: false,
+                                fields: [
+                                    {
+                                        label: "Texto ou HTML",
+                                        name: "title",
+                                        widget: "string"
+                                    },
+                                    {
+                                        label: "URL",
+                                        name: "url",
+                                        widget: "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: "apx_footer",
+                label: "Rodapé",
+                file: "content/apx_footer.json",
+                fields: [
+                    {
+                        label: "Menus do Rodapé",
+                        name: "links",
+                        widget: "list",
+                        required: false,
+                        fields: [
+                            {
+                                label: "Título",
+                                name: "title",
+                                widget: "string"
+                            },
+                            {
+                                label: "Itens da Lista",
+                                name: "list",
+                                widget: "list",
+                                required: false,
+                                fields: [
+                                    {
+                                        label: "Item da Lista",
+                                        name: "item",
+                                        widget: "object",
+                                        required: false,
+                                        fields: [
+                                            {
+                                                label: "Texto do Item",
+                                                name: "title",
+                                                widget: "string"
+                                            },
+                                            {
+                                                label: "URL do Item",
+                                                name: "url",
+                                                widget: "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: "whatsapp",
+                label: "Botão Whatsapp",
+                file: "content/apx_whatsapp.json",
+                editor: {
+                    preview: false
+                },
+                fields: [
+                    {
+                        label: "Ícone",
+                        name: "image",
+                        widget: "image",
+                        required: false
+                    },
+                    {
+                        label: "Número (Ex: 559900000000) 55 + DDD + Telefone",
+                        name: "number",
+                        widget: "string"
+                    },
+                    {
+                        label: "Posição",
+                        name: "position",
+                        widget: "select",
+                        options: ["Esquerda", "Direita"]
+                    }
+                ]
+            },
+            {
+                name: "apx_category",
+                label: "Configurações de Categoria",
+                file: "content/apx_category.json",
+                editor: {
+                    preview: false
+                },
+                fields: [
+                    {
+                        label: "Produtos por linha no desktop",
+                        required: true,
+                        name: "num_col_md",
+                        widget: "select",
+                        options: ["2", "3", "4", "5"]
+                    },
+                    {
+                        label: "Produtos por linha no mobile",
+                        required: true,
+                        name: "num_col_sm",
+                        widget: "select",
+                        options: ["1", "2"]
+                    },
+                    {
+                        label: "Espaçamento",
+                        required: true,
+                        name: "padding",
+                        widget: "select",
+                        options: ["px-md-0", "px-md-1", "px-md-2", "px-md-3", "px-md-4", "px-md-5"]
+                    },
+                    {
+                        label: "Espaçamento Mobile",
+                        required: true,
+                        name: "padding_sm",
+                        widget: "select",
+                        options: ["px-0", "px-1", "px-2", "px-3", "px-4", "px-5"]
+                    },
+                    {
+                        label: "Container",
+                        required: true,
+                        name: "container",
+                        widget: "select",
+                        options: ["container", "container-fluid", "container_90"]
+                    }
+                ]
+            }
+        ]
+    },
+      {
         name: 'apx_tags',        
         label: '[alpix.dev] - Produtos - Tags ',
         description: 'Adicione tags ou selos nos produtos',
