@@ -819,7 +819,6 @@ export default options => {
     label: '[alpix.dev] - Sessão com Imagem',
     name: 'apx-image-section',
     widget: 'object',
-    icon: 'https://api.iconify.design/la:blog.svg',
     fields: [
       ...titles,
       {
@@ -866,7 +865,7 @@ export default options => {
         widget: 'select',
         required: false,
         options: ["0","1","2","3","4","5"]
-      },  
+      } 
       ,...spacer
     ]
   },
