@@ -821,6 +821,7 @@ export default options => {
     widget: 'object',
     fields: [
       ...titles,
+      ...spacer,
       {
         label: 'Imagem em destaque',
         name: 'img',
@@ -842,7 +843,7 @@ export default options => {
       },
       {
         label: 'Posição da imagem',
-        name: 'title_order',
+        name: 'image_order',
         hint:'Serve apenas para desktop. No mobile a imagem será sempre acima do texto',
         widget: 'select',
         required: false,
@@ -865,8 +866,7 @@ export default options => {
         widget: 'select',
         required: false,
         options: ["0","1","2","3","4","5"]
-      } 
-      ,...spacer
+      }
     ]
   },
 ])
