@@ -93,6 +93,39 @@
       "title_text": "<small>A única com</small>2 anos de garantia",
       "type": "apx-image-section",
       "title_color": "#ffffff"
+    },
+    {
+      "spacing": {
+        "container": "container",
+        "desktop": {
+          "margin_top": "3",
+          "margin_bottom": "3"
+        },
+        "mobile": {
+          "margin_top": "3",
+          "margin_bottom": "3"
+        }
+      },
+      "title_order": "d-flex flex-column flex-md-row",
+      "banners": [
+        {
+          "img": "/img/uploads/image-9_.png",
+          "title": "Camy",
+          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "props": [
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            }
+          ]
+        }
+      ],
+      "description_text": "A Foison é mais do que uma plotter de recorte. Somos uma comunidade de empreendedores criativos e apaixonados que combinam tecnologia de ponta e muita criatividade para criar produtos incríveis.",
+      "visibility": "d-block d-md-block",
+      "title_text": "A Foison tem a Plotter Profissional <b>perfeita</b> para você",
+      "type": "apx_list-images",
+      "cta_text": "Encontrrar minha plotter ideal",
+      "section_secondary_color": "#9089ff"
     }
   ]
 }
