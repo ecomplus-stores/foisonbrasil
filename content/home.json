@@ -77,6 +77,22 @@
       "spacing": {
         "container": "container"
       }
+    },
+    {
+      "description_color": "#ffffff",
+      "spacing": {
+        "container": "container"
+      },
+      "img": "/img/uploads/image-9_.png",
+      "title_order": "d-flex flex-column flex-md-row",
+      "image_order": "d-flex flex-md-row-reverse flex-column",
+      "description_text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
+      "background_color": "#9089ff",
+      "visibility": "d-block d-md-block",
+      "image_negative_margin": "3",
+      "title_text": "<small>A única com</small>2 anos de garantia",
+      "type": "apx-image-section",
+      "title_color": "#ffffff"
     }
   ]
 }
