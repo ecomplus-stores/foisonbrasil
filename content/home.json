@@ -47,6 +47,25 @@
       "title_color": "#131313",
       "sort": "news",
       "section_secondary_color": "#ff970a"
+    },
+    {
+      "description_color": "#ffffff",
+      "spacing": {
+        "container": "container"
+      },
+      "img": "/img/uploads/group-106.png",
+      "title_order": "d-flex flex-column",
+      "cta_link": "/",
+      "background_image": "/img/uploads/vector_.png",
+      "image_order": "d-flex flex-column flex-md-row",
+      "description_text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
+      "visibility": "d-block d-md-block",
+      "image_negative_margin": "3",
+      "title_text": "Ela chegou!",
+      "type": "apx-image-section",
+      "cta_text": "Entrar para a turma",
+      "title_color": "#ffffff",
+      "section_secondary_color": "#9089ff"
     }
   ]
 }
