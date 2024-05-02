@@ -1,1 +1,168 @@
-// Add your custom CSS here.
+@font-face {
+  font-family: "CircularSTD";
+  src:
+    url("../../public/assets/fonts/CIRCULARSTD-BOOK.TTF") format("truetype")
+}
+@font-face {
+  font-family: "Coniferous";
+  src:
+    url("../../public/assets/fonts/CONIFEROUS-BOLD.TTF") format("truetype")
+}
+body{
+  --blk:#131313;
+  --txt:#4f4f4f;
+  --gray: #666;
+  --wht:#fff;
+  --color1:#9089FF;
+  --color2:#FF970A;
+  --color-border:#F2F2F2;
+  --color-bg: #ffffff;
+  --body-bg: #ffffff;
+
+
+  --content-max-width:81.25rem;
+
+  --btnrad: .25rem;
+
+  --primary-lightest:#fff;
+  --gray-dark:#F2F2F2!important;
+  
+}
+
+.btn-light.focus, .btn-light:focus, .btn-light:hover {
+  background-color: var(--gray-dark);    
+}
+@media(min-width:990px){
+  :root{
+      --h1:2.488rem;
+      --h2:2.074rem;
+      --h3:1.728rem;
+      --h4:1.44rem;
+      --h5:1.2rem;
+      --h6:1.2rem;
+      --font-size:1rem;
+      --font-size-sm: 0.833rem;
+      --smallest: 0.694rem;
+  }
+}
+
+body{
+  background:var(--color-bg);
+  font-size:var(--font-size);
+  font-family: "CircularSTD", sans-serif;
+}
+
+.products-carousel{padding: 0 15px 0 15px!important;}
+.products-carousel,
+.container,
+.container_90{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container .container{max-width: 100%;}
+
+h1{font-size: var(--h1);}
+h2{font-size: var(--h2);}
+h3{font-size: var(--h3);}
+h4{font-size: var(--h4);}
+h5{font-size: var(--h5);}
+h6{font-size: var(--h6);}
+
+.font-weight-bold{font-weight: bold;}
+.font-weight-800{font-weight: 800;}
+.font-weight-700{font-weight: 700;}
+.font-weight-600{font-weight: 600;}
+.font-weight-500{font-weight: 500;}
+.font-weight-normal{font-weight: normal;}
+.font-weight-300{font-weight: 300;}
+
+.align-items-center{align-items: center;}
+.align-items-end{align-items: flex-end;}
+.justify-content-center{justify-content: center;}
+.justify-content-end{justify-content: flex-end;}
+.justify-content-between{justify-content: space-between;}
+
+
+header#header{
+  background: var(--color-bg);
+  border: 0;
+  .header__nav{
+    text-align: left;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    .header__category{
+      font-size: var(--font-size);
+      text-transform: initial;
+      padding: 0;
+    }
+  }
+  .header__nav > div:first-child{
+    .header__category:first-child{font-weight: 600;position: relative;}
+    .header__category:first-child:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background: var(--color2);
+      bottom: 5px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  .header__buttons{
+    display: flex;
+    align-items: center;
+
+    .badge{
+      background: var(--color2);
+      width: 18px;
+      height: 18px;
+      display: flex;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      top: 7px;
+      right: 4px;
+    }
+  }
+  .header__buttons > *{margin: 0;border: 0;}
+  .header__buttons > *:not(:last-child){
+    padding-right:calc(var(--spacer-2) * 2.5) ;
+    margin-right:calc(var(--spacer-2) * 1.7) ;
+    
+    position: relative;
+  }
+  .header__buttons > *:not(:last-child):after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    height: 30px;
+    background-color: var(--color-border);
+
+  }
+  #user-button{
+    gap: .5rem;
+    div{
+      font-size: var(--smallest);
+      font-weight: bold;
+      text-align: left;
+      line-height: initial;
+      small{
+        display: block;
+        font-weight: normal;
+        color: var(--gray);
+        font-size: var(--smallest);
+        line-height: initial;
+        margin-top: 0.1rem;
+      }
+    }
+  }
+}
