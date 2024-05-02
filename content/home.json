@@ -66,6 +66,17 @@
       "cta_text": "Entrar para a turma",
       "title_color": "#ffffff",
       "section_secondary_color": "#9089ff"
+    },
+    {
+      "type": "apx-blog",
+      "title_order": "d-flex flex-column",
+      "enabled": true,
+      "visibility": "d-block d-md-block",
+      "title_text": "Confira nosso <b>blog</b>",
+      "section_secondary_color": "#ff970a",
+      "spacing": {
+        "container": "container"
+      }
     }
   ]
 }
