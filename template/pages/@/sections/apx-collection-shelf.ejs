@@ -65,9 +65,41 @@ if (opt.sort || opt.collection_id) {
   items = _.items.slice(offset, offset + size)
 }
 %>
+<p><%- JSON.stringify(opt) %></p>
+<div 
+    class="
+      apx collection-shelf <%= opt.container || opt.spacing.container %> 
+      mt-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.margin_top : 0 %>
+      mt-<%= opt.spacing?.mobile ? opt.spacing.mobile.margin_top : 0%>
+      mb-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.margin_bottom : 0%>
+      mb-<%= opt.spacing?.mobile ? opt.spacing.mobile.margin_bottom : 0%>
+      pt-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.padding_top : 0%>
+      pt-<%= opt.spacing?.mobile ? opt.spacing.mobile.padding_top : 0 %>
+      pb-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.padding_bottom : 0%>
+      pb-<%= opt.spacing?.mobile ? opt.spacing.mobile.padding_bottom : 0%>
+    "
+    style="
+      --title_color:<%= opt.title_color %>;
+      --description_color:<%= opt.description_color %>;
+      --secondary_color:<%= opt.section_secondary_color %>;
+    "
+    >
+    <div class="row align-items-center">
+      <div class="col-12 col-md-4">        
+        <%- await include('@/sections/inc/apx-title-section', {
+          _, opt: { ...opt }
+        }) %> 
+        
+        <%- await include('@/sections/inc/apx-cta-section', {
+          _, opt: { ...opt }
+        }) %>
 
-<div class="collection-shelf my-lg-5">
-  <%- await include('@/sections/inc/products-carousel', {
-    _, opt: { items, collection, title, link, shuffle, headless, autoplay }
-  }) %>
+      </div>
+      <div class="col col-md-7 offset-md-1">
+        <%- await include('@/sections/inc/apx-products-carousel', {
+          _, opt: { items, collection, title, link, shuffle, headless, autoplay }
+        }) %>
+      </div>
+    </div>
+  
 </div>

@@ -1,0 +1,80 @@
+<% if (Array.isArray(opt.items) && opt.items.length) {
+  const title = opt.title ||
+    (opt.collection && opt.collection.name) ||
+    _.dictionary('popularProducts')
+  const link = opt.link || (opt.collection && `/${opt.collection.slug}`)
+
+  if (opt.shuffle) {
+    let m = opt.items.filter(item => {
+      return item.available && _.ecomUtils.inStock(item)
+    }).length
+    let t, i
+    while (m) {
+      i = Math.floor(Math.random() * m--)
+      t = opt.items[m]
+      opt.items[m] = opt.items[i]
+      opt.items[i] = t
+    }
+  }
+  %>
+
+  <div
+    class="apx products-carousel"
+    data-size="<%= opt.items.length %>"
+    <% if (opt.collection) { %>
+      data-collection-id="<%= opt.collection._id %>"
+    <% } %>
+    data-title="<%= title %>"
+  >
+    <div
+      class="glide"
+      data-wait-mutation="true"
+      data-autoplay="<%= opt.autoplay %>"
+      data-per-view="2"
+      data-per-view-md="2"
+      data-per-view-sm="2"
+    >
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides products-carousel__list">
+          <% for (let i = 0; i < opt.items.length; i++) { %>
+            <li class="glide__slide products-carousel__item">
+              <%- await include('@/sections/inc/product-item', {
+                _, opt: { item: opt.items[i] }
+              }) %>
+            </li>
+          <% } %>
+        </ul>
+
+        <div
+          class="glide__arrows glide__arrows--outer"
+          data-glide-el="controls"
+        >
+          <button
+            class="btn glide__arrow glide__arrow--left"
+            data-glide-dir="<"
+            aria-label="<%= _.dictionary('previous') %>"
+          >
+            
+            <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="19.7071" y1="0.707107" x2="0.707107" y2="19.7071" stroke="#131313" stroke-width="2"/>
+              <line y1="-1" x2="26.8701" y2="-1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 19 38)" stroke="#131313" stroke-width="2"/>
+              </svg>
+  
+          </button>
+          <button
+            class="btn glide__arrow glide__arrow--right"
+            data-glide-dir=">"
+            aria-label="<%= _.dictionary('next') %>"
+          >
+            
+            <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-1" x2="26.8701" y2="-1" transform="matrix(0.707107 0.707107 0.707107 -0.707107 2 0)" stroke="#131313" stroke-width="2"/>
+              <line x1="1.29289" y1="37.2929" x2="20.2929" y2="18.2929" stroke="#131313" stroke-width="2"/>
+              </svg>
+  
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+<% } %>

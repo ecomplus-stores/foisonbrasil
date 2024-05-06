@@ -74,6 +74,8 @@
       "visibility": "d-block d-md-block",
       "title_text": "Confira nosso <b>blog</b>",
       "section_secondary_color": "#ff970a",
+      "cta_text": "Ver Todos",
+      "cta_link": "/blog",
       "spacing": {
         "container": "container"
       }

@@ -3,8 +3,15 @@ const posts = _.cms('posts')
 const themeCustom = _.settings.theme.custom || ''
 if (Array.isArray(posts) && posts.length) {
   %>
-    <div class="blog my-4 my-lg-5">
+    <div class="apx blog my-4 my-lg-5">
       <div class="container">
+        <div class="row justify-content-center mb-3">
+          <div class="col-auto">
+            <%- await include('@/sections/inc/apx-title-section', {
+              _, opt: { ...opt }
+            }) %> 
+          </div>
+        </div>
         <div class="row">
           <%
           const postsList = []
@@ -19,7 +26,7 @@ if (Array.isArray(posts) && posts.length) {
           postsList.forEach(post => { 
             const { title, slug, thumbnail, description, date } = post 
             %>
-            <div class="col col-md-6 col-lg-4">
+            <div class="col-12 col-md-3">
               <div class="card">
                 <% if (thumbnail) { %>
                   <a href="/posts/<%= slug %>">
@@ -31,7 +38,7 @@ if (Array.isArray(posts) && posts.length) {
                   </a>
                 <% } %>
                 <div class="card-body">
-                  <span class="blog-post-date <%= themeCustom === 'ecom-beauty' ? '' : ' d-none' %>">
+                  <span class="blog-post-date">
                     <% const postDate = _.ecomUtils.formatDate(date) %>
                     <%= postDate %>
                   </span>
@@ -40,24 +47,29 @@ if (Array.isArray(posts) && posts.length) {
                       <%= title %>
                     </a>
                   </h5>
-                  <% if(themeCustom === 'ecom-beauty') { %>
+                  
                     <a
                       href="/posts/<%= slug %>"
                       class="blog-post-link"
                     >
                       <%- _.dictionary('seeMore') %>
-                      <i class="i-chevron-right"></i>
+                      
                     </a>
-                  <% } else { %>
-                    <p class="card-text">
-                      <%= description %>
-                    </p>
-                  <% } %>
+                  
                 </div>
               </div>
             </div>
           <% }) %>
         </div>
+        <% if (opt.cta_link && opt.cta_text) {%>
+        <div class="row justify-content-center mt-5">
+          <div class="col-auto">
+            <%- await include('@/sections/inc/apx-cta-section', {
+              _, opt: { ...opt }
+            }) %>
+          </div>
+        </div>
+        <% } %>
       </div>
     </div>
   <%

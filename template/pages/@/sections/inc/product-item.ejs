@@ -32,6 +32,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
       data-to-render="true"
     <% } %>
   >
+  <div class="bg">
     <!--
       `ProductCard` should be rendered (hydrated) here:
       https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/ProductCard.html
@@ -93,10 +94,10 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
         <% } %>
       </strong>
     </div>
-
+  </div>
     <!-- Customize add to cart button content:
     <div data-slot="buy-button-content">
-      <i class="i-shopping-bag mr-1"></i>
+      
       {{ _.dictionary('buy') }}
     </div>
     -->

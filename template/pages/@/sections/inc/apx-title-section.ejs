@@ -1,0 +1,8 @@
+<% if (opt.title_text || opt.description_text) { %>
+
+  <div class="apx-title-section <%= opt.title_order %>" >
+    <% if (opt.title_text) { %><h2 class="mb-md-4"><%- opt.title_text %></h2><% } %>
+    <% if (opt.description_text) { %><p class="mb-md-4"><%- opt.description_text %></p><% } %>
+  </div>
+
+<% } %>
