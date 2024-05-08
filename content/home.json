@@ -18,6 +18,172 @@
       ]
     },
     {
+      "spacing": {
+        "container": "container",
+        "desktop": {
+          "margin_top": "5",
+          "margin_bottom": "5",
+          "padding_bottom": "5"
+        },
+        "mobile": {
+          "margin_top": "3",
+          "margin_bottom": "3"
+        }
+      },
+      "title_order": "d-flex flex-column flex-md-row",
+      "custom_css_class" : "chamada-foison",
+      "banners": [
+        {
+          "img": "/img/uploads/image-9_.png",
+          "title": "Camy",
+          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "props": [
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            }
+          ]
+        },
+        {
+          "img": "/img/uploads/image-9_.png",
+          "title": "Camy",
+          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "props": [
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            }
+          ]
+        },
+        {
+          "img": "/img/uploads/image-9_.png",
+          "title": "Camy",
+          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "props": [
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            }
+          ]
+        },
+        {
+          "img": "/img/uploads/image-9_.png",
+          "title": "Camy",
+          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "props": [
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            },
+            {
+              "img": "/img/uploads/file-04.svg",
+              "text": "<b>A3</b> e <b>A2</b>"
+            }
+          ]
+        }
+      ],
+      "description_text": "A Foison é mais do que uma plotter de recorte. Somos uma comunidade de empreendedores criativos e apaixonados que combinam tecnologia de ponta e muita criatividade para criar produtos incríveis.",
+      "visibility": "d-block d-md-block",
+      "title_text": "A Foison tem a Plotter Profissional <b>perfeita</b> para você",
+      "type": "apx_list-images",
+      "cta_text": "Encontrar minha plotter ideal",
+      "cta_link": "/lancamentos",
+      "section_secondary_color": "#9089ff"
+    },
+    {
+      "description_color": "#131313",
+      "spacing": {
+        "container": "container",
+        "desktop": {
+          "margin_top": "2",
+          "margin_bottom": "2",
+          "padding_top": "2",
+          "padding_bottom": "2"
+        },
+        "mobile": {
+          "margin_top": "2",
+          "margin_bottom": "2",
+          "padding_top": "2",
+          "padding_bottom": "2"
+        }
+      },
+      "title_order": "d-flex flex-column",
+      
+      "page": 1,
+      "description_text": "Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. ",
+      "visibility": "d-block d-md-block",
+      "title_text": "Confira nossos últimos <b>lançamentos</b>",
+      "shuffle": false,
+      "type": "apx-collection-shelf",
+      "limit": 8,
+      "cta_link": "/lancamentos",
+      "cta_text": "Ver Todos",
+      "title_color": "#131313",
+      "sort": "news",
+      "section_secondary_color": "#ff970a"
+    },
+    {
+      "description_color": "#ffffff",
+      "spacing": {
+        "container": "container",
+        "desktop": {
+          "margin_top": "5",
+          "margin_bottom": "5",
+          "padding_top": "5",
+          "padding_bottom": "0"
+        },
+        "mobile": {
+          "margin_top": "2",
+          "margin_bottom": "2",
+          "padding_top": "2",
+          "padding_bottom": "2"
+        }
+      },
+      "custom_css_class" : "banner-garantia",
+      "img": "/img/uploads/img_garantia.png",
+      "title_order": "d-flex flex-column flex-md-row",
+      "cta_link": "",
+      "background_image": "",
+      "background_color": "#9685eb",
+      "image_order": "d-flex flex-md-row-reverse flex-column",
+      "description_text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
+      "visibility": "d-block d-md-block",
+      "image_negative_margin": "3",
+      "title_text": "A única com <b>2 anos de garantia</b><div><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></div>",
+      "type": "apx-image-section",
+      "cta_text": "",
+      "title_color": "#ffffff",
+      "section_secondary_color": "#9089ff"
+    },
+    {
       "description_color": "#131313",
       "spacing": {
         "container": "container",
@@ -39,7 +205,7 @@
       "page": 1,
       "description_text": "Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. ",
       "visibility": "d-block d-md-block",
-      "title_text": "Confira nossos últimos <b>lançamentos</b>",
+      "title_text": "Confira nossos <b>kits</b> com descontos especiais",
       "shuffle": false,
       "type": "apx-collection-shelf",
       "limit": 8,
@@ -51,9 +217,22 @@
     {
       "description_color": "#ffffff",
       "spacing": {
-        "container": "container"
+        "container": "container",
+        "desktop": {
+          "margin_top": "5",
+          "margin_bottom": "2",
+          "padding_top": "5",
+          "padding_bottom": "2"
+        },
+        "mobile": {
+          "margin_top": "2",
+          "margin_bottom": "2",
+          "padding_top": "2",
+          "padding_bottom": "2"
+        }
       },
-      "img": "/img/uploads/group-106.png",
+      "custom_css_class" : "banner-turma",
+      "img": "/img/uploads/Group 134.png",
       "title_order": "d-flex flex-column",
       "cta_link": "/",
       "background_image": "/img/uploads/vector_.png",
@@ -79,55 +258,7 @@
       "spacing": {
         "container": "container"
       }
-    },
-    {
-      "description_color": "#ffffff",
-      "spacing": {
-        "container": "container"
-      },
-      "img": "/img/uploads/image-9_.png",
-      "title_order": "d-flex flex-column flex-md-row",
-      "image_order": "d-flex flex-md-row-reverse flex-column",
-      "description_text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
-      "background_color": "#9089ff",
-      "visibility": "d-block d-md-block",
-      "image_negative_margin": "3",
-      "title_text": "<small>A única com</small>2 anos de garantia",
-      "type": "apx-image-section",
-      "title_color": "#ffffff"
-    },
-    {
-      "spacing": {
-        "container": "container",
-        "desktop": {
-          "margin_top": "3",
-          "margin_bottom": "3"
-        },
-        "mobile": {
-          "margin_top": "3",
-          "margin_bottom": "3"
-        }
-      },
-      "title_order": "d-flex flex-column flex-md-row",
-      "banners": [
-        {
-          "img": "/img/uploads/image-9_.png",
-          "title": "Camy",
-          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
-          "props": [
-            {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
-            }
-          ]
-        }
-      ],
-      "description_text": "A Foison é mais do que uma plotter de recorte. Somos uma comunidade de empreendedores criativos e apaixonados que combinam tecnologia de ponta e muita criatividade para criar produtos incríveis.",
-      "visibility": "d-block d-md-block",
-      "title_text": "A Foison tem a Plotter Profissional <b>perfeita</b> para você",
-      "type": "apx_list-images",
-      "cta_text": "Encontrrar minha plotter ideal",
-      "section_secondary_color": "#9089ff"
-    }
+    }  
+    
   ]
 }

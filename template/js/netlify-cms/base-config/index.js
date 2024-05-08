@@ -179,6 +179,12 @@ const spacer = [
     ]
   },
   {
+    label: 'Classe Personalizada',
+    required: false,
+    name: 'custom_css_class',
+    widget: 'string'
+  },
+  {
     label: 'Espaçamento da Sessão',
     name: 'spacing',
     widget: 'object',
@@ -858,14 +864,6 @@ export default options => {
             value: "d-flex flex-md-row-reverse flex-column"
           }          
         ]
-      },
-      {
-        label: 'Recuo da Imagem',
-        hint:'Recuo da imagem em relação ao fundo. Dá sensaão da imagem saindo do bloco',
-        name: 'image_negative_margin',
-        widget: 'select',
-        required: false,
-        options: ["0","1","2","3","4","5"]
       }
     ]
   },

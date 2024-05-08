@@ -1,1 +1,43 @@
-<div></div>
+<div class="<%= opt.container || opt.spacing.container %> ">
+  <div 
+      class="
+        <%= opt.custom_css_class || ''%>
+        apx image-shelf
+        mt-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.margin_top : 0 %>
+        mt-<%= opt.spacing?.mobile ? opt.spacing.mobile.margin_top : 0%>
+        mb-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.margin_bottom : 0%>
+        mb-<%= opt.spacing?.mobile ? opt.spacing.mobile.margin_bottom : 0%>
+        pt-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.padding_top : 0%>
+        pt-<%= opt.spacing?.mobile ? opt.spacing.mobile.padding_top : 0 %>
+        pb-md-<%= opt.spacing?.desktop ? opt.spacing.desktop.padding_bottom : 0%>
+        pb-<%= opt.spacing?.mobile ? opt.spacing.mobile.padding_bottom : 0%>
+      "
+      style="
+        --title_color:<%= opt.title_color %>;
+        --description_color:<%= opt.description_color %>;
+        --secondary_color:<%= opt.section_secondary_color %>;
+        --background_image: url(<%= opt.background_image%>);
+        --background_color: <%= opt.background_color%>;
+      "
+      >
+      <div style="background-image:var(--background_image); background-color:var(--background_color);" class="p-5 bg">
+        <div class="row align-items-center <%= opt.image_order %> section-box">
+          <div class="col-12 col-md-6 image ">
+            <img src="<%= opt.img %>"/>
+        </div>
+          <div class="col-12 col-md-5 offset-md-1 content">        
+            <%- await include('@/sections/inc/apx-title-section', {
+              _, opt: { ...opt }
+            }) %> 
+            
+            <%- await include('@/sections/inc/apx-cta-section', {
+              _, opt: { ...opt }
+            }) %>
+
+          </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</div>

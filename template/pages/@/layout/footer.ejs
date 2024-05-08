@@ -9,15 +9,20 @@ const themeCustom = _.settings.theme.custom || ''
   <div class="container">
     <div class="bg p-5">
       <div class="row align-items-center p-4">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-7">
             <div class="apx-title-section" >
             <h2 class="mb-md-4">Assine nossa <b>newsletter</b><small>e receba as últimas novidades</small></h2>
               <p class="mb-md-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.</p>
             </div>
           
         </div>  
-        <div class="col-md-2"></div>
-        <div class="col-12 col-md-4 pl-md-5 offset-md-1">
+        <div class="col-md">
+          <svg class="ico" width="233" height="234" viewBox="0 0 233 234" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M124.802 31.1525L134.685 98.9741L202.241 110.533L140.793 140.89L150.676 208.712L102.816 159.652L41.3674 190.009L73.2365 129.331L25.3765 80.2716L92.9326 91.8303L124.802 31.1525Z" fill="#9089FF"/>
+            <path d="M139.198 20.7222L148.415 83.9755L148.572 85.0539L149.647 85.2377L212.652 96.0179L155.343 124.33L154.366 124.813L154.523 125.892L163.74 189.145L119.104 143.39L118.343 142.61L117.366 143.092L60.0569 171.405L89.7793 114.814L90.2861 113.849L89.525 113.069L44.8887 67.3138L107.895 78.094L108.969 78.2778L109.475 77.313L139.198 20.7222Z" fill="white" stroke="black" stroke-width="3"/>
+          </svg>  
+        </div>
+        <div class="col-12 col-md-4 pl-md-5">
           <div class="apx-title-section">
             <div class="h2 mb-3">
             Se inscreva, <b>é grátis</b></div>
@@ -34,37 +39,14 @@ const themeCustom = _.settings.theme.custom || ''
   </div>
 </section>
 <footer class="footer">
-  <div class="newsletter py-4 mb-md-5 mb-4">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-auto">
-          <h4 class="m-md-0 mb-3">Receba novidades e promoções</h4>
-        </div>
-        <div class="col-12 col-md mx-md-4 mb-md-0 mb-3">
-          <form action="" class="py-2 px-3">
-            <input type="email" placeholder="Digite seu email..." class="py-1">
-            <button type="button"><span class="d-none d-md-block">Assinar</span> <img src="./assets/arrow-right.svg"/></button>
-          </form>
-        </div>
-        <% if (footer.contacts.socials) { %>
-          <div class="col-12 col-md-auto">
-            <p class="footer__social m-0">
-              <%- await include('@/layout/inc/networks', { _, contacts }) %>
-            </p>
-          </div>
-        <% } %>        
-      </div>
-    </div>
-  </div>
+  
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-3">
         <div class="footer__contacts">
-          <% if (footer.contacts.title) { %>
-            <div class="footer__title">
-              <%= footer.contacts.title %>
-            </div>
-          <% } %>
+          <div class="mb-4">
+          <%- await include('@/layout/inc/logo', { _ }) %>
+          </div>
 
           <ul class="list-unstyled">
             <% if (footer.contacts.phone_wpp) { %>
@@ -84,7 +66,7 @@ const themeCustom = _.settings.theme.custom || ''
                     <%= contacts.whatsapp %>
                   </a>
                 </li>
-              <% } %>
+              <% } %> 
               <% if (contacts.phone) { %>
                 <li>
                   <span class="footer__list-icon">
@@ -119,7 +101,7 @@ const themeCustom = _.settings.theme.custom || ''
                 </span>
                 <address>
                   <small>Endereço</small>
-                  <%= contacts.address %>
+                  <%- contacts.address %>
                 </address>
               </li>
             <% } %>
@@ -282,7 +264,7 @@ const themeCustom = _.settings.theme.custom || ''
       
     <div class="footer__credits">
       <div class="p-0 w-100">
-        <div class="row align-items-center credits">
+        <div class="row align-items-center justify-content-between credits">
           <div class="col-12 col-md">
             <span>
               <small>
@@ -296,5 +278,3 @@ const themeCustom = _.settings.theme.custom || ''
     </div>
   </div>  
 </footer>
-
-<%- await include('@/layout/inc/ecom-credits') %>

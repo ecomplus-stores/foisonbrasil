@@ -3,8 +3,9 @@ const posts = _.cms('posts')
 const themeCustom = _.settings.theme.custom || ''
 if (Array.isArray(posts) && posts.length) {
   %>
+  
     <div class="apx blog my-4 my-lg-5">
-      <div class="container">
+      <div class="<%= opt.container || opt.spacing.container %> ">
         <div class="row justify-content-center mb-3">
           <div class="col-auto">
             <%- await include('@/sections/inc/apx-title-section', {
