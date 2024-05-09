@@ -1346,7 +1346,7 @@ export default options => {
                 required: false,
                 name: 'title',
                 widget: 'select',
-                options: ["Sobre o <b>Produto</b>","<b>Como</b> usar"]
+                options: ["Sobre o <b>Produto</b>","<b>Como</b> Usar"]
               },
               {
                 label: "Conteúdo",
