@@ -1342,12 +1342,33 @@ export default options => {
             required:false,
             fields: [
               {
-                label: "Título",
+                label: 'Container',
+                required: false,
+                name: 'title',
+                widget: 'select',
+                options: ["Sobre o <b>Produto</b>","<b>Como</b> usar"]
+              },
+              {
+                label: "Conteúdo",
+                name: "content",
+                widget: "markdown",
+                required:false,          
+              }              
+            ]
+          },
+          {
+            label:"Perguntas e Respostas",
+            name:"faq",
+            widget:"list",
+            required:false,
+            fields: [
+              {
+                label: "Pergunta",
                 name: "title",
                 widget: "string"          
               }, 
               {
-                label: "Conteúdo",
+                label: "Resposta",
                 name: "content",
                 widget: "markdown",
                 required:false,          
