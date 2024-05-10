@@ -915,6 +915,71 @@ export default options => {
                 file: "content/apx_header.json",
                 fields: [
                     {
+                      label: "Tarja com Temporizador",
+                      name: "topbar_timer",
+                      widget: "object",
+                      required: false,
+                      fields: [
+                          {
+                              label: "Cor do Texto",
+                              name: "color",
+                              widget: "color"
+                          },
+                          {
+                              label: "Cor do Fundo",
+                              name: "background",
+                              widget: "color"
+                          },
+                          {
+                              label: "Imagem de Fundo",
+                              name: "background",
+                              widget: "image",
+                              required: false
+                          },
+                          {
+                              label: "Texto",
+                              name: "title",
+                              widget: "string"
+                          },
+                          {
+                            label: "CTA TEXTO",
+                            name: "cta_text",
+                            widget: "string"
+                          },
+                          {
+                            label: "CTA URL",
+                            name: "cta_url",
+                            widget: "string"
+                          },
+                          {
+                            label: "CTA Cor do Texto",
+                            name: "cta_color",
+                            widget: "color"
+                          },
+                          {
+                            label: "CTA Cor do Fundo",
+                            name: "cta_background",
+                            widget: "color"
+                          },
+                          {
+                            label: 'Data de início',
+                            required: false,
+                            name: 'start',
+                            widget: 'datetime',
+                            dateFormat: 'DD/MM/YYYY',
+                            timeFormat: 'HH:mm'
+                          },
+                          {
+                            label: 'Data de encerramento',
+                            required: false,
+                            name: 'end',
+                            widget: 'datetime',
+                            dateFormat: 'DD/MM/YYYY',
+                            timeFormat: 'HH:mm'
+                          }
+                      ]
+                  },
+                    {
                         label: "Tarja Topo (Acima)",
                         name: "topbar_1",
                         widget: "object",
