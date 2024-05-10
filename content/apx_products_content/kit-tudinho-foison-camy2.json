@@ -33,13 +33,6 @@
   ],
   "upselling": [
     {
-      "title": "Software",
-      "help_title": "Qual software escolher?",
-      "help_link": "/blog",
-      "empty_text": "Sem Software",
-      "empty_pop_title": "Atenção",
-      "empty_pop_description": "Blá blá blá blá blá blá",
-      "empty_pop_button": "Entendi",
       "products": [
         {
           "sku": "FO0022"
@@ -50,7 +43,28 @@
         {
           "sku": "FO0022"
         }
-      ]
+      ],
+      "upselling_list": [
+        {
+          "products_sku": "FO0022",
+          "item_name": "Flexi SIGN 22"
+        },
+        {
+          "item_name": "Flexi SIGN 21 LA",
+          "products_sku": "FO782433"
+        },
+        {
+          "item_name": "SignMaster Cut Basic + Arms",
+          "products_sku": "CNC0041"
+        }
+      ],
+      "empty_pop_button": "Entendi",
+      "help_link": "/blog",
+      "title": "Software",
+      "empty_pop_title": "Atenção",
+      "help_title": "Qual software escolher?",
+      "empty_pop_description": "Blá blá blá blá blá blá",
+      "empty_text": "Sem Software"
     }
   ]
 }
