@@ -30,5 +30,27 @@
       "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio",
       "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\\\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\n<!--EndFragment-->"
     }
+  ],
+  "upselling": [
+    {
+      "title": "Software",
+      "help_title": "Qual software escolher?",
+      "help_link": "/blog",
+      "empty_text": "Sem Software",
+      "empty_pop_title": "Atenção",
+      "empty_pop_description": "Blá blá blá blá blá blá",
+      "empty_pop_button": "Entendi",
+      "products": [
+        {
+          "sku": "FO0022"
+        },
+        {
+          "sku": "FO782433"
+        },
+        {
+          "sku": "FO0022"
+        }
+      ]
+    }
   ]
 }
