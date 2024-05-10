@@ -927,12 +927,12 @@ export default options => {
                           },
                           {
                               label: "Cor do Fundo",
-                              name: "background",
+                              name: "background_color",
                               widget: "color"
                           },
                           {
                               label: "Imagem de Fundo",
-                              name: "background",
+                              name: "background_image",
                               widget: "image",
                               required: false
                           },
