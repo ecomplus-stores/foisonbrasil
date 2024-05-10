@@ -1440,6 +1440,78 @@ export default options => {
               }              
             ]
           },
+          {
+            label:"Upselling",
+            name:"upselling",
+            widget:"list",
+            required:false,
+            fields: [
+              {
+                label: "Título",
+                name: "title",
+                widget: "string"          
+              }, 
+              {
+                label: "Título - Ajuda",
+                name: "help_title",
+                widget: "string",
+                required:false,          
+              },   
+              {
+                label: "Link - Ajuda",
+                name: "help_link",
+                widget: "string",
+                required:false,          
+              },     
+              {
+                label: "Opção vazia - Texto",
+                name: "empty_text",
+                widget: "string",
+                required:false,          
+              },
+              {
+                label: "Opção vazia - Popup - Título",
+                name: "empty_pop_title",
+                widget: "string",
+                required:false,          
+              },
+              {
+                label: "Opção vazia - Popup - Descrição",
+                name: "empty_pop_description",
+                widget: "string",
+                required:false,          
+              },
+              {
+                label: "Opção vazia - Popup - Botão",
+                name: "empty_pop_button",
+                widget: "string",
+                required:false,          
+              },
+              {
+                label:"Produtos do Upselling",
+                name:"products",
+                widget:"list",
+                required:false,
+                fields: [
+                  {
+                    label: 'Identificador [SKU]',
+                    name: 'sku',
+                    widget: 'select',
+                        multiple: false,
+                        options: [
+                          ...options.state.routes
+                          .filter(({ sku }) => typeof sku === 'string')
+                          .map(({ sku }) => ({
+                            label: 'Produto - ' + sku,
+                            value: sku
+                          })),                          
+                        ]                
+                  },                  
+                ]
+              },                          
+            ]
+          },
+          
         ]
       },         
     ]
