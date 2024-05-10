@@ -17,6 +17,7 @@ body{
   --color1:#9089FF;
   --color2:#FF970A;
   --color3:#3A1F42;
+  --color4:#85FFDC;
   --color-border:#F2F2F2;
   --color-bg: #ffffff;
   --body-bg: #ffffff;
@@ -641,4 +642,187 @@ main ~ iframe{display: none;}
 .text-center{text-align: center;}
 i[class*=" fa-"]{
   font-family: FontAwesome;
+}
+
+
+nav{
+  ol.breadcrumb{
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--color-border);
+      li{
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          line-height: var(--font-size-sm);
+          *{color: var(--txt);font-size: var(--font-size-sm);line-height: initial;}
+          a{}
+          span{}
+          svg{}
+          
+      }
+      li:not(:first-child){padding-left: 1rem!important;}
+      li:last-child{
+          *{color:#CCCCCC}
+      }
+      li:before{display: none!important;}
+  }
+}
+.product-crumb{
+  .container,
+  .breadcrumb{
+    padding:0!important;
+    border: 0!important;
+    flex-wrap: nowrap;
+    .breadcrumb-item:last-child{
+      span{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 90%;
+      }
+    }    
+  }
+}
+
+#page-products{
+  #product-block{
+    margin-top: 3rem;
+    h1{
+      font-weight: 600;
+    }
+    .product__prices{
+      .prices__compare{
+        small{display: none;}
+        s{color: var(--txt);}
+      }
+      .prices__value{
+        font-family: "Coniferous";
+        position: relative;
+        width: fit-content;
+      }
+      .prices__value:before{
+        background: var(--color2);
+        bottom: 10%;
+        content: "";
+        height: calc(var(--h1)* .3);
+        left: 0;
+        line-height: var(--h1);
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+    .product__buy{
+      button{
+        border: 2px solid;
+        border-radius: 50px;
+        box-shadow: 5px 5px 0 var(--blk);
+        background: var(--color4);
+        color: var(--blk);
+        display: inline-block;
+        font-size: var(--font-size);
+        font-weight: 700;
+        line-height: var(--font-size);
+        padding: .75rem 2.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .2s ease-in-out;
+        width: 375px;
+        max-width: 100%;
+      }
+      button:hover{
+        box-shadow: 7px 7px 5px var(--blk);
+        scale: 1.05;
+      }
+    }
+    .col-right{
+      position: relative;
+      padding-left: 4rem;
+    }
+    .col-right:before{
+      position: absolute;
+      top: 0;
+      border-left: 1px solid var(--color-border);
+      height: 100%;
+      left: 1.5rem;
+      content: "";
+    }
+
+    #product-cms-content{
+      h4{
+        b{
+          position: relative;
+        }
+        b:before{
+          background: var(--color1);
+          bottom: 0;
+          content: "";
+          height: 10px;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+    }    
+  }
+}
+
+.apx_faq{
+  .list{
+      display:flex;
+      flex-direction: column;
+  }
+  .apx_faq-item{
+    border-bottom: 1px solid #ccc;
+      .hat{
+        cursor: pointer;
+          .a_text{
+              
+          }
+          button{
+              border:0;
+              padding:0;
+              background:transparent;
+              svg{
+                  transition: all .5s ease-in-out;
+              }
+          }
+
+      }
+      .content{
+          
+          height:0;
+          max-height:0;
+          overflow: hidden;
+          transition: padding .5s ease-in-out, max-height .5s ease-in-out;
+          color: var(--txt);
+          font-size: var(--font-size-sm);
+          box-sizing: border-box;margin: 0;
+      }
+  }
+  .apx_faq-item.visible{
+      .hat{
+        color: var(--color1);
+          button{
+              border:0;
+              padding:0;
+              background:transparent;
+              svg{
+                  transform: rotate(315deg);
+                  color: var(--color1);
+                  path{fill: var(--color1);stroke:var(--color1)}
+              }
+          }            
+      }
+      .content{
+          transition: padding .5s, max-height .5s;
+          max-height:180px;
+          overflow-y: auto;
+          height:auto;
+          padding-bottom: 1.5rem;
+          
+      }
+  }
 }

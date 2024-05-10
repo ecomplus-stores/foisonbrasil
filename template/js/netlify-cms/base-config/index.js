@@ -923,11 +923,13 @@ export default options => {
                           {
                               label: "Cor do Texto",
                               name: "color",
-                              widget: "color"
+                              widget: "color",
+                              required:false   
                           },
                           {
                               label: "Cor do Fundo",
                               name: "background_color",
+                              required:false  ,
                               widget: "color"
                           },
                           {
@@ -939,26 +941,31 @@ export default options => {
                           {
                               label: "Texto",
                               name: "title",
+                              required:false  ,
                               widget: "string"
                           },
                           {
                             label: "CTA TEXTO",
                             name: "cta_text",
+                            required:false  ,
                             widget: "string"
                           },
                           {
                             label: "CTA URL",
                             name: "cta_url",
+                            required:false  ,
                             widget: "string"
                           },
                           {
                             label: "CTA Cor do Texto",
                             name: "cta_color",
+                            required:false  ,
                             widget: "color"
                           },
                           {
                             label: "CTA Cor do Fundo",
                             name: "cta_background",
+                            required:false  ,
                             widget: "color"
                           },
                           {
@@ -988,11 +995,13 @@ export default options => {
                             {
                                 label: "Cor do Texto",
                                 name: "color",
+                                required:false  ,
                                 widget: "color"
                             },
                             {
                                 label: "Cor do Fundo",
                                 name: "background",
+                                required:false  ,
                                 widget: "color"
                             },
                             {
@@ -1004,11 +1013,13 @@ export default options => {
                                     {
                                         label: "Texto ou HTML",
                                         name: "title",
+                                        required:false  ,
                                         widget: "string"
                                     },
                                     {
                                         label: "URL",
                                         name: "url",
+                                        required:false  ,
                                         widget: "string"
                                     }
                                 ]
@@ -1100,11 +1111,13 @@ export default options => {
                             {
                                 label: "Cor do Texto",
                                 name: "color",
+                                required:false  ,
                                 widget: "color"
                             },
                             {
                                 label: "Cor do Fundo",
                                 name: "background",
+                                required:false  ,
                                 widget: "color"
                             },
                             {
@@ -1121,6 +1134,7 @@ export default options => {
                                     {
                                         label: "URL",
                                         name: "url",
+                                        required:false  ,
                                         widget: "string"
                                     }
                                 ]
@@ -1435,8 +1449,8 @@ export default options => {
               {
                 label: "Resposta",
                 name: "content",
-                widget: "markdown",
-                required:false,          
+                widget: "markdown"
+                     
               }              
             ]
           },
@@ -1467,7 +1481,7 @@ export default options => {
                 label: "Opção vazia - Texto",
                 name: "empty_text",
                 widget: "string",
-                required:false,          
+                
               },
               {
                 label: "Opção vazia - Popup - Título",
@@ -1488,14 +1502,19 @@ export default options => {
                 required:false,          
               },
               {
-                label:"Produtos do Upselling",
-                name:"products",
-                widget:"list",
-                required:false,
+                label: 'Itens de Upselling',
+                name: 'upselling_list',
+                widget: 'list',
                 fields: [
                   {
-                    label: 'Identificador [SKU]',
-                    name: 'sku',
+                    label: "Nome do Item",
+                    name: "item_name",
+                    widget: "string",
+                    required:false,          
+                  },
+                  {
+                    label: 'Produtos do Upselling [SKU]',
+                    name: 'products_sku',
                     widget: 'select',
                         multiple: false,
                         options: [
@@ -1506,9 +1525,10 @@ export default options => {
                             value: sku
                           })),                          
                         ]                
-                  },                  
+                  }    
                 ]
-              },                          
+              }
+                                           
             ]
           },
           

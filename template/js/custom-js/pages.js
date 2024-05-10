@@ -124,3 +124,7 @@ $(document).ready(function(){
 //     console.log(e)
 //   }
 // }
+
+$('.apx_faq-item .hat *').click(function(){
+  $(this).closest('.apx_faq-item').toggleClass('visible')
+});

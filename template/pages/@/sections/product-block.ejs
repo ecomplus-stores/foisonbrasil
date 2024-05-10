@@ -4,8 +4,31 @@ let stampsList
 if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
   stampsList = stamps.stamps_list
 }
-%>
 
+const current_lib_ = []
+const apx_products_ = _.cms('apx_products_content')
+if (Array.isArray(apx_products_) && apx_products_.length > 0) {      
+  apx_products_.forEach(item => { 
+    const lib = (_.cms(`apx_products_content/${item}`))
+    if(current_lib_.length == 0 && (lib.identificador.find(el => el == _.state.sku) || lib.identificador == 'default')){
+      current_lib_.push(lib)
+      return
+    }
+    if(_.state.categories && _.state.categories.length > 0){
+      _.state.categories.forEach(cat => {
+        if(current_lib_.length == 0 && lib.identificador.find(el => el == 'cat_'+ cat._id)){
+          current_lib_.push(lib)
+          return
+        }
+      })
+    }
+  })
+}
+let cms_content = current_lib_[0] || false
+%>
+<script>
+  window.product_cms_content = JSON.parse(<%- JSON.stringify(JSON.stringify(cms_content || [])) %>)
+</script>
 <div id="product-block" class="product-block my-4 mb-lg-5">
   <div class="container">
     <section
@@ -83,13 +106,139 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
             <% } %>
           <% } %>
           <!-- Custom additional code on bottom of images gallery -->
+          <%- JSON.stringify(cms_content)%>
+          
+          <div id="product-cms-content">
+            <% if (cms_content) { %>
+              <%
+              cms_content.list.forEach(item => { 
+                  %>
+                  <div class="content-block my-5">
+                    <h4><%- item.title %></h4>
+                    <div class="html-clearfix">
+                      <%- item.content %>
+                    </div>
+                  </div>
+                  <%
+                })
+              %>
+
+              <%
+                if(cms_content.faq.length > 0){
+                  %>
+                  <div class="content-block my-5 apx_faq">
+                    <h4 class="mb-4"><b>Perguntas</b> Frequentes</h4>
+                    <%
+                    cms_content.faq.forEach(item => { 
+                      %>
+                      <div class="apx_faq-item">
+                        <div class="hat  my-2 d-flex justify-content-between">
+                          <span class="a_text py-3 d-block"><%- item.title %></span>
+                          <button type="button" aria-label="Ver mais opções">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                          </button>
+                        </div>
+                        <div class="content html-clearfix">
+                          <%- item.content %>
+                        </div>
+                      </div>
+                      <%
+                    })
+                    %>
+                  </div>
+                  <%
+                }
+              %>
+            <% } %>
+          </div>
         </div>
 
-        <div class="col">
-          <h1 class="product__name">
+        <div class="col-12 col-md-6 col-right">
+          <div class="product-crumb">
+            <%
+              const breadcrumbs = opt.breadcrumbs && opt.breadcrumbs.length
+                ? opt.breadcrumbs
+                : _.breadcrumbs || (_.state.title && [{
+                  name: _.state.title,
+                  link: _.route.path
+                }])
+
+              if (Array.isArray(breadcrumbs) && breadcrumbs.length) {
+                %>
+                <div class="container">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item d-none d-md-block">
+                        <a href="/">            
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.75 15.75V10.2C6.75 9.77995 6.75 9.56993 6.83175 9.4095C6.90365 9.26837 7.01839 9.15364 7.15951 9.08173C7.31994 8.99999 7.52996 8.99999 7.95 8.99999H10.05C10.47 8.99999 10.6801 8.99999 10.8405 9.08173C10.9816 9.15364 11.0963 9.26837 11.1683 9.4095C11.25 9.56993 11.25 9.77995 11.25 10.2V15.75M8.26327 2.073L3.17654 6.02934C2.83652 6.29381 2.6665 6.42604 2.54402 6.59164C2.43552 6.73833 2.3547 6.90359 2.30552 7.07929C2.25 7.27764 2.25 7.49302 2.25 7.92379V13.35C2.25 14.1901 2.25 14.6101 2.41349 14.931C2.5573 15.2132 2.78677 15.4427 3.06901 15.5865C3.38988 15.75 3.80992 15.75 4.65 15.75H13.35C14.1901 15.75 14.6101 15.75 14.931 15.5865C15.2132 15.4427 15.4427 15.2132 15.5865 14.931C15.75 14.6101 15.75 14.1901 15.75 13.35V7.92379C15.75 7.49302 15.75 7.27764 15.6945 7.07929C15.6453 6.90359 15.5645 6.73833 15.456 6.59164C15.3335 6.42604 15.1635 6.29381 14.8235 6.02934L9.73673 2.073C9.47324 1.86806 9.34149 1.76559 9.19601 1.7262C9.06765 1.69145 8.93235 1.69145 8.80399 1.7262C8.65851 1.76559 8.52677 1.86806 8.26327 2.073Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </a>
+                      </li>
+                      <% breadcrumbs.forEach(({ name, link }, index) => { %>
+                        <% if (index < breadcrumbs.length - 1) { %>
+                          <li
+                            <% if (index === breadcrumbs.length - 2) { %>
+                              class="breadcrumb-item"
+                            <% } else { %>
+                              class="breadcrumb-item d-none d-md-block"
+                            <% } %>
+                          >
+                              
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                            <a href="<%= link %>">
+                              <%= name %>
+                            </a>
+                          </li>
+                        <% } else { %>
+                          <li class="breadcrumb-item d-none d-md-flex active" aria-current="page">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            
+                              <span><%= name %></span>
+                          </li>
+                        <% } %>
+                      <% }) %>
+                    </ol>
+                  </nav>
+                </div>
+
+                <script type="application/ld+json"><%-
+                  JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                      {
+                        '@type': 'ListItem',
+                        position: 1,
+                        item: {
+                          '@id': `https://${_.settings.domain}/`,
+                          name: 'Homepage'
+                        }
+                      }
+                    ].concat(breadcrumbs.map(({ name, link }, index) => {
+                      return {
+                        '@type': 'ListItem',
+                        position: index + 2,
+                        item: {
+                          '@id': `https://${_.settings.domain}${link}`,
+                          name
+                        }
+                      }
+                    }))
+                  })
+                %></script>
+              <% } %>
+
+          </div>
+          <h1 class="product__name my-md-4 py-2">
             <%= _.ecomUtils.name(_.state) %>
           </h1>
-          <p class="product__sku">
+          <p class="product__sku d-none">
             COD: <%= _.state.sku %>
           </p>
 
@@ -162,17 +311,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                   <% } %>
                 >
                   <div data-slot="buy-button-content">
-                    <i class="i-shopping-bag mr-1"></i>
-                    <% if (_.state.kit_composition && _.state.kit_composition.length) { %>
-                      <%= _.dictionary('buyKit') %>
-                    <% } else { %> 
-                      <% let buyText %>
-                      <% if (Array.isArray(_.widgets)) { %>
-                        <% const productWidget = _.widgets.find(item => item.pkg === '@ecomplus/widget-product') %>
-                        <% buyText = productWidget && productWidget.options.buyText %>
-                      <% } %>
-                      <%= buyText || _.dictionary('buy') %>
-                    <% } %>
+                    Adicionar ao Carrinho
                   </div>
                 </button>
               </div>
