@@ -9,8 +9,14 @@
       "content": "<!--StartFragment-->\n\nA Camy é a única Plotter Profissional desenvolvida exclusivamente para o mercado brasileiro de Papelaria e Personalizados.\\\nLeitura: Automática por Câmera\\\nA tecnologia mais moderna para um Print&Cut sem erros.\\\nPara cortar papéis até 420g de uma passada só e mais de 100 materiais.\\\nAproveitamento máximo do Papel\\\nA Foison tem a menor marca de registro do mercado para você utilizar ao máximo a área da folha e aumentar seus lucros.\\\nCorte até 3 folhas A4 de uma só vez\\\nDê um salto de produtividade com a Função REPEAT e a técnica do Corte Matriz\n\n<!--EndFragment-->"
     },
     {
-      "title": "<b>Como</b> usar",
+      "title": "<b>Como</b> Usar",
       "content": "<!--StartFragment-->\n\nPraesent placerat risus quis eros.\\\nFusce pellentesque suscipit nibh.\\\nInteger vitae libero ac risus egestas placerat.\\\nVestibulum commodo felis quis tortor.\\\nUt aliquam sollicitudin leo.\\\nCras iaculis ultricies nulla.\\\nDonec quis dui at dolor tempor interdum.\n\n<!--EndFragment-->"
+    }
+  ],
+  "faq": [
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio",
+      "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\\\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\n<!--EndFragment-->"
     }
   ]
 }
