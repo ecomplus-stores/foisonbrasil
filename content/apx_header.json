@@ -1,0 +1,28 @@
+{
+  "topbar_timer": {
+    "cta_url": "/promo",
+    "start": "2024-05-10T00:42:12.538Z",
+    "color": "#000000",
+    "background_image": "/img/uploads/rectangle-51.png",
+    "background_color": "#ffffff",
+    "cta_color": "#ffffff",
+    "title": "#MêsDoConsumidor com descontos de até 50% OFF por tempo limitado",
+    "end": "2024-06-07T00:42:12.550Z",
+    "cta_text": "VER PROMOÇÕES",
+    "cta_background": "#9089ff"
+  },
+  "topbar_1": {
+    "background": "#9089ff",
+    "color": "#ffffff",
+    "topbar_1": [
+      {
+        "title": "A única com <b>2 anos de garantia</b>",
+        "url": "/"
+      }
+    ]
+  },
+  "topbar_2": {
+    "color": "#ffffff",
+    "background": "#9089ff"
+  }
+}
