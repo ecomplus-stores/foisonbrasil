@@ -62,10 +62,103 @@
           </p>
         </slot>
 
+        
+
         <component
           :is="isSSR ? 'portal' : 'div'"
           selector="#product-actions"
         >
+        <div
+          v-if="product_cms"
+          class="product__upselling"
+        >
+          <div
+            class="upselling__row"
+            v-for="(upselling, index) in product_cms.upselling"
+            :key="index"
+          >
+            <div
+              class="upselling__title d-flex justify-content-between align-items-center"
+            >
+              <label>                
+                {{upselling.title}}:
+                <span
+                  v-if="productUpselling && productUpselling[index]"
+                >
+                
+                  {{productUpselling[index].name}}
+                </span>
+              </label>
+              <div
+                v-if="upselling.help_title"
+                class="upselling__help-trigger"
+              >
+                <button
+                  type="button"
+                  
+                >                    
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33341 2.01367V4.76737C9.33341 5.14073 9.33341 5.32742 9.40608 5.47003C9.46999 5.59547 9.57198 5.69745 9.69742 5.76137C9.84003 5.83403 10.0267 5.83403 10.4001 5.83403H13.1538M6.56673 8.50214C6.6842 8.16823 6.91605 7.88665 7.22122 7.7073C7.52639 7.52795 7.8852 7.46239 8.23408 7.52223C8.58296 7.58207 8.8994 7.76346 9.12736 8.03425C9.35532 8.30505 9.48009 8.64779 9.47956 9.00177C9.47956 10.001 7.98068 10.5007 7.98068 10.5007M8.00008 12.5007H8.00675M9.33341 1.83398H5.86675C4.74664 1.83398 4.18659 1.83398 3.75877 2.05197C3.38244 2.24372 3.07648 2.54968 2.88473 2.926C2.66675 3.35383 2.66675 3.91388 2.66675 5.03398V11.9673C2.66675 13.0874 2.66675 13.6475 2.88473 14.0753C3.07648 14.4516 3.38244 14.7576 3.75877 14.9493C4.18659 15.1673 4.74664 15.1673 5.86675 15.1673H10.1334C11.2535 15.1673 11.8136 15.1673 12.2414 14.9493C12.6177 14.7576 12.9237 14.4516 13.1154 14.0753C13.3334 13.6475 13.3334 13.0874 13.3334 11.9673V5.83398L9.33341 1.83398Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  <span>{{upselling.help_title}}</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="upselling__options d-flex align-items-center justify-content-start align-items-center flex-wrap">
+              <div
+                class="upselling__option"
+                v-for="item in upselling.upselling_list"
+              >
+                <button
+                  type="button"
+                  :sku="item.products_sku"
+                  :class="productUpselling && productUpselling[index] && productUpselling[index].sku == item.products_sku ? 'active' : ''"
+                  @click="setUpsellingProduct(index, item.products_sku, item.item_name, 'add')"
+                >
+                  {{ item.item_name }}
+                </button>
+              </div>
+
+              <div
+                class="upselling__option"
+                v-if="upselling.empty_text"
+              >
+                <button
+                  type="button"
+                  :sku="'empty'"
+                  :class="productUpselling && productUpselling[index] && productUpselling[index].sku == 'empty' ? 'active' : ''"
+                  @click="setUpsellingProduct(index, 'empty',upselling.empty_text, 'add'), setPopVisibility(index, true)"
+                >
+                  {{ upselling.empty_text }}
+                  <span
+                    v-if="upselling.empty_pop_description"
+                  >                    
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.99976 6.00015V8.66682M7.99976 11.3335H8.00642M7.07663 2.59464L1.59338 12.0657C1.28924 12.591 1.13717 12.8537 1.15965 13.0693C1.17925 13.2573 1.27776 13.4282 1.43067 13.5394C1.60597 13.6668 1.90948 13.6668 2.5165 13.6668H13.483C14.09 13.6668 14.3935 13.6668 14.5688 13.5394C14.7217 13.4282 14.8203 13.2573 14.8399 13.0693C14.8623 12.8537 14.7103 12.591 14.4061 12.0657L8.92288 2.59463C8.61983 2.07119 8.46831 1.80947 8.27062 1.72157C8.09818 1.64489 7.90133 1.64489 7.72889 1.72157C7.5312 1.80947 7.37968 2.07119 7.07663 2.59464Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+  
+                  </span>
+                </button>
+              </div>
+              <div
+                class="upselling__empty_pop"
+                v-if="upselling.empty_pop_description && upselling_pop_visibility[index]"
+              >
+                <div class="upselling__empty_pop-content">
+                  <h4>{{upselling.empty_pop_title || "Atenção"}}</h4>
+                  <p class="my-md-4 my-3">{{ upselling.empty_pop_description }}</p>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="fs_btn" style="--fs-color:var(--color2)"
+                    @click="setPopVisibility(index, false)"
+                    >{{upselling.empty_pop_button || "Entendi"}}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
           <slot name="rating">
             <div
               v-once
@@ -107,6 +200,8 @@
               </a>
             </slot>
           </div>
+
+         
 
           <template v-else>
             <slot name="prices">
@@ -179,7 +274,7 @@
                 >
               </div>
             </slot>
-           
+            
             <div
               v-if="isKit"
               class="product__kit"
@@ -192,8 +287,8 @@
                   <quantity-selector
                     v-if="kitItems.length && !isKitWithVariations"
                     :items="kitItems"
-                    :min="body.min_quantity"
-                    :max="body.quantity"
+                    :min="kitItems.length"
+                    :max="kitItems.length + 1"
                     :slug="body.slug"
                     :kit-product-id="body._id"
                     :kit-name="name"

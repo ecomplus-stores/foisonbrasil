@@ -164,7 +164,9 @@ export default {
       paymentOptions: [],
       customizations: [],
       kitItems: [],
-      currentTimer: null
+      currentTimer: null,
+      productUpselling:[],
+      upselling_pop_visibility:[]
     }
   },
 
@@ -293,6 +295,27 @@ export default {
   },
 
   methods: {
+    setPopVisibility(key, action){
+      let upselling_pop_visibility = [...this.upselling_pop_visibility]
+      if(action == true){
+        upselling_pop_visibility[key] = true
+      }else{
+        upselling_pop_visibility[key] = false
+      }      
+      this.upselling_pop_visibility = [...upselling_pop_visibility]
+    },
+    setUpsellingProduct(key,product, item_name, action){
+      let productUpselling = [...this.productUpselling]
+      if(action == "add"){
+        productUpselling[key] = {sku: product, name: item_name}
+      }
+      if(action == "remove"){
+        delete productUpselling[key]
+      }      
+      
+      this.productUpselling = [...productUpselling]
+      
+    },
     getVariationsGrids,
     getSpecValueByText,
 
@@ -395,6 +418,7 @@ export default {
     },
 
     buy () {
+      alert('aa')
       this.hasClickedBuy = true
       const product = sanitizeProductBody(this.body)
       let variationId

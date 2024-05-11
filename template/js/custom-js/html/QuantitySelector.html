@@ -1,0 +1,152 @@
+<div class="quantity-selector">
+  <div v-if="kitProductId">
+    <div class="kit__title">
+      <label for="">Itens do Kit</label>
+    </div>
+    <div class="kit__items">
+      <div
+        class="quantity-selector__item"
+        v-for="item in items"
+      >
+        <div class="kit__item"
+          :disabled="!checkInStock(item)"
+        >
+          <div class="d-flex align-items-start">
+            <div class="kit__toggle">
+              <img :src="item.pictures && item.pictures[0] && item.pictures[0].normal.url || ''" alt="">
+            </div>
+            <div class="kit__data">
+              <div class="kit__data-name">
+                {{item.quantity}}x {{ item.name }}
+              </div>
+              <div class="kit__data-price">
+                {{ formatPrice(item.price)}}
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+
+    <a-alert :can-show="hasMinAlert">
+      {{ i19minQuantity }}:
+      <strong>{{ min }}</strong>
+    </a-alert>
+
+    <a-alert
+      :can-show="hasMaxAlert"
+      :variant="alertVariant"
+    >
+      {{ i19maxQuantity }}:
+      <strong>{{ max }}</strong>
+    </a-alert>
+
+    <div
+      v-if="hasBuyButton"
+      class="quantity-selector__buy product__buy mt-4"
+    >
+      <slot
+        name="buy"
+        v-bind="{ selectedQnts, buy }"
+      >
+        <button
+          type="button"
+          class="btn btn-lg btn-primary my-3"
+          @click="buy"
+        >
+          <slot name="buy-button-content">
+            <i class="i-shopping-bag mr-1"></i>
+            {{ strBuy }}
+          </slot>
+        </button>
+      </slot>
+    </div>
+  </div>
+  <div v-else>
+    <div
+      class="quantity-selector__item"
+      v-for="item in items"
+    >
+      <div class="row quantity-selector__btn-container">
+        <button
+          class="btn btn-sm btn-link col-sm-3"
+          type="button"
+          @click="changeQnt(item, -1)"
+          :disabled="item.min_quantity >= selectedQnts[item._id]"
+        >
+          <i class="i-chevron-down"></i>
+        </button>
+        <input
+          type="tel"
+          class="form-control quantity-selector__input col-sm-6"
+          @change="ev => changeQnt(item, null, ev)"
+          @keyup.up="changeQnt(item, 1)"
+          @keyup.down="changeQnt(item, -1)"
+          :value="selectedQnts[item._id]"
+          :disabled="!checkInStock(item)"
+          :readonly="item.min_quantity && item.min_quantity === item.max_quantity"
+        >
+        <button
+          class="btn btn-sm btn-link col-sm-3"
+          type="button"
+          @click="changeQnt(item, 1)"
+          :disabled="item.max_quantity <= selectedQnts[item._id]"
+        >
+          <i class="i-chevron-up"></i>
+        </button>
+      </div>
+
+      <span class="quantity-selector__label">
+        <slot v-bind="{ item }">
+          <a-link
+            v-if="item.slug"
+            target="_blank"
+            :href="`/${item.slug}`"
+            :title="item.name"
+          >
+            {{ item.name }}
+          </a-link>
+          <template v-else>
+            {{ item.name }}
+          </template>
+        </slot>
+      </span>
+    </div>
+
+    <a-alert :can-show="hasMinAlert">
+      {{ i19minQuantity }}:
+      <strong>{{ min }}</strong>
+    </a-alert>
+
+    <a-alert
+      :can-show="hasMaxAlert"
+      :variant="alertVariant"
+    >
+      {{ i19maxQuantity }}:
+      <strong>{{ max }}</strong>
+    </a-alert>
+    
+    
+    <div
+      v-if="hasBuyButton"
+      class="quantity-selector__buy"
+    >
+      <slot
+        name="buy"
+        v-bind="{ selectedQnts, buy }"
+      >
+        <button
+          type="button"
+          class="btn btn-lg btn-primary my-3"
+          @click="buy"
+        >
+          <slot name="buy-button-content">
+            <i class="i-shopping-bag mr-1"></i>
+            {{ strBuy }}
+          </slot>
+        </button>
+      </slot>
+    </div>
+  </div>
+  
+</div>

@@ -33,17 +33,6 @@
   ],
   "upselling": [
     {
-      "products": [
-        {
-          "sku": "FO0022"
-        },
-        {
-          "sku": "FO782433"
-        },
-        {
-          "sku": "FO0022"
-        }
-      ],
       "upselling_list": [
         {
           "products_sku": "FO0022",
