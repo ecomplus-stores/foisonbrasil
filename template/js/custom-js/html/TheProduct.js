@@ -418,7 +418,6 @@ export default {
     },
 
     buy () {
-      alert('aa')
       this.hasClickedBuy = true
       const product = sanitizeProductBody(this.body)
       let variationId

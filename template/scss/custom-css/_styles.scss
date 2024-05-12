@@ -765,7 +765,40 @@ nav{
           z-index: -1;
         }
       }
-    }    
+    }  
+    .gallery{
+      flex-direction: column-reverse;
+      .gallery__open{
+        background: transparent;
+        border: 2px solid var(--blk);
+        color: var(--blk);
+        line-height: initial;
+        aspect-ratio: 1;
+        border-radius: 10px;
+        font-size: var(--h4);
+      }
+      .gallery__open:after{
+        content: "Fotos";
+        font-weight: 400;
+        font-size: var(--h6);
+      }
+      .gallery__thumbs{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        margin-top: 1rem;
+        overflow: hidden;
+        .gallery__item{
+          picture{
+            img{
+              aspect-ratio: 1;
+              border-radius: 1rem;
+            }
+          }
+        }
+      }
+    }  
   }
 }
 
@@ -989,5 +1022,13 @@ nav{
         font-weight: bold;
       }
     }
+  }
+}
+
+.col-right{
+  position: relative;
+  .content-sticky{
+    position: sticky;
+    top:4rem;
   }
 }
