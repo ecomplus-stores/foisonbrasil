@@ -139,6 +139,21 @@
             v-html="footerHtml"
           ></div>
         </slot>
+
+        <div class="product-specs">
+          <div v-for="(spec, index) in body.specs" :key="index">
+            <i>
+              <img 
+              v-if="storefrontSpecImage(storefrontGrids(spec.grid))"
+              :src="storefrontSpecImage(storefrontGrids(spec.grid))"
+            />
+            </i>
+            <b>{{spec.text}}</b>           
+          </div>          
+        </div>
+        <div class="product-compare">
+          <button :data="JSON.stringify({_id:body._id, name: body.name, sku: body.sku, specs: body.specs, image: body.pictures})" type="button">Comparar</button>
+        </div>
       </div>
       </div>
       <div

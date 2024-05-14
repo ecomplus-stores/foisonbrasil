@@ -211,6 +211,12 @@ export default {
             this.isWaitingBuy = false
           })
       }
+    },
+    storefrontGrids(grid_id){
+      return window.storefront.data.grids.find(el => el.grid_id == grid_id).title || ''
+    },
+    storefrontSpecImage(grid_title){
+      return window.apx_properties.find(el => el.title == grid_title).img || ''
     }
   },
 

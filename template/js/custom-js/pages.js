@@ -102,7 +102,7 @@ $(document).ready(function(){
 //     search.setProductIds(favorites).fetch().then(result => {
 //       $.each(result.hits.hits, function(k,i){
 //         let item = i._source;
-//         $(`<div class="row item"><div class=col-12><div class="favorite-list product-card"data-sku=${item.sku} data-product-id=${item._id}><section><a class=product-card__link href=/${item.slug} title=${item.name}><div class=product-card__pictures><img alt="${item.pictures ? item.pictures[0].normal.alt : ''}"src="${item.pictures ? item.pictures[0].normal.url : '/assets/img-placeholder.png'}"></div></a><div class=product-card__content-group><div class='row align-items-start'><div class=col><a class=product-card__link href=/${item.slug} title=${item.name}><h3 class=product-card__name>${item.name}</h3></a></div><div class=col-auto><button class="btn product-card__favorite-remove"aria-label="Remover dos favoritos"><svg fill=none height=16 viewBox="0 0 16 16"width=16 xmlns=http://www.w3.org/2000/svg><g clip-path=url(#clip0_21_6728)><path d="M5.33331 8.00004H10.6666M14.6666 8.00004C14.6666 11.6819 11.6819 14.6667 7.99998 14.6667C4.31808 14.6667 1.33331 11.6819 1.33331 8.00004C1.33331 4.31814 4.31808 1.33337 7.99998 1.33337C11.6819 1.33337 14.6666 4.31814 14.6666 8.00004Z"stroke=#666666 stroke-linecap=round stroke-linejoin=round /></g><defs><clipPath id=clip0_21_6728><rect fill=white height=16 width=16 /></clipPath></defs></svg></button></div></div><div class="prices product-card__prices "><span class='prices__compare ${item.base_price ? '' : 'd-none'}'><s>${item.base_price ? (item.currency_symbol + ' ' +item.base_price.toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2,minimumFractionDigits: 2})) : ''}</s> </span><strong class=prices__value>${item.currency_symbol} ${item.price.toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2,minimumFractionDigits: 2})}</strong></div><div class="fade product-card__buy"><button class="btn btn-primary btn-sm"data-id=${item._id} type=button>Adicionar ao Carrinho</button></div></div></section><div></div></div></div>`).appendTo(`.favorites__body`);
+//         $(`<div class="row item"><div class=col-12><div class="favorite-list product-card"data-sku=${item.sku} data-product-id=${item._id}><section><a class=product-card__link href=/${item.slug} title=${item.name}><div class=product-card__pictures><img alt="${item.pictures ? item.pictures[0].normal.alt : ''}"src="${item.pictures ? item.pictures[0].normal.url : '/assets/img-placeholder.png'}"></div></a><div class=product-card__content-group><div class='row align-items-start'><div class=col><a class=product-card__link href=/${item.slug} title=${item.name}><h3 class=product-card__name>${item.name}</h3></a></div><div class=col-auto><button class="btn product-card__favorite-remove"aria-label="Remover dos favoritos"><svg fill=none height=16 viewBox="0 0 16 16"width=16 xmlns=http://www.w3.org/2000/svg><g clip-path=url(#clip0_21_6728)><path d="M5.33331 8.00004H10.6666M14.6666 8.00004C14.6666 11.6819 11.6819 14.6667 7.99998 14.6667C4.31808 14.6667 1.33331 11.6819 1.33331 8.00004C1.33331 4.31814 4.31808 1.33337 7.99998 1.33337C11.6819 1.33337 14.6666 4.31814 14.6666 8.00004Z"stroke=#666666 stroke-linecap=round stroke-linejoin=round /></g><defs><clipPath id=clip0_21_6728><rect fill=white height=16 width=16 /></clipPath></defs></svg></button></div></div><div class="prices product-card__prices "><span class='prices__window.compare ${item.base_price ? '' : 'd-none'}'><s>${item.base_price ? (item.currency_symbol + ' ' +item.base_price.toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2,minimumFractionDigits: 2})) : ''}</s> </span><strong class=prices__value>${item.currency_symbol} ${item.price.toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2,minimumFractionDigits: 2})}</strong></div><div class="fade product-card__buy"><button class="btn btn-primary btn-sm"data-id=${item._id} type=button>Adicionar ao Carrinho</button></div></div></section><div></div></div></div>`).appendTo(`.favorites__body`);
 //       });      
 //     })
     
@@ -128,3 +128,94 @@ $(document).ready(function(){
 $('.apx_faq-item .hat *').click(function(){
   $(this).closest('.apx_faq-item').toggleClass('visible')
 });
+
+window.compare = {};
+window.compare.init = function(){
+  $(`body`).on(`click`,`.product-compare button`,function(){
+    let product = $(this).attr('data') ? JSON.parse($(this).attr('data')) : {};
+    window.compare.toggleItem(product)
+  });
+  $(`body`).on(`click`,`.specs_compare-trigger, .specs_compare .close`,function(){
+    $(`.specs_compare`).toggleClass(`active`);
+  });
+  window.compare.updateList();
+  if(window.compare.db.length > 1){
+    $('body').addClass('compare-is-active');    
+  }else{
+    $('body').removeClass('compare-is-active');    
+  };
+};
+window.compare.db = sessionStorage.getItem('apx_window.compare_specs') ? JSON.parse(sessionStorage.getItem('apx_window.compare_specs')) : [];
+window.compare.toggleItem = function(product){
+  console.log(product)
+  if(!window.compare.db.find(el => el._id == product._id)){
+    window.compare.db.push(product)
+  }else{
+    window.compare.db = [...window.compare.db.filter(el => el._id != product._id)]
+  }
+  sessionStorage.setItem('apx_window.compare_specs', JSON.stringify(window.compare.db))
+  window.compare.updateList();
+};
+window.compare.inList = function(product){
+  if(window.compare.db.find(el => el._id == product._id)){
+    return true
+  }
+  return false
+
+  
+};
+window.compare.updateList = function(){
+  if(window.compare.db.length > 1){
+    $('body').addClass('compare-is-active');    
+  }else{
+    $('body').removeClass('compare-is-active');    
+  };
+  $(`.specs_compare-product-list, .specs_compare-specs`).empty();
+  window.compare.db.forEach((product, index) => {
+      $('<div class="col"><div class="specs_compare-products-image"><img src="'+((product.image && product.image.length > 0 && product.image[0].zoom && product.image[0].zoom.url)   ? product.image[0].zoom.url : 'sem imagem') + '"/></div><span>'+ product.name +'</span></div>').appendTo('.specs_compare-product-list');
+  });
+
+  
+  $.each(window.compare.extractSpecs(), function(k,i){
+    let r = $(`<div class="specs_row"><div class="row list"><div class="col-md-3"><span class="spec_compare-specs-title">`+ (window.storefront.data.grids.find(el => el.grid_id == k).title || 'N/A') +`</span></div></div></div>`);
+    $.each(i, function(k_, i_){
+      r.find('.list').append(`<div class="col-md"><span class="spec_compare-specs-value">`+ i_ +`</span></div>`);
+    });
+    r.appendTo('.specs_compare-specs')
+  });  
+}
+
+window.compare.extractSpecs = function(){
+  const specsObj = {};
+
+  window.compare.db.forEach((product, index) => {
+      const productKey = `product_${index + 1}`;
+      product.specs.forEach(spec => {
+          if (!specsObj[spec.grid]) {
+              specsObj[spec.grid] = {};
+          }
+          specsObj[spec.grid][productKey] = spec.text;
+      });
+      
+      // Ensure every spec grid exists for each product
+      Object.keys(specsObj).forEach(key => {
+          if (!specsObj[key][productKey]) {
+              specsObj[key][productKey] = "N/A";
+          }
+      });
+  });
+
+  // Ensure every product has a value for every spec grid
+  Object.keys(specsObj).forEach(key => {
+    window.compare.db.forEach((_, index) => {
+          const productKey = `product_${index + 1}`;
+          if (!specsObj[key][productKey]) {
+              specsObj[key][productKey] = "N/A";
+          }
+      });
+  });
+
+  return specsObj;
+};
+window.compare.init();
+  
