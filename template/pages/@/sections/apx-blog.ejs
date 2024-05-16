@@ -4,7 +4,7 @@ const themeCustom = _.settings.theme.custom || ''
 if (Array.isArray(posts) && posts.length) {
   %>
   
-    <div class="apx blog my-4 my-lg-5">
+    <div class="apx blog my-4 my-lg-5" style="--secondary_color:<%= opt.section_secondary_color %>;">
       <div class="<%= opt.container || opt.spacing.container %> ">
         <div class="row justify-content-center mb-3">
           <div class="col-auto">

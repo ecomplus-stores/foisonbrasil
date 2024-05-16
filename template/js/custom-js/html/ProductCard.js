@@ -141,6 +141,10 @@ export default {
   },
 
   methods: {
+    showEquipmentSpecs(){
+      let enable = window.location.pathname.includes(`equipamentos`)
+      return enable
+    },
     setBody (data) {
       this.body = Object.assign({}, data)
       delete this.body.body_html

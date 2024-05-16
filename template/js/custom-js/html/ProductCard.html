@@ -140,7 +140,9 @@
           ></div>
         </slot>
 
-        <div class="product-specs">
+        <div class="product-specs"
+          v-if="showEquipmentSpecs()"
+        >
           <div v-for="(spec, index) in body.specs" :key="index">
             <i>
               <img 
@@ -151,7 +153,9 @@
             <b>{{spec.text}}</b>           
           </div>          
         </div>
-        <div class="product-compare">
+        <div class="product-compare"
+        v-if="showEquipmentSpecs()"
+        >
           <button :data="JSON.stringify({_id:body._id, name: body.name, sku: body.sku, specs: body.specs, image: body.pictures})" type="button">Comparar</button>
         </div>
       </div>

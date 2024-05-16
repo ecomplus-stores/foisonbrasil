@@ -113,10 +113,29 @@ h6{font-size: var(--h6);}
   }
 }
 
+.apx_topbar{
+  background-color:var(--background);
+    *{
+        color:var(--color);
+        font-size: var(--f14);
+        text-align: center;
+        font-weight:500;
+    }
+}
+.apx_topbar.first{
+    *{
+        color:var(--color);
+        font-size: calc(var(--f14) * .8);
+        text-align: center;
+        font-weight:500;
+    }
+}
 
 header#header{
   background: var(--color-bg);
   border: 0;
+  
+
   .header__nav{
     text-align: left;
     display: flex;
@@ -437,6 +456,11 @@ header#header{
         text-transform: uppercase;
         transition: all .2s ease-in-out;
         width: 100%;
+        background: #fff;
+      }
+      button:hover{
+        box-shadow: 7px 7px 5px var(--secondary_color);
+        scale: 1.05;
       }
     }
     .ico{
@@ -1210,4 +1234,171 @@ nav{
   border: 1px solid #f2f2f2;
   opacity: 0;
   transition: opacity .2s ease-in-out;
+  .specs_compare-quantity{
+    background: var(--color1);
+    color: #fff;
+    position: absolute;
+    font-style: normal;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -8px;
+    left: -8px;
+  }
+}
+
+
+.slick-list{margin-left: auto;margin-right: auto;}
+.slick-track:before,
+.slick-track:after{display: none;}
+.slick-slider{
+    .apx_arrow{
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        z-index: 2;
+        border: 0;
+        padding: 0%;
+        background: transparent;
+    }
+    .prev{left: -20px;}
+    .next{right: -20px;}
+}
+.slick-dots{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+    li{
+        width: auto;
+        display: block;
+        margin: 0;
+        button{
+            font-size: 0;
+            background: rgba(0,0,0,.3);
+            height: 2px;
+            width: 30px;
+            border-radius: 0;
+            padding: 0;
+            border: 0;
+            position: relative;
+            
+        }
+        button:before{
+            display:none;
+        }
+
+    }
+    li.slick-active{
+        button{
+            background: #000;
+        }
+        button:after{
+            display: none;
+        }
+    }
+}
+
+.apx_topbar.first{
+  .glide{
+    max-width: 100%;
+    margin: 0 auto;
+    width: 700px;
+  }
+  li{
+    *{font-size: var(--font-size-sm);}
+    font-size: var(--font-size-sm);
+  }
+  .glide__arrows{
+    .glide__arrow{
+      svg{
+        height: 12px;
+        width: 6px;
+        fill: #fff;
+        line{
+          stroke: #fff!important;
+          stroke-width: 6px;
+        }
+      }
+    }
+  }
+}
+
+.timer_{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  .timer__icon{
+      font-weight: bold;
+      font-size: var(--h4);
+      color: #fff;
+  }
+  .timer__count{
+      display: flex;
+      gap: .5rem;
+      background: transparent;
+      span{
+          background: #fff;
+          color: var(--blk);
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          line-height: calc(var(--h4) * .8);
+          border-radius: 0.313rem;
+          height: 46px;
+          width: 46px;
+          font-size: var(--h4);
+          font-weight: bold;
+          align-items: center;
+          padding-top: 4px;
+
+      }
+      span:after{
+          display: block;
+          font-size: var(--smallest);
+          font-weight: 300;
+          line-height: initial;
+      }
+      span.dd:after{content: "dias";}
+      span.hh:after{content: "horas";}
+      span.mm:after{content: "min.";}
+      span.ss:after{content: "seg.";}
+  }
+}
+@media(max-width:990px){
+  .timer_{
+      gap: .5rem;
+      .timer__count{
+          
+          span{
+              height: 40px;
+              width: 40px;
+          }
+      }
+  }
+}
+
+.apx_topbar_timer{
+  background-color:var(--background_color);
+  background-image:var(--background_image);
+  background-size:cover;
+
+  h4{
+    font-size: var(--font-size);
+    margin: 0;
+    font-weight: 600;
+  }
+  a{
+    font-size: var(--font-size-sm);
+    height: auto;
+    line-height: initial;
+    padding: .5rem 1.5rem;
+    background: #fff;
+    box-shadow: 3px 3px 0 var(--secondary_color);
+    color: var(--blk);
+  }
 }

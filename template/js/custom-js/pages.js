@@ -138,12 +138,13 @@ window.compare.init = function(){
   $(`body`).on(`click`,`.specs_compare-trigger, .specs_compare .close`,function(){
     $(`.specs_compare`).toggleClass(`active`);
   });
-  window.compare.updateList();
-  if(window.compare.db.length > 1){
-    $('body').addClass('compare-is-active');    
-  }else{
-    $('body').removeClass('compare-is-active');    
-  };
+  // window.compare.updateList();
+  // console.log(`compare initialized`)
+  // if(window.compare.db.length > 1){
+  //   $('body').addClass('compare-is-active');    
+  // }else{
+  //   $('body').removeClass('compare-is-active');    
+  // };
 };
 window.compare.db = sessionStorage.getItem('apx_window.compare_specs') ? JSON.parse(sessionStorage.getItem('apx_window.compare_specs')) : [];
 window.compare.toggleItem = function(product){
@@ -165,7 +166,8 @@ window.compare.inList = function(product){
   
 };
 window.compare.updateList = function(){
-  if(window.compare.db.length > 1){
+  $(`.specs_compare-quantity`).text(window.compare.db.length)
+  if(window.compare.db.length > 0){
     $('body').addClass('compare-is-active');    
   }else{
     $('body').removeClass('compare-is-active');    
@@ -217,5 +219,90 @@ window.compare.extractSpecs = function(){
 
   return specsObj;
 };
-window.compare.init();
+
+if(window.location.pathname.includes(`equipamentos`)){
+  setTimeout(() => {
+    window.compare.init();
+    window.compare.updateList();
+  }, "1000");
   
+}
+
+  
+// const $timers = $('.timer_');
+// if ($timers.length) {
+//   const formatTime_ = timeNumber => timeNumber.toString().padStart(2, '0')
+//   $timers.each(function () {
+//     const { end, maxHours } = $(this)[0].dataset
+//     const diffSeconds = Math.min(
+//       (new Date(end).getTime() - Date.now()) / 1000,
+//       maxHours * 3600
+//     )
+
+//     if (diffSeconds > 0) {
+//       let hours = Math.floor(diffSeconds / 3600)
+//       const hoursAsSeconds_ = hours * 3600
+//       let minutes = Math.floor((diffSeconds - hoursAsSeconds_) / 60)
+//       let seconds = parseInt(diffSeconds - hoursAsSeconds_ - minutes * 60, 10)
+//       const $timerCount_ = $(this).find('.timer__count')
+
+//       const updateTimerCount_ = () => {
+//         if (seconds > 0) {
+//           seconds--
+//         } else if (minutes > 0) {
+//           minutes--
+//           seconds = 59
+//         } else if (hours > 0) {
+//           hours--
+//           seconds = minutes = 59
+//         } else {
+//           return clearInterval(stopwatch)
+//         }
+//         $timerCount_.html(`<span class="hh">${formatTime_(hours)}</span><span class="mm">${formatTime_(minutes)}</span><span class="ss">${formatTime_(seconds)}</span>`)
+//       }
+//       const stopwatch = setInterval(updateTimerCount_, 1000)
+//       updateTimerCount_()
+//     }
+//   })
+// }
+
+const $timers = $('.timer_');
+if ($timers.length) {
+  const formatTime_ = timeNumber => timeNumber.toString().padStart(2, '0');
+  $timers.each(function () {
+    const { end } = $(this)[0].dataset;
+    const diffSeconds = Math.max((new Date(end).getTime() - Date.now()) / 1000, 0);
+
+    if (diffSeconds > 0) {
+      let days = Math.floor(diffSeconds / (24 * 3600)); // Calcular dias
+      const remainingSeconds = diffSeconds % (24 * 3600); // Calcular tempo restante em segundos
+      let hours = Math.floor(remainingSeconds / 3600);
+      const hoursAsSeconds_ = hours * 3600;
+      let minutes = Math.floor((remainingSeconds - hoursAsSeconds_) / 60);
+      let seconds = parseInt(remainingSeconds - hoursAsSeconds_ - minutes * 60, 10);
+      const $timerCount_ = $(this).find('.timer__count');
+
+      const updateTimerCount_ = () => {
+        if (seconds > 0) {
+          seconds--;
+        } else if (minutes > 0) {
+          minutes--;
+          seconds = 59;
+        } else if (hours > 0) {
+          hours--;
+          seconds = minutes = 59;
+        } else if (days > 0) { // Se houver dias, reduzir um dia
+          days--;
+          hours = 23;
+          minutes = 59;
+          seconds = 59;
+        } else {
+          return clearInterval(stopwatch);
+        }
+        $timerCount_.html(`<span class="dd">${formatTime_(days)}</span><span class="hh">${formatTime_(hours)}</span><span class="mm">${formatTime_(minutes)}</span><span class="ss">${formatTime_(seconds)}</span>`);
+      };
+      const stopwatch = setInterval(updateTimerCount_, 1000);
+      updateTimerCount_();
+    }
+  });
+}

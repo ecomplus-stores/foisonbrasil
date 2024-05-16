@@ -4,13 +4,11 @@ if (!opt.start || timestamp > new Date(opt.start).getTime()) {
   if (timestamp < new Date(opt.end).getTime()) {
     %>
     <div
-      class="timer"
+      class="timer_"
       data-end="<%= opt.end %>"
-      data-max-hours="<%= opt.max_hours %>"
+      data-max-hours="<%= opt.max_hours || 99 %>"
     >
-      <div class="timer__icon">
-        <i class="i-stopwatch"></i>
-      </div>
+      
       <span class="timer__count">__:__:__</span>
       <% if (opt.notes) { %>
         <div class="timer__notes">
