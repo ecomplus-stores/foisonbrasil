@@ -14,9 +14,7 @@
           :alt="img.alt || item.name"
         />
       </component>
-      <div>
-        
-      </div>
+
       <div v-if="minicart || 1 == 1" class="d-flex w-100 align-items-center justify-content-between">
         <small
           v-if="maxQuantity === 0"
@@ -57,11 +55,13 @@
                 11+
               </option>
             </select> -->
-            <div v-else-if="canInputSelect && type == 'quick'" class="w-100 apx_minicart-quantity d-flex align-items-center">
+            <div v-else-if="canInputSelect" class="w-100 apx_minicart-quantity d-flex align-items-center">
               <button type="button" @click="quantity--;updateInputType()">                                
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.91663 7H11.0833" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" stroke="black"/>
+                  <path d="M10.5 5.25L6.75 9L10.5 12.75" stroke="#131313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+  
               </button>
               <input              
                 ref="input"
@@ -75,11 +75,13 @@
                 @blur="updateInputType"
               >
               <button type="button" @click="quantity++;updateInputType()">                
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.99996 2.91663V11.0833M2.91663 6.99996H11.0833" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" stroke="#131313"/>
+                  <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#131313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
               </button>
-            </div>            
+            </div>
+            
           </div>
 
           
@@ -88,14 +90,19 @@
     </div>
 
     <div class="cart-item__data">
-      <div class="row mr-0 align-items-start">
-        <div class="col">
-          <div
+
+      <div
         class="cart-item__name"
         :title="item.name"
       >
+      <small
+        class="cart-item__name-subtitle"
+        v-if="item.kit_product"
+      >
+        {{ formatName(item.kit_product.name) }}
+      </small>
         <a-link
-          v-if="item.slug"
+          v-else-if="item.slug"
           :href="`/${item.slug}`"
         >
           {{ name }}
@@ -104,56 +111,113 @@
           {{ name }}
         </template>
 
-        <small
-          class="cart-item__name-subtitle"
-          v-if="item.kit_product"
-        >
-          {{ formatName(item.kit_product.name) }}
-        </small>
+        
       </div>
-        </div>
-        <div class="col-auto pr-0">
-          
-            <div class="d-flex justify-content-end">
-              <button
-              v-if="!isFreebie"
-              type="button"
-              class="close"
-              :title="i19remove"
-              @click="remove"
-            >
-              <span class="ico-svg">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.00623 14H6.99377C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-              </span>
-            </button>
-              <span
-                v-else
-                class="cart-item__freebie"
-              >
-                <i class="i-gift mr-1"></i>
-                {{ i19freebie }}
-              </span>
-              </div>
-        </div>
-      </div>
-      
       
       <item-customizations
         :item="item"
         class="cart-item__customizations"
       />
-      
-      <div class="row align-items-center" :class="type == 'normal' ? 'mt-3' : ''">
-        <div class="col-auto" v-if="canInputSelect && type != 'quick'">
-          <div  class="w-100 apx_minicart-quantity d-flex align-items-center">
-            <button type="button" @click="quantity--;updateInputType()">                                
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.91663 7H11.0833" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <input              
+      <div v-if="minicart || 1 == 1" class="cart-item__mini-price">
+        <div
+          v-if="!isFreebie || price > 0"
+          class="cart-item__prices"
+        >
+          <div
+            class="cart-item__price-un fade"
+            :class="{ show: quantity > 1 }"
+          >
+            <span>
+                {{ formatMoney(price) }}
+            </span>
+            
+            <small>/un</small>
+          </div>
+            <span
+            v-if="item.kit_product">
+              {{ formatMoney(item.kit_product.price)}}
+            </span>
+            <span v-else>
+                {{ formatMoney(price * quantity) }}
+            </span>
+          
+        </div>
+      </div>
+      <div
+      v-if="item.kit_product"
+      class="kit_item-list">
+        <b>Itens do Kit:</b>
+        <div class="item" v-for="item_ in item.kit_product.composition">
+          
+          {{item_.quantity}}x {{ itemKitData(item_._id).name}}
+        </div>
+      </div>
+      <div v-if="!minicart && 1 != 1" class="d-flex w-100 align-items-center justify-content-between">
+        <small
+          v-if="maxQuantity === 0"
+          class="cart-item__out-of-stock"
+        >
+          {{ i19outOfStock }}
+        </small>
+
+        <template v-else>
+          <div
+            :title="i19quantity"
+            class="cart-item__quantity"
+          >
+            <strong v-if="item.kit_product || item.keep_item_quantity">
+              {{ quantity }}x
+            </strong>
+
+            <div v-else-if="canInputSelect" class="w-100 apx_minicart-quantity d-flex align-items-center">
+              <button type="button" @click="quantity--;updateInputType()">                                
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 6L9 12L15 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>  
+              </button>
+              <input              
+                ref="input"
+                :type="inputType && inputType !== 'select' ? inputType : 'number'"
+                :min="minQuantity"
+                :max="maxQuantity"
+                :step="isIntegerQnt ? null : 0.001"
+                class="form-control"
+                v-model.number="quantity"
+                :readonly="!price"
+                @blur="updateInputType"
+              >
+              <button type="button" @click="quantity++;updateInputType()">                
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6L15 12L9 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>  
+              </button>
+            </div>
+            <!-- <select
+              v-else-if="canInputSelect && inputType === 'select'"
+              class="custom-select"
+              v-model.number="quantity"
+              :disabled="!price"
+              @change="updateInputType"
+            >
+              <option
+                v-for="qnt in Math.min(maxQuantity, 10)"
+                v-if="qnt >= minQuantity"
+                :key="`qnt-${qnt}`"
+                :value="qnt"
+                :selected="qnt === quantity"
+              >
+                {{ qnt }}
+              </option>
+              <option
+                v-if="maxQuantity > 10"
+                :value="11"
+              >
+                11+
+              </option>
+            </select> -->
+
+            <input
+              v-else
               ref="input"
               :type="inputType && inputType !== 'select' ? inputType : 'number'"
               :min="minQuantity"
@@ -164,151 +228,53 @@
               :readonly="!price"
               @blur="updateInputType"
             >
-            <button type="button" @click="quantity++;updateInputType()">                
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.99996 2.91663V11.0833M2.91663 6.99996H11.0833" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-          </div>  
-        </div>  
-        <div class="col-auto">
-          <div v-if="minicart || 1 == 1" class="cart-item__mini-price">
+          </div>
+
+          <div
+            v-if="!isFreebie || price > 0"
+            class="cart-item__prices"
+          >
             <div
-              v-if="!isFreebie || price > 0"
-              class="cart-item__prices"
+              class="cart-item__price-un fade"
+              :class="{ show: quantity > 1 }"
             >
-              <div
-                class="cart-item__price-un fade"
-                :class="{ show: quantity > 1 }"
-              >
-                <span v-if="parseInt(formatMoney(price).split(',')[1]) == 0">
-                    {{ formatMoney(price) }}
-                </span>
-                <span v-else>
-                    {{ formatMoney(price) }}
-                </span>
-                
-                <small>/un</small>
-              </div>
-              <span v-if="parseInt(formatMoney(price).split(',')[1]) == 0">
-                {{ formatMoney(price * quantity) }}
-                </span>
-                <span v-else>
-                    {{ formatMoney(price * quantity) }}
-                </span>
+              <span>
+                  {{ formatMoney(price) }}
+              </span>
               
+              <small>/un</small>
             </div>
+            
+              <span>
+                  {{ formatMoney(price * quantity) }}
+              </span>
+            
           </div>
-          <div v-if="!minicart && 1 != 1" class="d-flex w-100 align-items-center justify-content-between">
-            <small
-              v-if="maxQuantity === 0"
-              class="cart-item__out-of-stock"
-            >
-              {{ i19outOfStock }}
-            </small>
-    
-            <template v-else>
-              <div
-                :title="i19quantity"
-                class="cart-item__quantity"
-              >
-                <strong v-if="item.kit_product || item.keep_item_quantity">
-                  {{ quantity }}x
-                </strong>
-    
-                <div v-else-if="canInputSelect" class="w-100 apx_minicart-quantity d-flex align-items-center">
-                  <button type="button" @click="quantity--;updateInputType()">                                
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15 6L9 12L15 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>  
-                  </button>
-                  <input              
-                    ref="input"
-                    :type="inputType && inputType !== 'select' ? inputType : 'number'"
-                    :min="minQuantity"
-                    :max="maxQuantity"
-                    :step="isIntegerQnt ? null : 0.001"
-                    class="form-control"
-                    v-model.number="quantity"
-                    :readonly="!price"
-                    @blur="updateInputType"
-                  >
-                  <button type="button" @click="quantity++;updateInputType()">                
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 6L15 12L9 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>  
-                  </button>
-                </div>
-                <!-- <select
-                  v-else-if="canInputSelect && inputType === 'select'"
-                  class="custom-select"
-                  v-model.number="quantity"
-                  :disabled="!price"
-                  @change="updateInputType"
-                >
-                  <option
-                    v-for="qnt in Math.min(maxQuantity, 10)"
-                    v-if="qnt >= minQuantity"
-                    :key="`qnt-${qnt}`"
-                    :value="qnt"
-                    :selected="qnt === quantity"
-                  >
-                    {{ qnt }}
-                  </option>
-                  <option
-                    v-if="maxQuantity > 10"
-                    :value="11"
-                  >
-                    11+
-                  </option>
-                </select> -->
-    
-                <input
-                  v-else
-                  ref="input"
-                  :type="inputType && inputType !== 'select' ? inputType : 'number'"
-                  :min="minQuantity"
-                  :max="maxQuantity"
-                  :step="isIntegerQnt ? null : 0.001"
-                  class="form-control"
-                  v-model.number="quantity"
-                  :readonly="!price"
-                  @blur="updateInputType"
-                >
-              </div>
-    
-              <div
-                v-if="!isFreebie || price > 0"
-                class="cart-item__prices"
-              >
-                <div
-                  class="cart-item__price-un fade"
-                  :class="{ show: quantity > 1 }"
-                >
-                  <span v-if="parseInt(formatMoney(price).split(',')[1]) == 0">
-                      {{ formatMoney(price).split(',')[0] }}
-                  </span>
-                  <span v-else>
-                      {{ formatMoney(price) }}
-                  </span>
-                  
-                  <small>/un</small>
-                </div>
-                <span v-if="parseInt(formatMoney(price).split(',')[1]) == 0">
-                  {{ formatMoney(price * quantity).split(',')[0] }}
-                  </span>
-                  <span v-else>
-                      {{ formatMoney(price * quantity) }}
-                  </span>
-                
-              </div>
-            </template>
-          </div>
-        </div>             
+        </template>
       </div>
-      
       <div :class="!minicart ? 'topper' : ''">
-        
+        <div class="w-100 d-flex justify-content-end">
+          <button
+          v-if="!isFreebie"
+          type="button"
+          class="close"
+          :title="i19remove"
+          @click="remove"
+        >
+          <span class="ico-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.9999 9L8.99994 15M9.00006 9L15.0001 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <span
+          v-else
+          class="cart-item__freebie"
+        >
+          <i class="i-gift mr-1"></i>
+          {{ i19freebie }}
+        </span>
+        </div>
       
       </div>
     </div>

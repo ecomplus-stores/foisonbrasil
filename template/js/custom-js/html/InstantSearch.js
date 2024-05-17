@@ -141,7 +141,7 @@ export default {
   },
   mounted() {
     const $input = $('#search-input-m')
-    const $toggleSearch = $('#m-toggleSearch')
+    const $toggleSearch = $('#mobile-search-btn')
     if ($input.length) {
       $input.on('click', () => {
         this.$emit('update:is-visible', true)

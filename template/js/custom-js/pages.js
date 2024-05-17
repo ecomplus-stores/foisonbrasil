@@ -72,7 +72,7 @@ $(document).ready(function(){
   // }
   
 
-  // $('body').css('--header-vh-main', ($('header#header').innerHeight()) + 'px');
+  $('body').css('--header-vh', ($('header#header').innerHeight()) + 'px');
 
   //adiciona nome do usuário aos elementos username
   const client = EcomPassport.ecomPassport.getCustomer();   
@@ -306,3 +306,5 @@ if ($timers.length) {
     }
   });
 }
+
+

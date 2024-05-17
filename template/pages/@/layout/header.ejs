@@ -145,6 +145,18 @@ const hasAllDepartments = header.menu_all_departments
 <header class="header" id="header">
   
   <div class="header__container container-fluid">
+    <div id="login-modal">
+      <!--
+        `LoginModal` should be rendered here:
+        https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/LoginModal.html
+      -->
+    </div>
+    <div id="cart-quickview">
+      <!--
+        `CartQuickview` should be rendered here:
+        https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/CartQuickview.html
+      -->
+    </div>
     <div class="header__row row<%= isCentralizedLogo ? ' header__row--centralized-logo' : '' %><%= isCentralizedLogo && isCategoriesNavFull ? ' header__row--full-width' : '' %>">
       <div class="col-auto p-0 header__toggler-block">
         <button
@@ -174,19 +186,26 @@ const hasAllDepartments = header.menu_all_departments
           role="group"
           aria-label="<%= _.dictionary('myAccount') %>"
         >
-          <button
-            class="btn btn-lg"
-            id="mobile-search-btn"
-            type="button"
-            data-toggle="collapse"
-            data-target="#search-bar"
-            aria-expanded="true"
-            aria-controls="search-bar"
-            aria-controls="search-bar"
-            title="<%= _.dictionary('searchProducts') %>"
-          >
-          <img src="/assets/foison_search.svg"/>
-          </button>
+          <div class="search___container">
+            <button
+              class="btn btn-lg"
+              id="mobile-search-btn"
+              type="button"
+           
+              aria-controls="search-bar"
+              aria-controls="search-bar"
+              title="<%= _.dictionary('searchProducts') %>"
+            >
+            <img src="/assets/foison_search.svg"/>
+            </button>
+            <div id="instant-search">
+              <!--
+                `InstantSearch` should be open on input focus:
+                https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/InstantSearch.html
+              -->
+            </div>
+          </div>
+          
 
           <a
             id="user-button"
@@ -216,18 +235,7 @@ const hasAllDepartments = header.menu_all_departments
           </a>
         </div>
 
-        <div id="login-modal">
-          <!--
-            `LoginModal` should be rendered here:
-            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/LoginModal.html
-          -->
-        </div>
-        <div id="cart-quickview">
-          <!--
-            `CartQuickview` should be rendered here:
-            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/CartQuickview.html
-          -->
-        </div>
+        
       </div>
 
       <% if (header.search_input) {
@@ -258,12 +266,7 @@ const hasAllDepartments = header.menu_all_departments
             >
               <i class="i-search"></i>
             </button>
-            <div id="instant-search">
-              <!--
-                `InstantSearch` should be open on input focus:
-                https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/InstantSearch.html
-              -->
-            </div>
+            
           </form>
 
           <% if (_.settings.domain) { %>
@@ -342,7 +345,7 @@ const hasAllDepartments = header.menu_all_departments
                   </nav>
               </div>
             <% } %>
-            <% categories.forEach(({ slug, name, _id}) => { %>
+            <% categories.forEach(({ slug, name, _id, icon}) => { %>
               <% let $categoryLink %>
               <div class="d-inline-block">
                 <a
@@ -367,8 +370,9 @@ const hasAllDepartments = header.menu_all_departments
                       }
                     %>
                     <nav class="header__submenu<%= fullWidthSubmenu ? ' header__submenu--full' : '' %>" id="<%= `s-${slug.replace(/\//g, '_')}` %>">
+                      <div class="header___links">
                       <% subcategories.forEach(subcategory => { %>
-                        <div>               
+                        <div class="header___link">               
                           <a id="sd-<%= subcategory._id %>" href="/<%= subcategory.slug %>"><%= subcategory.name %></a>
                           <% const thirdCategories = _.categories.filter(({ parent }) => parent && parent.slug === subcategory.slug) %>
                           <%
@@ -383,8 +387,16 @@ const hasAllDepartments = header.menu_all_departments
                               <%= thirdCategory.name %>
                             </a>
                           <% }) %>
-                        </div>
+                        </div>                        
                       <% }) %>
+                      </div>
+                      <% if(icon){ %>
+                        <div>
+                          <a href="<%- slug %>">
+                            <img src="<%= icon.url %>"/>
+                          </a>
+                        </div>
+                      <% } %>
                     </nav>
                   <% } %>
                 <% } %>
