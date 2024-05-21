@@ -13,7 +13,7 @@ if (Array.isArray(posts) && posts.length) {
             }) %> 
           </div>
         </div>
-        <div class="row">
+        <div class="row posts">
           <%
           const postsList = []
           posts.forEach(slug => { 
@@ -27,7 +27,7 @@ if (Array.isArray(posts) && posts.length) {
           postsList.forEach(post => { 
             const { title, slug, thumbnail, description, date } = post 
             %>
-            <div class="col-12 col-md-3">
+            <div class="col-6 col-md-3">
               <div class="card">
                 <% if (thumbnail) { %>
                   <a href="/posts/<%= slug %>">

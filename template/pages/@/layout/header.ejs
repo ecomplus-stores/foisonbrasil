@@ -59,7 +59,7 @@ const hasAllDepartments = header.menu_all_departments
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <% if(apx_header?.topbar_timer?.title) { %>
-        <div class="col-auto">
+        <div class="col col-md-auto">
           <h4
             style="color:<%= apx_header?.topbar_timer?.color %>;"
           ><%- apx_header?.topbar_timer?.title %></h4>
@@ -80,7 +80,7 @@ const hasAllDepartments = header.menu_all_departments
   </div>
 <% } %>
 <% if(apx_header?.topbar_1?.topbar_1?.length > 0){ %>
-  <div class="apx_topbar first py-md-2 py-1" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
+  <div class="apx_topbar first py-md-2 py-2" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -165,12 +165,10 @@ const hasAllDepartments = header.menu_all_departments
           onclick="toggleSidenav()"
           aria-label="Toggle side navigation"
         >
-          <i class="header__toggler-icon i-bars"></i>
-          <% if (!categories.length) { %>
-            <span class="d-none d-lg-inline">
-              Menu
-            </span>
-          <% } %>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.75 11H19.25M2.75 5.5H19.25M2.75 16.5H13.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+  
         </button>
       </div>
 
@@ -216,7 +214,7 @@ const hasAllDepartments = header.menu_all_departments
           >
             
           <img src="/assets/foison_user.svg"/>
-          <div>            
+          <div class="d-md-inline d-none">            
               Olá, <span username></span>
               <small>
                 Minha conta

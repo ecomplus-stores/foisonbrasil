@@ -51,12 +51,12 @@ const productProperties = [];
 </script>
 <section class="newsletter my-5">
   <div class="container">
-    <div class="bg p-5">
+    <div class="bg p-md-5">
       <div class="row align-items-center p-4">
         <div class="col-12 col-md-7">
             <div class="apx-title-section" >
             <h2 class="mb-md-4">Assine nossa <b>newsletter</b><small>e receba as últimas novidades</small></h2>
-              <p class="mb-md-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.</p>
+              <p class="mb-md-4 d-md-block d-none">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.</p>
             </div>
           
         </div>  
@@ -66,8 +66,8 @@ const productProperties = [];
             <path d="M139.198 20.7222L148.415 83.9755L148.572 85.0539L149.647 85.2377L212.652 96.0179L155.343 124.33L154.366 124.813L154.523 125.892L163.74 189.145L119.104 143.39L118.343 142.61L117.366 143.092L60.0569 171.405L89.7793 114.814L90.2861 113.849L89.525 113.069L44.8887 67.3138L107.895 78.094L108.969 78.2778L109.475 77.313L139.198 20.7222Z" fill="white" stroke="black" stroke-width="3"/>
           </svg>  
         </div>
-        <div class="col-12 col-md-4 pl-md-5">
-          <div class="apx-title-section">
+        <div class="col-12 col-md-4 pl-md-5 mt-md-0 mt-3">
+          <div class="apx-title-section d-md-block d-none">
             <div class="h2 mb-3">
             Se inscreva, <b>é grátis</b></div>
             </div>
@@ -75,7 +75,7 @@ const productProperties = [];
           <form action="">
             <input type="text" placeholder="Nome"/>
             <input type="email" placeholder="E-mail">
-            <button type="button">Assinar</button>
+            <button type="button">Assinar <span class="d-md-none d-inline">Newsletter</span></button>
           </form>
         </div>
       </div>
@@ -86,9 +86,9 @@ const productProperties = [];
   
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-3">
+      <div class="col-12 col-lg-3 order-lg-first order-last mt-md-0 mt-4">
         <div class="footer__contacts">
-          <div class="mb-4">
+          <div class="mb-4 d-md-block d-none">
           <%- await include('@/layout/inc/logo', { _ }) %>
           </div>
 
@@ -178,9 +178,7 @@ const productProperties = [];
                 >
                   <%= footer.links_1.title || _.dictionary('pages') %>
                   <button type="button" class="d-inline d-md-none">                    
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>  
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> 
                   </button>
                 </a>
                 <div class="collapse" id="footer-pages">
@@ -224,9 +222,7 @@ const productProperties = [];
                 >
                   <%= footer.links_2.title || _.dictionary('categories') %>
                   <button type="button" class="d-inline d-md-none">                    
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>  
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   </button>
                 </a>
                 <div class="collapse" id="footer-categories">
@@ -269,11 +265,7 @@ const productProperties = [];
                   aria-expanded="false"
                   aria-controls="footer-payments"
                 >Pagamento
-                <button type="button" class="d-inline d-md-none">                    
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>  
-                </button>
+                
                 </a>
                 <p class="footer__payment-methods collapse" id="footer-payments">
                   <% Object.keys(footer.payment_methods).forEach(method => { %>
@@ -290,11 +282,7 @@ const productProperties = [];
                   aria-expanded="false"
                   aria-controls="footer-security"
                 >Segurança
-                <button type="button" class="d-inline d-md-none">                    
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>  
-                </button>
+                
                 </a>
                 <div class="footer__stamps collapse" id="footer-security">
                   <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>

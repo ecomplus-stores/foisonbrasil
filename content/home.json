@@ -140,7 +140,7 @@
       "page": 1,
       "description_text": "Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. ",
       "visibility": "d-block d-md-block",
-      "title_text": "Confira nossos últimos <b>lançamentos</b>",
+      "title_text": "Confira nossos <br class=`d-md-none`>últimos <b>lançamentos</b>",
       "shuffle": false,
       "type": "apx-collection-shelf",
       "limit": 8,
