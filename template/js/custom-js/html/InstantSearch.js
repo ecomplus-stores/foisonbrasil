@@ -54,7 +54,8 @@ export default {
       history: [],
       totalSearchResults: 0,
       isSearching: false,
-      hasSearched: false
+      hasSearched: false,
+      isMobile_ : window.innerWidth < 990
     }
   },
 
@@ -67,6 +68,7 @@ export default {
   },
 
   methods: {
+    
     hide () {
       this.$emit('update:is-visible', false)
       const $toggleSearch = $('#m-toggleSearch')
@@ -140,6 +142,7 @@ export default {
     }
   },
   mounted() {
+    
     const $input = $('#search-input-m')
     const $toggleSearch = $('#mobile-search-btn')
     if ($input.length) {

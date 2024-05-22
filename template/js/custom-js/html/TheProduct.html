@@ -204,77 +204,6 @@
          
 
           <template v-else>
-            <slot name="prices">
-              <p class="product__prices">
-                <a-prices
-                  :product="ghostProductForPrices"
-                  :is-literal="true"
-                  :is-big="true"
-                  @fix-price="price => fixedPrice = price"
-                />
-
-                <slot
-                  name="discount-tag"
-                  v-bind="{ discount }"
-                >
-                  <span
-                    v-if="discount > 0"
-                    class="product__discount"
-                  >
-                    {{ i19discountOf }}
-                    <strong>{{ discount }}%</strong>
-                  </span>
-                </slot>
-              </p>
-            </slot>
-
-            <slot
-              name="variations"
-              v-if="hasVariations"
-            >
-              <product-variations
-                :product="body"
-                :selected-id.sync="selectedVariationId"
-                :max-options-btns="maxVariationOptionsBtns"
-                @select-option="handleGridOption"
-              />
-              <a-alert :can-show="hasClickedBuy && !selectedVariationId">
-                {{ i19selectVariationMsg }}
-              </a-alert>
-
-              <slot name="variations-info"/>
-            </slot>
-
-            <slot
-              name="customizations"
-              v-if="body.customizations"
-            >
-              <div
-                v-for="custom in body.customizations"
-                v-if="custom.custom_value"
-                :key="custom._id"
-                class="product__customization form-group"
-                :class="custom.grid_id ? `product__customization--${custom.grid_id}` : null"
-              >
-                <label :for="`c-${custom._id}`">
-                  {{ custom.label }}
-                  <span
-                    v-if="custom.add_to_price"
-                    class="badge badge-secondary"
-                  >
-                    {{ formatAdditionalPrice(custom.add_to_price) }}
-                  </span>
-                </label>
-
-                <input
-                  type="text"
-                  class="form-control"
-                  :id="`c-${custom._id}`"
-                  @keyup="ev => setCustomizationOption(custom, ev.target.value)"
-                >
-              </div>
-            </slot>
-            
             <div
               v-if="isKit"
               class="product__kit"
@@ -326,7 +255,80 @@
               </slot>
             </div>
 
-            <template v-else>
+            <slot
+              name="variations"
+              v-if="hasVariations"
+            >
+              <product-variations
+                :product="body"
+                :selected-id.sync="selectedVariationId"
+                :max-options-btns="maxVariationOptionsBtns"
+                @select-option="handleGridOption"
+              />
+              <a-alert :can-show="hasClickedBuy && !selectedVariationId">
+                {{ i19selectVariationMsg }}
+              </a-alert>
+
+              <slot name="variations-info"/>
+            </slot>
+
+            <slot
+              name="customizations"
+              v-if="body.customizations"
+            >
+              <div
+                v-for="custom in body.customizations"
+                v-if="custom.custom_value"
+                :key="custom._id"
+                class="product__customization form-group"
+                :class="custom.grid_id ? `product__customization--${custom.grid_id}` : null"
+              >
+                <label :for="`c-${custom._id}`">
+                  {{ custom.label }}
+                  <span
+                    v-if="custom.add_to_price"
+                    class="badge badge-secondary"
+                  >
+                    {{ formatAdditionalPrice(custom.add_to_price) }}
+                  </span>
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  :id="`c-${custom._id}`"
+                  @keyup="ev => setCustomizationOption(custom, ev.target.value)"
+                >
+              </div>
+            </slot>
+            
+
+            <slot name="prices">
+              <p class="product__prices">
+                <a-prices
+                  :product="ghostProductForPrices"
+                  :is-literal="true"
+                  :is-big="true"
+                  @fix-price="price => fixedPrice = price"
+                />
+
+                <slot
+                  name="discount-tag"
+                  v-bind="{ discount }"
+                >
+                  <span
+                    v-if="discount > 0"
+                    class="product__discount"
+                  >
+                    {{ i19discountOf }}
+                    <strong>{{ discount }}%</strong>
+                  </span>
+                </slot>
+              </p>
+            </slot>
+
+            
+            <template>
               <div
                 v-if="!isVariationInStock"
                 class="product__out-of-stock"
@@ -349,7 +351,26 @@
                   :has-buy-button="false"
                   @set-quantity="({ quantity }) => qntToBuy = quantity"
                 >
-                  <span @click="buy">
+                <span v-if="isKit" @click="buy_kit">
+                  
+                  <slot
+                    name="buy"
+                    v-bind="{ hasClickedBuy, isOnCart }"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-lg btn-primary"
+                      :disabled="hasClickedBuy && !isOnCart"
+                    >
+                      <slot name="buy-button-content">
+                        <i class="i-shopping-bag mr-1"></i>
+                        {{ strBuy }} A
+                      </slot>
+                    </button>
+                  </slot>
+                </span>
+                  <span v-else @click="buy">
+                    
                     <slot
                       name="buy"
                       v-bind="{ hasClickedBuy, isOnCart }"
@@ -361,7 +382,7 @@
                       >
                         <slot name="buy-button-content">
                           <i class="i-shopping-bag mr-1"></i>
-                          {{ strBuy }}
+                          {{ strBuy }} B
                         </slot>
                       </button>
                     </slot>

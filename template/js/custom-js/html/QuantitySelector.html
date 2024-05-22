@@ -44,26 +44,7 @@
       <strong>{{ max }}</strong>
     </a-alert>
 
-    <div
-      v-if="hasBuyButton"
-      class="quantity-selector__buy product__buy mt-4"
-    >
-      <slot
-        name="buy"
-        v-bind="{ selectedQnts, buy }"
-      >
-        <button
-          type="button"
-          class="btn btn-lg btn-primary my-3"
-          @click="buy"
-        >
-          <slot name="buy-button-content">
-            <i class="i-shopping-bag mr-1"></i>
-            {{ strBuy }}
-          </slot>
-        </button>
-      </slot>
-    </div>
+    
   </div>
   <div v-else>
     <div
@@ -130,26 +111,7 @@
     </a-alert>
     
     
-    <div
-      v-if="hasBuyButton"
-      class="quantity-selector__buy"
-    >
-      <slot
-        name="buy"
-        v-bind="{ selectedQnts, buy }"
-      >
-        <button
-          type="button"
-          class="btn btn-lg btn-primary my-3"
-          @click="buy"
-        >
-          <slot name="buy-button-content">
-            <i class="i-shopping-bag mr-1"></i>
-            {{ strBuy }}
-          </slot>
-        </button>
-      </slot>
-    </div>
+    
   </div>
   
 </div>

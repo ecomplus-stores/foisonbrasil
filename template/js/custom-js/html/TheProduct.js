@@ -34,7 +34,8 @@ import {
   specTextValue as getSpecTextValue,
   specValueByText as getSpecValueByText,
   formatMoney,
-  $ecomConfig
+  $ecomConfig,
+  findBySlug
 } from '@ecomplus/utils'
 
 import { store, modules } from '@ecomplus/client'
@@ -166,7 +167,8 @@ export default {
       kitItems: [],
       currentTimer: null,
       productUpselling:[],
-      upselling_pop_visibility:[]
+      upselling_pop_visibility:[],
+      upsellingProductData: []
     }
   },
 
@@ -268,6 +270,18 @@ export default {
             }
           })
         }
+        if(this.productUpselling){
+          //console.log(`add upsell a`,this.productUpselling)
+          this.productUpselling.forEach( upsell => {
+            //console.log(`add upsell`, upsell,this.upsellingProductData)
+            let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
+            //console.log(q)
+            if(q){
+              price += q.price
+            }
+          })
+        }
+        
         prices[field] = price
       })
       const ghostProduct = { ...this.body }
@@ -416,8 +430,64 @@ export default {
         this.isFavorite = toggleFavorite(this.body._id, this.ecomPassport)
       }
     },
+    totalQuantity () {
+      let total = 0
+      this.kitItems.forEach(item => {
+        total += item.quantity        
+      })
+      return total
+    },
+
+    buy_kit () {
+      this.alertVariant = 'warning'
+  
+      const items = []
+      const composition = this.kitItems.map(item => ({
+        _id: item.product_id,
+        variation_id: item.variation_id,
+        quantity: item.quantity
+      }))
+      this.kitItems.forEach(item => {
+        const quantity = item.quantity
+        //if (quantity > 0) {
+          const newItem = { ...item, quantity }
+          delete newItem.customizations
+          //if (this.kitProductId) {
+            newItem.kit_product = {
+              _id: this.body._id,
+              name: this.body.name,
+              pack_quantity: this.totalQuantity()+1,
+              price: this.fixedPrice,
+              composition
+            }
+          //}
+          if (this.slug) {
+            newItem.slug = this.slug
+          }
+          items.push(newItem)
+          if (this.canAddToCart) {
+            ecomCart.addItem(newItem)
+          }
+        //}
+      })
+      this.$emit('buy', { items })       
+    },
+
+    getUpsellingProduct(){
+      if(this.product_cms && this.product_cms.upselling[0] && this.product_cms.upselling[0].upselling_list){
+      const ecomSearch = new EcomSearch()
+      ecomSearch
+        .setSkus(this.product_cms.upselling[0].upselling_list.map(item => item.products_sku))
+        .fetch(true)
+        .then(() => {
+          this.upsellingProductData = [...ecomSearch.getItems()]
+        })
+        .catch(console.error)
+      }
+    },
 
     buy () {
+      
       this.hasClickedBuy = true
       const product = sanitizeProductBody(this.body)
       let variationId
@@ -432,6 +502,20 @@ export default {
       this.$emit('buy', { product, variationId, customizations })
       if (this.canAddToCart) {
         ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
+
+        if(this.productUpselling){
+          //console.log(`add upsell a`,this.productUpselling)
+          this.productUpselling.forEach( upsell => {
+            //console.log(`add upsell`, upsell,this.upsellingProductData)
+            let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
+            //console.log(q)
+            if(q){
+              //console.log(`add upsell x`,q)
+              ecomCart.addProduct(q)
+            }
+          })
+        }
+        
       }
       this.isOnCart = true
     },
@@ -556,9 +640,11 @@ export default {
     }
     this.isFavorite = checkFavorite(this.body._id || this.productId, this.ecomPassport)
     this.product_cms = window.product_cms_content
+    this.getUpsellingProduct()
   },
 
   mounted () {
+    
     if (this.$refs.sticky && !this.isWithoutPrice) {
       let isBodyPaddingSet = false
       const setStickyBuyObserver = (isToVisible = true) => {

@@ -38,16 +38,26 @@ if (mainCategories) {
 %>
 
 <aside id="menu" class="menu shadow">
+  <header class="card-header d-md-none d-block">
+    <div class="row apx-side-heading">
+      <div class="col">
+        <span>Menu</span>
+      </div>
+      <div class="col-auto">
+        <button
+          type="button"
+          class="close"
+          onclick="toggleSidenav()"
+        >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
   <nav class="accordion" id="accordion-menu">
-    <button
-      class="menu__btn menu__btn--close btn"
-      type="button"
-      onclick="toggleSidenav()"
-      aria-label="Toggle Side Navigation"
-    >
-      <i class="i-times"></i>
-    </button>
-
+    
     <% for (const slug in categoryParents) { %>
       <% if (categoryParents.hasOwnProperty(slug)) { %>
         <% let category, parent %>
@@ -83,7 +93,9 @@ if (mainCategories) {
                 aria-controls="<%= submenuId %>"
               <% } %>
             >
+              
               <i class="i-arrow-left"></i>
+              <%- category.name %>
             </button>
           <% } %>
 
@@ -105,19 +117,15 @@ if (mainCategories) {
                 id="c-<%= subcategory._id %>"
                 class="menu__item"
               >
-                <% if (subcategory.icon) { %>
-                  <span class="menu__item-icon">
-                    <img
-                      data-src="<%= subcategory.icon.url %>"
-                      alt="<%= subcategory.icon.alt || subcategory.name %>"
-                      class="lozad"
-                      data-preload="<%= (index * 200) %>"
-                    >
-                  </span>
-                <% } %>
+                
                 <span>
                   <%= subcategory.name %>
                 </span>
+                <% if (hasSubmenu) { %>
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> 
+                  </div>
+                <% } %>
               </a>
             <% }) %>
           </div>

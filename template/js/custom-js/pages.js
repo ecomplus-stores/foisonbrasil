@@ -174,14 +174,16 @@ window.compare.updateList = function(){
   };
   $(`.specs_compare-product-list, .specs_compare-specs`).empty();
   window.compare.db.forEach((product, index) => {
-      $('<div class="col"><div class="specs_compare-products-image"><img src="'+((product.image && product.image.length > 0 && product.image[0].zoom && product.image[0].zoom.url)   ? product.image[0].zoom.url : 'sem imagem') + '"/></div><span>'+ product.name +'</span></div>').appendTo('.specs_compare-product-list');
+      $('<div class="col-5 col-md"><div class="specs_compare-products-image"><img src="'+((product.image && product.image.length > 0 && product.image[0].zoom && product.image[0].zoom.url)   ? product.image[0].zoom.url : 'sem imagem') + '"/></div><span>'+ product.name +'</span></div>').appendTo('.specs_compare-product-list');
   });
 
   
   $.each(window.compare.extractSpecs(), function(k,i){
-    let r = $(`<div class="specs_row"><div class="row list"><div class="col-md-3"><span class="spec_compare-specs-title">`+ (window.storefront.data.grids.find(el => el.grid_id == k).title || 'N/A') +`</span></div></div></div>`);
+    console.log(k,i)
+    let r = $(`<div class="specs_row"><div class="row list"><div class="col-md-3 d-none d-md-block"><span class="spec_compare-specs-title">`+ (window.storefront.data.grids.find(el => el.grid_id == k).title || 'N/A') +`</span></div></div></div>`);
     $.each(i, function(k_, i_){
-      r.find('.list').append(`<div class="col-md"><span class="spec_compare-specs-value">`+ i_ +`</span></div>`);
+      
+      r.find('.list').append(`<div class="col-md col-5"><span class="spec_compare-specs-value"><span class="d-md-none d-block">${(window.storefront.data.grids.find(el => el.grid_id == k).title || 'N/A')}</span>`+ i_ +`</span></div>`);
     });
     r.appendTo('.specs_compare-specs')
   });  

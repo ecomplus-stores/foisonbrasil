@@ -25,11 +25,20 @@ if (Array.isArray(apx_products_) && apx_products_.length > 0) {
   })
 }
 let cms_content = current_lib_[0] || false
+
+const productProperties = [];
+  const apx_products = _.cms('apx_properties')
+  if (Array.isArray(apx_products) && apx_products.length > 0) {      
+    apx_products.forEach(item => { 
+      const lib = (_.cms(`apx_properties/${item}`))
+      productProperties.push(lib)    
+    })
+  }
 %>
 <script>
   window.product_cms_content = JSON.parse(<%- JSON.stringify(JSON.stringify(cms_content || [])) %>)
 </script>
-<div id="product-block" class="product-block my-4 mb-lg-5">
+<div id="product-block" class="product-block my-md-4 mb-lg-5">
   <div class="container">
     <section
       id="product"
@@ -47,6 +56,14 @@ let cms_content = current_lib_[0] || false
 
       <div class="row">
         <div class="col-12 col-md-6 mb-4">
+          <div class="d-block d-md-none">
+            <h1 class="product__name my-md-4 py-2">
+              <%= _.ecomUtils.name(_.state) %>
+            </h1>
+            <p class="product__sku d-none">
+              COD: <%= _.state.sku %>
+            </p>
+          </div>
           <!-- Picture(s) gallery will be inserted dynamically within `TheProduct` -->
           <% if (_.state.pictures) { %>
             <% const imgObj = _.ecomUtils.img(_.state, null, 'big') %>
@@ -107,16 +124,90 @@ let cms_content = current_lib_[0] || false
           <% } %>
           <!-- Custom additional code on bottom of images gallery -->
           
-          
-          <div id="product-cms-content">
+          <div class="product-cms-content d-md-block d-none">
+            <% if (_.state.short_description) { %>
+              <div class="content-block my-5">
+                <div class="d-flex align-items-center gap-1">
+                  <img class="mr-2" src="/img/file-06.svg"/>
+                  <h4 class="m-0"><b>Sobre</b> o produto</h4>
+                </div>
+                <p class="html-clearfix">
+                  <%= _.state.short_description %>
+                </p>
+              </div>              
+            <% } %>
+            <% if (_.state.body_html) { %>
+              <div class="content-block my-5">
+                <div class="d-flex align-items-center gap-1">
+                  <img class="mr-2" src="/img/file-06.svg"/>
+                  <h4 class="m-0"><b>Detalhes</b> do produto</h4>
+                </div>
+                <div class="html-clearfix">
+                 <%- _.state.body_html.replace(
+                  /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,
+                  '<img class="lozad" data-src="$2" $1 $3>'
+                ).replace(
+                  /<img class="lozad" data-src="([^'"]+)"([^>]+)class=['"]([^'"]+)['"]([^/>]+)?>/g,
+                  '<img class="lozad $3" data-src="$1" $2 $4>'
+                ) %>
+                </div>
+              </div> 
+            <% } %>
+            <div>
+            <%- await include('@/helpers/widgets-append', {
+              _, opt: {}, field: 'productDescriptionAppend'
+            }) %>
+            </div>
+            <% if (_.state.specifications) { %>
+              <div class="content-block my-5">
+                <div class="d-flex align-items-center gap-1">
+                  <img class="mr-2" src="/img/certificate-01.svg"/>
+                  <h4 class="m-0"><b>Características</b></h4>
+                </div>
+                <div class="row specifications mt-4">
+                  <% for (const gridId in _.state.specifications) {
+                    if (_.state.specifications[gridId]) {
+                      %>
+                      <div class="col-auto">
+                        <% if (productProperties.find(el => el.title == _.ecomUtils.gridTitle(gridId, _.grids))) {%>
+                        <div class="cms-icon">
+                          <img src="<%= productProperties.find(el => el.title == _.ecomUtils.gridTitle(gridId, _.grids)).img %>"/>
+                        </div>
+                        <% } %>
+                        <div class="text-muted">
+                          <%= _.ecomUtils.gridTitle(gridId, _.grids) %>
+                        </div>
+                        <div class="text">
+                          <%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %>
+                        </div>
+                      </div>
+                      <%
+                    }
+                  } %>
+                </div>
+              </div>
+              
+            <% } %>
+            
+            
             <% if (cms_content) { %>
               <%
               cms_content.list.forEach(item => { 
                   %>
                   <div class="content-block my-5">
-                    <h4><%- item.title %></h4>
+                    <div class="d-flex align-items-center gap-1">
+                      <% let icon_cms = {
+                        "Sobre o <b>Produto</b>" : "/img/file-06.svg",
+                        "<b>Avaliações</b>" : "/img/message-check-circle.svg",
+                        "<b>Como</b> Usar" : "/img/graduation-hat-02.svg",
+                        "<b>Perguntas</b> Frequentes" : ""
+                      }
+                      %>
+                      <img class="mr-2" src="<%= icon_cms[item.title] || ''%>"/>
+                      <h4 class="m-0"><%- item.title %></h4>
+                    </div>
                     <div class="html-clearfix">
-                      <%- item.content %>
+                      <%- _.md.render(item.content) %>
                     </div>
                   </div>
                   <%
@@ -155,7 +246,7 @@ let cms_content = current_lib_[0] || false
 
         <div class="col-12 col-md-6 col-right">
           <div class="content-sticky">
-            <div class="product-crumb">
+            <div class="product-crumb d-md-block d-none">
               <%
                 const breadcrumbs = opt.breadcrumbs && opt.breadcrumbs.length
                   ? opt.breadcrumbs
@@ -236,12 +327,14 @@ let cms_content = current_lib_[0] || false
                 <% } %>
 
             </div>
-            <h1 class="product__name my-md-4 py-2">
-              <%= _.ecomUtils.name(_.state) %>
-            </h1>
-            <p class="product__sku d-none">
-              COD: <%= _.state.sku %>
-            </p>
+            <div class="d-md-block d-none">
+              <h1 class="product__name my-md-4 py-2">
+                <%= _.ecomUtils.name(_.state) %>
+              </h1>
+              <p class="product__sku d-none">
+                COD: <%= _.state.sku %>
+              </p>
+            </div>
 
             <div id="product-actions">
               <div id="product-loading">
@@ -319,10 +412,58 @@ let cms_content = current_lib_[0] || false
               </div>
             </div>
 
+            
+          </div>
+          <div class="product-cms-content d-block d-md-none">
             <% if (_.state.short_description) { %>
-              <p class="product__info mt-3 lead">
-                <%= _.state.short_description %>
-              </p>
+              <div class="content-block my-5">
+                <h4>Sobre o produto</h4>
+                <p class="product__info mt-3 lead">
+                  <%= _.state.short_description %>
+                </p>
+              </div>
+              
+            <% } %>
+            <% if (cms_content) { %>
+              <%
+              cms_content.list.forEach(item => { 
+                  %>
+                  <div class="content-block my-5">
+                    <h4><%- item.title %></h4>
+                    <div class="html-clearfix">
+                      <%- item.content %>
+                    </div>
+                  </div>
+                  <%
+                })
+              %>
+
+              <%
+                if(cms_content.faq.length > 0){
+                  %>
+                  <div class="content-block my-5 apx_faq">
+                    <h4 class="mb-4"><b>Perguntas</b> Frequentes</h4>
+                    <%
+                    cms_content.faq.forEach(item => { 
+                      %>
+                      <div class="apx_faq-item">
+                        <div class="hat  my-2 d-flex justify-content-between">
+                          <span class="a_text py-3 d-block"><%- item.title %></span>
+                          <button type="button" aria-label="Ver mais opções">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                          </button>
+                        </div>
+                        <div class="content html-clearfix">
+                          <%- item.content %>
+                        </div>
+                      </div>
+                      <%
+                    })
+                    %>
+                  </div>
+                  <%
+                }
+              %>
             <% } %>
           </div>
         </div>
