@@ -57,14 +57,6 @@
           "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
           "props": [
             {
-              "img": "/img/uploads/raio-x-camy.png",
-              "text": ""
-            },
-            {
-              "img": "/img/uploads/base-a1-branca.webp",
-              "text": "<b>A3</b> e <b>A2</b>"
-            },
-            {
               "img": "/img/uploads/file-04.svg",
               "text": "<b>A3</b> e <b>A2</b>"
             }
