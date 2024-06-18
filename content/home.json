@@ -31,7 +31,6 @@
         }
       },
       "title_order": "d-flex flex-column flex-md-row",
-      "custom_css_class" : "chamada-foison",
       "banners": [
         {
           "img": "/img/uploads/image-9_.png",
@@ -58,11 +57,11 @@
           "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
           "props": [
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/raio-x-camy.png",
+              "text": ""
             },
             {
-              "img": "/img/uploads/file-04.svg",
+              "img": "/img/uploads/base-a1-branca.webp",
               "text": "<b>A3</b> e <b>A2</b>"
             },
             {
@@ -110,12 +109,13 @@
           ]
         }
       ],
+      "cta_link": "/lancamentos",
+      "custom_css_class": "chamada-foison",
       "description_text": "A Foison é mais do que uma plotter de recorte. Somos uma comunidade de empreendedores criativos e apaixonados que combinam tecnologia de ponta e muita criatividade para criar produtos incríveis.",
       "visibility": "d-block d-md-block",
       "title_text": "A Foison tem a Plotter Profissional <b>perfeita</b> para você",
       "type": "apx_list-images",
       "cta_text": "Encontrar minha plotter ideal",
-      "cta_link": "/lancamentos",
       "section_secondary_color": "#9089ff"
     },
     {
@@ -136,7 +136,7 @@
         }
       },
       "title_order": "d-flex flex-column",
-      
+      "cta_link": "/lancamentos",
       "page": 1,
       "description_text": "Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. ",
       "visibility": "d-block d-md-block",
@@ -144,7 +144,6 @@
       "shuffle": false,
       "type": "apx-collection-shelf",
       "limit": 8,
-      "cta_link": "/lancamentos",
       "cta_text": "Ver Todos",
       "title_color": "#131313",
       "sort": "news",
@@ -167,14 +166,14 @@
           "padding_bottom": "2"
         }
       },
-      "custom_css_class" : "banner-garantia",
       "img": "/img/uploads/img_garantia.png",
       "title_order": "d-flex flex-column flex-md-row",
       "cta_link": "",
       "background_image": "",
-      "background_color": "#9685eb",
       "image_order": "d-flex flex-md-row-reverse flex-column",
+      "custom_css_class": "banner-garantia",
       "description_text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
+      "background_color": "#9685eb",
       "visibility": "d-block d-md-block",
       "image_negative_margin": "3",
       "title_text": "A única com <b>2 anos de garantia</b><div><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></div>",
@@ -231,12 +230,12 @@
           "padding_bottom": "2"
         }
       },
-      "custom_css_class" : "banner-turma",
       "img": "/img/uploads/Group 134.png",
       "title_order": "d-flex flex-column",
       "cta_link": "/",
       "background_image": "/img/uploads/vector_.png",
       "image_order": "d-flex flex-column flex-md-row",
+      "custom_css_class": "banner-turma",
       "description_text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
       "visibility": "d-block d-md-block",
       "image_negative_margin": "3",
@@ -247,18 +246,17 @@
       "section_secondary_color": "#9089ff"
     },
     {
-      "type": "apx-blog",
-      "title_order": "d-flex flex-column",
       "enabled": true,
-      "visibility": "d-block d-md-block",
-      "title_text": "Confira nosso <b>blog</b>",
-      "section_secondary_color": "#ff970a",
-      "cta_text": "Ver Todos",
-      "cta_link": "/blog",
       "spacing": {
         "container": "container"
-      }
-    }  
-    
+      },
+      "title_order": "d-flex flex-column",
+      "cta_link": "/blog",
+      "visibility": "d-block d-md-block",
+      "title_text": "Confira nosso <b>blog</b>",
+      "type": "apx-blog",
+      "cta_text": "Ver Todos",
+      "section_secondary_color": "#ff970a"
+    }
   ]
 }
