@@ -8,16 +8,42 @@
     "title": "Institucional",
     "list": [
       {
-        "url": "https://www.foison.com.br/"
+        "url": "https://www.foison.com.br/",
+        "text": "Quem somos"
+      },
+      {
+        "text": "Política de privacidade",
+        "url": "/politica-de-privacidade"
+      },
+      {
+        "text": "Termos e condições de compra",
+        "url": "/termos-de-uso"
+      },
+      {
+        "text": "Política de troca",
+        "url": "/politica-de-troca"
       }
     ]
   },
   "links_2": {
     "list_categories": true,
-    "title": "Quem somos",
+    "title": "Produtos",
     "list": [
       {
-        "url": "https://www.foison.com.br/sobre"
+        "url": "",
+        "text": "Equipamentos"
+      },
+      {
+        "text": "Software"
+      },
+      {
+        "text": "Acessórios"
+      },
+      {
+        "text": "Peças de reposição"
+      },
+      {
+        "text": "Cursos"
       }
     ]
   },
