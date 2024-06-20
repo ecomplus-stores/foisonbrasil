@@ -5,16 +5,22 @@
   },
   "links_1": {
     "list_pages": true,
-    "title": "Institucional",
-    "list": []
+    "title": "Sobre a Foison",
+    "list": [
+      {
+        "url": "https://www.foison.com.br/sobre",
+        "text": "A Foison é muito mais do que uma plotter de recorte – somos uma vibrante comunidade de empreendedores criativos e apaixonados. Combinamos tecnologia de ponta e uma dose generosa de criatividade para desenvolver produtos incríveis. Junte-se a nós nessa jornada de aprendizado contínuo, crescimento e evolução. Explore nossa loja online e descubra como podemos transformar suas ideias em realidade!"
+      },
+      {}
+    ]
   },
   "links_2": {
-    "list_categories": true,
-    "title": "Produtos",
+    "list_categories": false,
+    "title": "Saiba mais",
     "list": []
   },
   "contacts": {
-    "title": "Contatos",
+    "title": "Fale com a Foison",
     "phone_wpp": true,
     "socials": true,
     "email": true,
@@ -43,5 +49,5 @@
     "hipercard": true,
     "boleto": true
   },
-  "credits": ""
+  "credits": "Razão Social: Cobra CNC Comércio de Máquinas Ltda | Distribuidora exclusiva Foison Brasil | CNPJ: 13.809.800/0001-08 | Endereço: Rua Serrita 93 A - Duque de Caxias - RJ © 2024 Foison Brasil - - Todos os direitos reservados."
 }
