@@ -1,11 +1,11 @@
 {
   "description": {
     "title": "Sobre a Foison",
-    "text": "A Foison é mais do que uma plotter de recorte. Somos uma comunidade de empreendedores criativos e apaixonados que combinam tecnologia de ponta e muita criatividade para criar produtos incríveis. Estamos juntos numa jornada de muito aprendizado, crescimento e evolução."
+    "text": "A Foison é muito mais do que uma plotter de recorte – somos uma vibrante comunidade de empreendedores criativos e apaixonados. Combinamos tecnologia de ponta e uma dose generosa de criatividade para desenvolver produtos incríveis. Junte-se a nós nessa jornada de aprendizado contínuo, crescimento e evolução. Explore nossa loja online e descubra como podemos transformar suas ideias em realidade!"
   },
   "links_1": {
     "list_pages": true,
-    "title": "Sobre a Foison",
+    "title": "Sobre nós",
     "list": [
       {
         "url": "https://www.foison.com.br/sobre",
@@ -14,9 +14,11 @@
     ]
   },
   "links_2": {
-    "list_categories": false,
-    "title": "Saiba mais",
-    "list": []
+    "list_categories": true,
+    "title": "Termos de serviços ",
+    "list": [
+      {}
+    ]
   },
   "contacts": {
     "title": "Fale com a Foison",
