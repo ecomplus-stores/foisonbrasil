@@ -1,7 +1,8 @@
 {
   "shipping": {
     "show": false,
-    "text": "Entregamos para todo o Brasil"
+    "text": "Entregamos para todo o Brasil",
+    "title": "Consulte condições"
   },
   "installments": {
     "show": false,
