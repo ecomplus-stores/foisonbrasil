@@ -72,7 +72,7 @@
         {
           "img": "/img/uploads/camy-2-okk.png",
           "title": "Camy 2+",
-          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "description": "A Plotter Profissional perfeita para papelaria e personalizados!  🌟 Vai começar a Era de Ouro da Plotter Profissional! 🌟  A Camy 2+  veio com várias funções novas que vão facilitar ainda mais o seu dia a dia de trabalho: • Tamanho Plus: Ela tem 39cm de área útil, no corte simples e 33,5cm no corte de contorno! O que quer dizer que você consegue cortar materiais maiores que o tamanho A3, inclusive no corte de contorno! • Novo sistema de leitura por câmera ainda mais ágil, preciso e exibido pelo painel em tempo real (o que a câmera estiver lendo, o painel mostra, na hora da leitura) • Ela tem painel 100% touch screen que vai oferecer controles mais sensíveis e precisos! ",
           "props": [
             {
               "img": "/img/uploads/file-04.svg",
@@ -83,7 +83,7 @@
         {
           "img": "/img/uploads/c24-removebg-preview.png",
           "title": "C24",
-          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "description": "Se você quer aumentar sua produção, aumentar suas vendas e ter aquele acabamento de CORTE PERFEITO e ainda ganhar tempo: A C24 Pro Cam foi feita pra você! Essa plotter de recorte profissional conta com uma leitura por CÂMERA, que é uma leitura sofisticada",
           "props": [
             {
               "img": "/img/uploads/file-04.svg",
@@ -100,9 +100,9 @@
           ]
         },
         {
-          "img": "/img/uploads/image-9_.png",
-          "title": "Camy",
-          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "img": "/img/uploads/foison-e24.webp",
+          "title": "E24",
+          "description": "Vem se apaixonar pela E24L 2.0:  Tamanho: 72cm de boca/61cm de área útil   Leitura:  Manual por Mira Laser  A E24L 2.0 leitura das marcas de registro por mira laser, você quem define onde o corte começa posicionando o laser na marca de registro. Ou se for corte sem impressão, só mandar cortar de uma vez  A Foison tem a menor marca de registro do mercado para você utilizar ao máximo a área da folha e aumentar seus lucros.  Dê um salto de produtividade com a Função REPEAT e a técnica do Corte Matriz",
           "props": [
             {
               "img": "/img/uploads/file-04.svg",
@@ -119,9 +119,9 @@
           ]
         }
       ],
-      "cta_link": "/lancamentos",
+      "cta_link": "/equipamentos",
       "custom_css_class": "chamada-foison",
-      "description_text": "A Foison é mais do que uma plotter de recorte. Somos uma comunidade de empreendedores criativos e apaixonados que combinam tecnologia de ponta e muita criatividade para criar produtos incríveis.",
+      "description_text": "A Foison é muito mais do que uma plotter de recorte – somos uma vibrante comunidade de empreendedores criativos e apaixonados. Combinamos tecnologia de ponta e uma dose generosa de criatividade para desenvolver produtos incríveis. Junte-se a nós nessa jornada de aprendizado contínuo, crescimento e evolução. Explore nossa loja online e descubra como podemos transformar suas ideias em realidade!",
       "visibility": "d-block d-md-block",
       "title_text": "A Foison tem a Plotter Profissional <b>perfeita</b> para você",
       "type": "apx_list-images",
