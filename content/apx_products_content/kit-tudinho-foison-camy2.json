@@ -15,46 +15,41 @@
   ],
   "faq": [
     {
-      "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio",
-      "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\\\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\n<!--EndFragment-->"
+      "title": " Quais são os principais diferenciais da Plotter Profissional Foison Camy?",
+      "content": "<!--StartFragment-->\n\nA Foison Camy é a única plotter desenvolvida exclusivamente para o mercado brasileiro de papelaria e personalizados, com tecnologia de leitura automática por câmera para um corte preciso e eficiente.\n\n<!--EndFragment-->"
     },
     {
-      "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio",
-      "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\\\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\n<!--EndFragment-->"
-    },
-    {
-      "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio",
-      "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\\\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\n<!--EndFragment-->"
-    },
-    {
-      "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio",
-      "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\\\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\n<!--EndFragment-->"
+      "title": "Quais materiais a Foison Camy pode cortar?",
+      "content": "<!--StartFragment-->\n\nA Foison Camy corta uma ampla variedade de materiais flexíveis, como EVA, acetato, vinil, papel holler, entre outros, com até 1 kg de força de corte e a capacidade de cortar até 3 folhas A4 de uma vez com a base de corte A4x3.\n\n\n\n<!--EndFragment-->"
     }
   ],
   "upselling": [
     {
       "upselling_list": [
         {
-          "products_sku": "FO0022",
-          "item_name": "Flexi SIGN 22"
+          "products_sku": "FO0023",
+          "item_name": "Software SignMaster V5 PRO"
         },
         {
-          "item_name": "Flexi SIGN 21 LA",
-          "products_sku": "FO782433"
+          "item_name": "Software SignMaster - Basic (Licença Vitalícia)",
+          "products_sku": "CNC0039"
         },
         {
           "item_name": "SignMaster Cut Basic + Arms",
           "products_sku": "CNC0041"
+        },
+        {
+          "item_name": "Software SignMaster CRAFT (licença vitálicia) ",
+          "products_sku": "SOFT0001"
         }
       ],
-      "empty_pop_button": "Entendi",
+      "empty_pop_button": "Entendi,desejo prosseguir sem a contratação do software!",
       "help_link": "/blog",
       "title": "Software",
       "empty_pop_title": "Atenção",
       "help_title": "Qual software escolher?",
-      "empty_pop_description": "Ao adquirir um equipamento sem software sua máquina será enviada sem um sistema, sendo necessário realizar a instalação por conta própria.",
+      "empty_pop_description": "Ao adquirir um equipamento sem software, sua máquina será enviada sem um sistema operacional. Sem a instalação do software adequado, não será possível utilizar o equipamento.",
       "empty_text": "Sem Software"
     }
   ]
- 
 }
