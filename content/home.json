@@ -210,18 +210,18 @@
         }
       },
       "title_order": "d-flex flex-column",
-      "cta_link": "/lancamentos",
+      "cta_link": "/acessorios",
       "page": 1,
       "description_text": "Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. ",
       "visibility": "d-block d-md-block",
       "title_text": "Confira nossos <b>kits</b> com descontos especiais",
-      "shuffle": false,
+      "shuffle": true,
       "type": "apx-collection-shelf",
       "limit": 8,
       "cta_text": "Ver Todos",
       "title_color": "#131313",
       "sort": "news",
-      "section_secondary_color": "#ff970a"
+      "section_secondary_color": "#ff0abf"
     },
     {
       "description_color": "#ffffff",
