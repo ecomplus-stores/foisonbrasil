@@ -1,6 +1,6 @@
 {
   "shipping": {
-    "show": false,
+    "show": true,
     "text": "Entregamos para todo o Brasil",
     "title": "Consulte condições"
   },
