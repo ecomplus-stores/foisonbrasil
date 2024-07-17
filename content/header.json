@@ -5,12 +5,12 @@
     "full_width": false
   },
   "menu_all_departments": false,
-  "centralized_logo": true,
+  "centralized_logo": false,
   "marketing_stripe": {
     "text": "Começou o Arraiá da Foison: Sua nova funcionária, Foison Camy, com software* e Frete Grátis!*",
     "link": "",
-    "background": "#ec09e4",
-    "color": "#18e0f0"
+    "background": "#9685eb",
+    "color": "#ffffff"
   },
   "alphabetical_order_submenu": true,
   "name_all_departments": "",
