@@ -65,6 +65,7 @@ const productProperties = [];
 <script>
   window.apx_properties = JSON.parse(<%- JSON.stringify(JSON.stringify(productProperties)) %>);  
 </script>
+<% if(_.pageName == "home") { %>
 <section class="newsletter my-5">
   <div class="container">
     <div class="bg p-md-5">
@@ -98,6 +99,7 @@ const productProperties = [];
     </div>
   </div>
 </section>
+<% } %>
 <footer class="footer">
   
   <div class="container">
