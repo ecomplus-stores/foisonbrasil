@@ -31,7 +31,8 @@
           > 
             <slot name="stamps"/>
             <product-gallery
-              :product="body"
+              :key="variationImagesKey"
+              :product="productToGallery"
               :can-add-to-cart="canAddToCart && body.available && isInStock"
               :current-slide.sync="currentGalleyImg"
               :is-s-s-r="isSSR"

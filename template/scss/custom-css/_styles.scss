@@ -3558,3 +3558,19 @@ ul.app_contacts{
   }
 }
 
+.gallery__stage{
+  .glide__arrows{
+    button{
+      padding: 0;
+      margin: 0;
+      height: 24px;
+      width: 24px;
+      line-height: 0;
+      svg{
+        height: 24px;
+        width: 24px;
+      }
+    }
+    button.glide__arrow--disabled{opacity: .1;}
+  }
+}

@@ -171,6 +171,9 @@ export default {
       upsellingProductData: [],
       apx_tags: [],
       apx_productTags:{},
+      variationImagesKey : null,
+      variationImages: [],      
+      variantGalleryImages:[],
     }
   },
 
@@ -304,7 +307,19 @@ export default {
     isKit () {
       return this.body.kit_composition && this.body.kit_composition.length
     },
-
+    productToGallery() {
+      if (this.variationImages.length) {
+        window.mainProductGallery = [...this.variationImages]
+        this.variationImagesKey = Math.random().toString()
+        //console.log('update',window.mainProductGallery)
+        return {
+          ...this.body,
+          pictures: this.variationImages
+          //...this.body.pictures
+        }
+      }
+      return this.body
+    },
     isKitWithVariations () {
       return this.kitItems.some(item => item.variations && item.variations.length)
     }
@@ -427,11 +442,32 @@ export default {
       }
     },
 
+    // showVariationPicture (variation) {
+    //   if (variation.picture_id) {
+    //     const pictureIndex = this.body.pictures.findIndex(({ _id }) => {
+    //       return _id === variation.picture_id
+    //     })
+    //     this.currentGalleyImg = pictureIndex + 1
+    //   }
+    // },
     showVariationPicture (variation) {
       if (variation.picture_id) {
-        const pictureIndex = this.body.pictures.findIndex(({ _id }) => {
+
+        let pictureIndex = this.body.pictures.findIndex(({ _id }) => {
           return _id === variation.picture_id
         })
+        
+        this.variationImages = []
+        for(let i_ = pictureIndex; i_ < (pictureIndex + (this.body.pictures.length / this.body.variations.length)) ; i_++){
+          this.variationImages.push(this.body.pictures[i_])
+        }
+
+        pictureIndex = this.variationImages.findIndex(({ _id }) => {
+          return _id === variation.picture_id
+        })
+
+        window.mainProductGallery = [...this.variationImages]
+
         this.currentGalleyImg = pictureIndex + 1
       }
     },
@@ -520,6 +556,7 @@ export default {
           return
         }
       }
+      product.pictures = this.productToGallery.pictures
       const customizations = [...this.customizations]
       this.$emit('buy', { product, variationId, customizations })
       if (this.canAddToCart) {
@@ -643,7 +680,18 @@ export default {
         }
       },
       immediate: true
-    }
+    },
+    variationImages (variationImages, pastVariationImages) {
+      if (variationImages.length) {
+        if (pastVariationImages.length && pastVariationImages[0][0] === variationImages[0][0]) {
+          return
+        }
+        this.variationImagesKey = Math.random().toString()
+      } else {
+        this.variationImagesKey = null
+      }
+      
+    },
   },
 
   created () {
@@ -666,7 +714,8 @@ export default {
   },
 
   mounted () {
-    
+    window.mainProductGallery_ = [...this.body.pictures] 
+    window.mainProductGallery = [...this.body.pictures]
     if (this.$refs.sticky && !this.isWithoutPrice) {
       let isBodyPaddingSet = false
       const setStickyBuyObserver = (isToVisible = true) => {
