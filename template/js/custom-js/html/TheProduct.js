@@ -168,7 +168,9 @@ export default {
       currentTimer: null,
       productUpselling:[],
       upselling_pop_visibility:[],
-      upsellingProductData: []
+      upsellingProductData: [],
+      apx_tags: [],
+      apx_productTags:{},
     }
   },
 
@@ -309,6 +311,26 @@ export default {
   },
 
   methods: {
+    getTags(){
+      return this.apx_productTags
+    },
+    setTags(){
+      let tags = [];
+      if(this.body.categories){
+        let terms = this.body.categories.map(item => 'cat_' + item._id)
+        terms.push(this.body.sku)
+        this.apx_tags.filter(el => terms.some(term => el.identificador.includes(term))).forEach(item => {
+          if(!this.apx_productTags[item.type]){
+            this.apx_productTags[item.type] = []
+
+          }
+          this.apx_productTags[item.type] = [...this.apx_productTags[item.type], item]
+        })
+
+        this.apx_productTags = {...this.apx_productTags}
+      }
+      console.log(`tagssss`,this.apx_productTags)
+    },
     setPopVisibility(key, action){
       let upselling_pop_visibility = [...this.upselling_pop_visibility]
       if(action == true){
@@ -712,6 +734,9 @@ export default {
         }, 1000)
       }
     }
+
+    this.apx_tags = [...window.apx_tags]
+    this.setTags()
   },
 
   destroyed () {
