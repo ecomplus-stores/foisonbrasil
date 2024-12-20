@@ -23,6 +23,22 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
     })
   }
 %>
+<script>
+  (function (o, c, t, a, d, e, s, k) {
+       o.octadesk = o.octadesk || {};
+       o.octadesk.chatOptions = {
+         subDomain: a,
+         showButton: d,
+         openOnMessage: e,
+         hide: s
+       };
+       var bd = c.getElementsByTagName("body")[0];
+       var sc = c.createElement("script");
+       sc.async = 1;
+       sc.src = t;
+       bd.appendChild(sc);
+     })(window, document, 'https://cdn.octadesk.com/embed.js', 'o166130-558',  'true', 'true', 'false');
+ </script>
 <button class="specs_compare-trigger">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M14 10C14.9319 10 15.3978 10 15.7654 9.84776C16.2554 9.64477 16.6448 9.25542 16.8478 8.76537C17 8.39782 17 7.93188 17 7C17 6.06812 17 5.60218 16.8478 5.23463C16.6448 4.74458 16.2554 4.35523 15.7654 4.15224C15.3978 4 14.9319 4 14 4L6 4C5.06812 4 4.60218 4 4.23463 4.15224C3.74458 4.35523 3.35523 4.74458 3.15224 5.23463C3 5.60218 3 6.06812 3 7C3 7.93188 3 8.39782 3.15224 8.76537C3.35523 9.25542 3.74458 9.64477 4.23463 9.84776C4.60218 10 5.06812 10 6 10L14 10Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -1782,7 +1782,7 @@ body #cart-quickview .cart-item .cart-item__data .cart-item__mini-price .cart-it
 .backdrop{
     pointer-events: none;
 }
-.backdrop[style="transition: opacity 150ms linear 0s; top: 0px; z-index: 1080;"]{
+.backdrop[style="transition: opacity 150ms linear; top: 0px; z-index: 1080;"]{
   pointer-events: all;
 }
 
