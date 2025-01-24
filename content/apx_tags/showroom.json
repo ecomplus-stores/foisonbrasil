@@ -5,5 +5,8 @@
     "CAMY-2301059",
     "C24-2212H015"
   ],
-  "title": "SHOWROOM"
+  "title": "SHOWROOM",
+  "background_color": "#b12cd5",
+  "border": "#b12cd5",
+  "color": "#fcfaf8"
 }
