@@ -6,6 +6,8 @@ module.exports = () => ({
       './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
       //'./base-config/sections.js': path.resolve(__dirname, 'template/js/netlify-cms/base-config/sections.js'),
       './html/KitProductVariations.html': path.resolve(__dirname, 'template/js/custom-js/html/KitProductVariations.html'),   
+      './html/ProductVariations.html': path.resolve(__dirname, 'template/js/custom-js/html/ProductVariations.html'),   
+      './js/ProductVariations.js': path.resolve(__dirname, 'template/js/custom-js/html/ProductVariations.js'),   
       './html/QuantitySelector.html': path.resolve(__dirname, 'template/js/custom-js/html/QuantitySelector.html'),   
       './js/QuantitySelector.js': path.resolve(__dirname, 'template/js/custom-js/html/QuantitySelector.js'),   
       './html/ProductCard.html': path.resolve(__dirname, 'template/js/custom-js/html/ProductCard.html'),   
