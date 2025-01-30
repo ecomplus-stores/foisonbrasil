@@ -8,12 +8,12 @@
       "full_width": false,
       "slides": [
         {
-          "img": "/img/uploads/image-1.png",
-          "link": "",
+          "img": "/img/uploads/site_banner-desktop-camy.png",
+          "link": "https://foisonbrasil.netlify.app/foison-camy",
           "alt": "",
           "start": "",
           "end": "",
-          "mobile_img": "/img/uploads/image-1-1-.png"
+          "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
         },
         {
           "start": "",
