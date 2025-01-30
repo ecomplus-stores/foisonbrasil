@@ -8,13 +8,6 @@
       "full_width": false,
       "slides": [
         {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
-          "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
-          "link": "https://foisonbrasil.netlify.app/equipamentos"
-        },
-        {
           "img": "/img/uploads/site_banner-desktop-camy.png",
           "link": "https://foisonbrasil.netlify.app/foison-camy",
           "alt": "",
@@ -25,9 +18,23 @@
         {
           "start": "",
           "end": "",
+          "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
+          "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
+          "link": "https://foisonbrasil.netlify.app/equipamentos"
+        },
+        {
+          "start": "",
+          "end": "",
           "img": "/img/uploads/site_banner-desktop-fc350.png",
           "link": "https://foisonbrasil.netlify.app/foison-fc350",
           "mobile_img": "/img/uploads/site_banner-mobile-fc350.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/site_banner-desktop-serie-c.png",
+          "link": "https://foisonbrasil.netlify.app/foison-serie-c",
+          "mobile_img": "/img/uploads/site_banner-mobile-serie-c.png"
         }
       ]
     },
