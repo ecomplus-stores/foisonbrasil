@@ -49,6 +49,13 @@
           "img": "/img/uploads/site_banner-desktop-serie-s.png",
           "mobile_img": "/img/uploads/site_banner-mobile-serie-s.png",
           "link": "https://foisonbrasil.netlify.app/foison-serie-s"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/site_banner-desktop-acessorios.png",
+          "link": "https://foisonbrasil.netlify.app/acessorios",
+          "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
         }
       ]
     },
