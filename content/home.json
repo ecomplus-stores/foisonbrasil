@@ -11,7 +11,8 @@
           "start": "",
           "end": "",
           "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
-          "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png"
+          "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
+          "link": "https://foisonbrasil.netlify.app/equipamentos"
         },
         {
           "img": "/img/uploads/site_banner-desktop-camy.png",
