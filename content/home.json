@@ -18,20 +18,8 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-30-pc.png",
-          "mobile_img": "/img/uploads/banner-30-cell.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-45-pc.png",
-          "mobile_img": "/img/uploads/banner-45-cell.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-60-pc.png",
-          "mobile_img": "/img/uploads/banner-60-cell.png"
+          "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
+          "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png"
         }
       ]
     },
