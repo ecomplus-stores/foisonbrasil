@@ -81,15 +81,15 @@
           "props": [
             {
               "img": "/img/uploads/bases.png",
-              "text": "<b>A3</b>, <b>A4</b> e <b>A4X3</b>"
+              "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
             },
             {
               "img": "/img/uploads/forca.png",
-              "text": "<b>1kg</b>"
+              "text": "Força de corte: <b>1kg</b>"
             },
             {
               "img": "/img/uploads/velocidade.png",
-              "text": "<b>800mm/s</b>"
+              "text": "Velocidade: <b>800mm/s</b>"
             }
           ]
         },
@@ -99,7 +99,7 @@
           "description": "A Camy 2+ possui várias funções novas que vão facilitar ainda mais o seu dia a dia de trabalho: envio do corte por Wi-fi, sensor de folhas e painel de led com touch!",
           "props": [
             {
-              "img": "/img/uploads/base-de-corte.png",
+              "img": "/img/uploads/bases.png",
               "text": "<b>A4</b>, <b>A3</b> e <b>A4x3</b>"
             },
             {
