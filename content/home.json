@@ -77,30 +77,38 @@
         {
           "img": "/img/uploads/image-9_.png",
           "title": "Camy",
-          "description": "Com um sistema avançado de leitura automática por câmera a Foison Camy é uma máquina compacta e robusta desenvolvida especialmente para o mercado da papelaria personalizada.",
+          "description": "Desenvolvida especialmente para o mercado da papelaria personalizada, a Camy possui leitura automática por câmera que possibilita otimizar sua produção ao máximo.",
           "props": [
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/base-de-corte.png",
+              "text": "<b>A3</b>, <b>A4</b> e <b>A4X3</b>"
             },
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/forca-de-corte.png",
+              "text": "<b>1kg</b>"
             },
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/velocidade-de-corte.png",
+              "text": "<b>800mm/s</b>"
             }
           ]
         },
         {
           "img": "/img/uploads/camy-2-okk.png",
           "title": "Camy 2+",
-          "description": "A Plotter Profissional perfeita para papelaria e personalizados!  🌟 Vai começar a Era de Ouro da Plotter Profissional! 🌟  A Camy 2+  veio com várias funções novas que vão facilitar ainda mais o seu dia a dia de trabalho: • Tamanho Plus: Ela tem 39cm de área útil, no corte simples e 33,5cm no corte de contorno! O que quer dizer que você consegue cortar materiais maiores que o tamanho A3, inclusive no corte de contorno! • Novo sistema de leitura por câmera ainda mais ágil, preciso e exibido pelo painel em tempo real (o que a câmera estiver lendo, o painel mostra, na hora da leitura) • Ela tem painel 100% touch screen que vai oferecer controles mais sensíveis e precisos! ",
+          "description": "A Camy 2+ possui várias funções novas que vão facilitar ainda mais o seu dia a dia de trabalho: envio do corte por Wi-fi, sensor de folhas e painel de led com touch!",
           "props": [
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/base-de-corte.png",
+              "text": "<b>A4</b>, <b>A3</b> e <b>A4x3</b>"
+            },
+            {
+              "img": "/img/uploads/forca-de-corte.png",
+              "text": "<b>1kg</b>"
+            },
+            {
+              "img": "/img/uploads/velocidade-de-corte.png",
+              "text": "<b>800mm/s</b>"
             }
           ]
         },
@@ -150,7 +158,7 @@
       "title_text": "A Foison tem a Plotter Profissional <b>perfeita</b> para você",
       "type": "apx_list-images",
       "cta_text": "Encontrar minha plotter ideal",
-      "section_secondary_color": "#9089ff"
+      "section_secondary_color": "#b9a9ff"
     },
     {
       "description_color": "#131313",
