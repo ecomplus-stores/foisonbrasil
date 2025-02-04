@@ -132,21 +132,21 @@
           ]
         },
         {
-          "img": "/img/uploads/foison-e24.webp",
-          "title": "E24",
-          "description": "Vem se apaixonar pela E24L 2.0:  Tamanho: 72cm de boca/61cm de área útil   Leitura:  Manual por Mira Laser  A E24L 2.0 leitura das marcas de registro por mira laser, você quem define onde o corte começa posicionando o laser na marca de registro. Ou se for corte sem impressão, só mandar cortar de uma vez  A Foison tem a menor marca de registro do mercado para você utilizar ao máximo a área da folha e aumentar seus lucros.  Dê um salto de produtividade com a Função REPEAT e a técnica do Corte Matriz",
+          "img": "/img/uploads/e24-black-4.png",
+          "title": "E24L 2.0",
+          "description": "A E24L 2.0 conta com leitura manual por mira laser, você posiciona o laser na marca de registro para cortes exatos. Para projetos sem impressão, o corte pode ser iniciado imediatamente, otimizando seu tempo. ",
           "props": [
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/base-de-corte.png",
+              "text": "<b>A4</b>, <b>A4x3</b>, <b>A3</b>, <b>A2</b> e <b>A1</b>"
             },
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/forca-de-corte.png",
+              "text": "<b>500gr</b>"
             },
             {
-              "img": "/img/uploads/file-04.svg",
-              "text": "<b>A3</b> e <b>A2</b>"
+              "img": "/img/uploads/velocidade-de-corte.png",
+              "text": "<b>800mm/s</b>"
             }
           ]
         }
