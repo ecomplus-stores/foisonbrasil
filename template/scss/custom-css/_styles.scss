@@ -4,10 +4,28 @@
   src:
     url("../../public/assets/fonts/CIRCULARSTD-BOOK.TTF") format("truetype")
 }
+// @font-face {
+//   font-family: "Coniferous";
+//   src:
+//     url("../../public/assets/fonts/CONIFEROUS-BOLD.TTF") format("truetype")
+// }
 @font-face {
-  font-family: "Coniferous";
+  font-family: "Voltage";
+  font-weight:300;
   src:
-    url("../../public/assets/fonts/CONIFEROUS-BOLD.TTF") format("truetype")
+    url("../../public/assets/fonts/Voltage-Light.ttf") format("truetype")
+}
+@font-face {
+  font-family: "Voltage";
+  font-weight:600;
+  src:
+    url("../../public/assets/fonts/Voltage-Bold.ttf") format("truetype")
+}
+@font-face {
+  font-family: "Voltage";
+  font-weight: normal;
+  src:
+    url("../../public/assets/fonts/Voltage-Regular.ttf") format("truetype")
 }
 body{
   --blk:#131313;
@@ -223,7 +241,7 @@ header#header{
     color:var(--title_color);
     font-weight: 600;
     b{
-      font-family:'Coniferous';
+      font-family:'Voltage';
       font-size: calc(var(--h1) * 1.2);
       position: relative;
       display: inline-block;
@@ -564,7 +582,7 @@ main ~ iframe{display: none;}
   .apx-title-section{text-align: center;}
   .apx-cta-section{margin-top:1rem}
   .apx-title-section h2{
-    font-family:'Coniferous';
+    font-family:'Voltage';
     text-shadow: 3px 3px 0px var(--color3);
     font-size: calc(var(--h1) * 1.5);
   }
@@ -741,7 +759,7 @@ nav{
         s{color: var(--txt);}
       }
       .prices__value{
-        font-family: "Coniferous";
+        font-family: "Voltage";
         position: relative;
         width: fit-content;
       }
@@ -810,13 +828,17 @@ nav{
         }
       }
       .content-block{
+        // .html-clearfix{
+        //   font-size: var(--font-size)!important;
+        //   line-height: calc(var(--font-size) * 1.8);
+        //   span,
+        //   p{font-weight: normal!important;}
+        //   *{font-size: var(--font-size)!important;
+        //     line-height: calc(var(--font-size) * 1.8)!important;}
+        // }
+
         .html-clearfix{
-          font-size: var(--font-size)!important;
-          line-height: calc(var(--font-size) * 1.8);
-          span,
-          p{font-weight: normal!important;}
-          *{font-size: var(--font-size)!important;
-            line-height: calc(var(--font-size) * 1.8)!important;}
+          *{font-family: "CircularSTD", sans-serif!important;}
         }
         .specifications{
           .cms-icon{
@@ -1003,7 +1025,7 @@ nav{
           -webkit-box-orient: vertical;
         }
         .kit__data-price{
-          font-family: "Coniferous";
+          font-family: "Voltage";
         }
       }
     }
@@ -1088,7 +1110,7 @@ nav{
       left: 50%;
       translate: -50% -50%;
       h4{
-        font-family: "Coniferous";
+        font-family: "Voltage";
         font-size: var(--h1);
         display: block;
         color: var(--blk);
@@ -1499,7 +1521,7 @@ nav.header__submenu{
       .prices__value{
         font-size: var(--h5);
         text-transform: uppercase;
-        font-family: "Coniferous";
+        font-family: "Voltage";
         color: var(--blk);
         font-weight: bold;
       }
@@ -1586,14 +1608,14 @@ nav.header__submenu{
               align-items: center!important;
               text-align: right;
               span{
-                font-family: "Coniferous";
+                font-family: "Voltage";
                 color: var(--blk);
               }
               .cart-item__price-un,
               .cart-item__price-un *{
                   font-size: var(--font-size-sm);
                   color: #848484;
-                  font-family: "Coniferous";
+                  font-family: "Voltage";
                   font-weight: normal;
               }
           }
@@ -1712,7 +1734,7 @@ body{
           .minicart__summary > span{
               font-size: var(--h5);
               text-transform: uppercase;
-              font-family: "Coniferous";
+              font-family: "Voltage";
               color: var(--blk);
               font-weight: bold;
           }
@@ -1752,7 +1774,7 @@ body{
           height: 32px;
           font-weight: 600;
           font-size: var(--font-size);
-          font-family: "Coniferous";
+          font-family: "Voltage";
           color: var(--blk);
           border: 0;
 
@@ -1810,7 +1832,7 @@ body #cart-quickview .cart-item .cart-item__data .cart-item__mini-price .cart-it
     text-align: center;
     display: block;
     font-weight: 600;
-    font-family: "Coniferous";
+    font-family: "Voltage";
   }
 }
 
@@ -1973,7 +1995,7 @@ body{overflow-y:auto!important}
 
 .product-card{
   .prices__value{
-    font-family: "Coniferous";
+    font-family: "Voltage";
     position: relative;
     line-height: initial;
     width: fit-content;
@@ -3434,7 +3456,7 @@ ul.app_contacts{
   .card-header{
     background:#fff;
     font-weight: bold;
-    font-family: "Coniferous";
+    font-family: "Voltage";
     font-size: var(--h4);
     button{
       background-image: url('../../public/assets/cross-circle.svg');
@@ -3602,3 +3624,64 @@ ul.app_contacts{
       }
   }
 }
+
+
+
+
+//04022025
+.specs_compare .specs_compare-products .specs_compare-products-image{
+  position: relative;
+  overflow: visible;
+
+  button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--color4);
+    border: 1px solid #000;
+    border-radius: 50%;
+    color: #000;
+    font-size: 12px;
+    line-height: 0;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    padding: 0 0 3px 0;
+  }
+}
+
+.product-cms-content{
+  .specifications{
+    justify-content: flex-start;
+    gap:2rem 0;
+    > .col-auto{}
+  }
+  
+}
+
+
+.floating-whatsapp-link{
+  *{text-decoration: none!important;}
+  text-decoration: none!important;
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  align-items: center;
+  background: #18d940;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px #00000026;
+  display: flex;
+  height: 64px;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  width: 64px;
+  z-index:999999999;
+  i{
+    font-size: 36px;
+    color: #fff;
+  }
+}
+
+.product-item .product-card .product-card__pictures picture{aspect-ratio: 1;}
+#page-products #product-block .gallery .product__picture{max-width: 100%!important;}

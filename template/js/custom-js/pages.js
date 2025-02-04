@@ -135,6 +135,11 @@ window.compare.init = function(){
     let product = $(this).attr('data') ? JSON.parse($(this).attr('data')) : {};
     window.compare.toggleItem(product)
   });
+  $(`body`).on(`click`,`.product-compare-remove`,function(){
+    let product = $(this).attr('data') ? JSON.parse($(this).attr('data')) : {};
+    console.log(product)
+    window.compare.toggleItem(product)
+  });
   $(`body`).on(`click`,`.specs_compare-trigger, .specs_compare .close`,function(){
     $(`.specs_compare`).toggleClass(`active`);
   });
@@ -174,7 +179,7 @@ window.compare.updateList = function(){
   };
   $(`.specs_compare-product-list, .specs_compare-specs`).empty();
   window.compare.db.forEach((product, index) => {
-      $('<div class="col-5 col-md"><div class="specs_compare-products-image"><img src="'+((product.image && product.image.length > 0 && product.image[0].zoom && product.image[0].zoom.url)   ? product.image[0].zoom.url : 'sem imagem') + '"/></div><span>'+ product.name +'</span></div>').appendTo('.specs_compare-product-list');
+      $('<div class="col-5 col-md"><div class="specs_compare-products-image"><button class="product-compare-remove" data=\''+JSON.stringify(product)+'\' type="button">x</button><img src="'+((product.image && product.image.length > 0 && product.image[0].zoom && product.image[0].zoom.url)   ? product.image[0].zoom.url : 'sem imagem') + '"/></div><span>'+ product.name +'</span></div>').appendTo('.specs_compare-product-list');
   });
 
   

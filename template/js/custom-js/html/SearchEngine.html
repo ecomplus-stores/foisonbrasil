@@ -363,16 +363,18 @@
               :key="product._id"
               :ref="i === pageAnchorIndex ? 'pageAnchor' : null"
             >
-              <slot
-                name="product-card"
-                v-bind="{ product }"
-              >
-                <product-card
-                  class="search-engine__item"
-                  v-bind="productCardProps"
-                  :product="product"
-                />
-              </slot>
+              <div class="product-item">
+                <slot
+                  name="product-card"
+                  v-bind="{ product }"
+                >
+                  <product-card
+                    class="search-engine__item"
+                    v-bind="productCardProps"
+                    :product="product"
+                  />
+                </slot>
+              </div>
             </div>
           </div>
         </article>

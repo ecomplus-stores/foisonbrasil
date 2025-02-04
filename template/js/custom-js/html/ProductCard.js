@@ -146,6 +146,10 @@ export default {
     getTags(){
       return this.apx_productTags
     },
+    rng(){
+      return Math.floor(Math.random() * 10000)
+
+    },
     setTags(){
       let tags = [];
       
@@ -240,7 +244,14 @@ export default {
       }
     },
     storefrontGrids(grid_id){
-      return window.storefront.data.grids.find(el => el.grid_id == grid_id).title || ''
+      //console.log('storefrontGrids', grid_id,window.storefront.data.grids.find(el => el.grid_id == grid_id))
+      let q = window.storefront.data.grids.find(el => el.grid_id == grid_id)
+
+      if(q != undefined){
+        //console.log('aaaa')
+        return q.title
+      }
+      return''
     },
     storefrontSpecImage(grid_title){
       return window.apx_properties.find(el => el.title == grid_title).img || ''

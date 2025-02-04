@@ -168,7 +168,7 @@ const productProperties = [];
                   <% for (const gridId in _.state.specifications) {
                     if (_.state.specifications[gridId]) {
                       %>
-                      <div class="col-auto">
+                      <div class="col-md-4 col-6">
                         <% if (productProperties.find(el => el.title == _.ecomUtils.gridTitle(gridId, _.grids))) {%>
                         <div class="cms-icon">
                           <img src="<%= productProperties.find(el => el.title == _.ecomUtils.gridTitle(gridId, _.grids)).img %>"/>
