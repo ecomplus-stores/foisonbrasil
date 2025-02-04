@@ -100,15 +100,15 @@
           "props": [
             {
               "img": "/img/uploads/bases.png",
-              "text": "<b>A4</b>, <b>A3</b> e <b>A4x3</b>"
-            },
-            {
-              "img": "/img/uploads/forca-de-corte.png",
-              "text": "<b>1kg</b>"
+              "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
             },
             {
               "img": "/img/uploads/velocidade-de-corte.png",
-              "text": "<b>800mm/s</b>"
+              "text": "Velocidade de corte: <b>800mm/s</b>"
+            },
+            {
+              "img": "/img/uploads/forca-de-corte.png",
+              "text": "Força de corte: <b>1kg</b>"
             }
           ]
         },
