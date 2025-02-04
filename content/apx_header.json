@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
     "cta_url": "/promo",
-    "start": "2024-05-10T00:42:12.538Z",
-    "color": "#000000",
-    "background_image": "/img/uploads/rectangle-51.png",
-    "background_color": "#ffffff",
+    "start": "",
+    "color": "#332b69",
+    "background_image": "",
+    "background_color": "#b9a9ff",
     "cta_color": "#ffffff",
-    "title": "#MêsDoConsumidor com descontos de até 50% OFF por tempo limitado",
-    "end": "2024-06-07T00:42:12.550Z",
-    "cta_text": "VER PROMOÇÕES",
+    "title": "Ano novo, site novo com promoções pra você!",
+    "end": "",
+    "cta_text": "APROVEITE AQUI",
     "cta_background": "#9089ff"
   },
   "topbar_1": {
@@ -20,13 +20,13 @@
         "url": "/"
       },
       {
-        "title": "A Plotter Profissional Perfeita para Você",
-        "url": "/"
+        "title": "A Plotter de Recorte Profissional perfeita para você",
+        "url": "/https://foisonbrasil.netlify.app/equipamentos"
       }
     ]
   },
   "topbar_2": {
     "color": "#ffffff",
-    "background": "#9089ff"
+    "background": "#5c52ab"
   }
 }
