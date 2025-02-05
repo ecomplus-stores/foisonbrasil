@@ -107,6 +107,14 @@
           "description": "A Camy 2+ possui várias funções novas que vão facilitar ainda mais o seu dia a dia de trabalho: envio do corte por Wi-fi, sensor de folhas e painel de led com touch!",
           "props": [
             {
+              "img": "/img/uploads/corte-simples.png",
+              "text": "Área útil no corte simples: <b>36,5cm</b>"
+            },
+            {
+              "img": "/img/uploads/corte-contorno.png",
+              "text": "Área útil no corte de contorno: <b>36,5cm</b>"
+            },
+            {
               "img": "/img/uploads/bases.png",
               "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
             },
@@ -117,14 +125,6 @@
             {
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>1kg</b>"
-            },
-            {
-              "img": "/img/uploads/corte-contorno.png",
-              "text": "Área útil no corte de contorno: <b>36,5cm</b>"
-            },
-            {
-              "img": "/img/uploads/corte-simples.png",
-              "text": "Área útil no corte simples: <b>36,5cm</b>"
             }
           ]
         },
