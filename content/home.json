@@ -80,6 +80,14 @@
           "description": "Desenvolvida especialmente para o mercado da papelaria personalizada, a Camy possui leitura automática por câmera que possibilita otimizar sua produção ao máximo.",
           "props": [
             {
+              "img": "/img/uploads/corte-simples.png",
+              "text": "Área útil no corte simples: <b>31cm</b>"
+            },
+            {
+              "img": "/img/uploads/corte-contorno.png",
+              "text": "Área útil no corte de contorno: <b>26,5cm</b>"
+            },
+            {
               "img": "/img/uploads/bases.png",
               "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
             },
@@ -90,14 +98,6 @@
             {
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>1kg</b>"
-            },
-            {
-              "img": "/img/uploads/corte-contorno.png",
-              "text": "Área útil no corte de contorno: <b>26,5cm</b>"
-            },
-            {
-              "img": "/img/uploads/corte-simples.png",
-              "text": "Área útil no corte simples: <b>31cm</b>"
             }
           ]
         },
