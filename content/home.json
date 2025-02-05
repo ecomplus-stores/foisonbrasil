@@ -175,6 +175,10 @@
             {
               "img": "/img/uploads/corte-contorno.png",
               "text": "Área útil no corte de contorno: <b>59cm</b>"
+            },
+            {
+              "img": "/img/uploads/corte-simples.png",
+              "text": "Área útil no corte de contorno: <b>61cm</b>"
             }
           ]
         }
