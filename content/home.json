@@ -161,6 +161,14 @@
           "description": "A E24L 2.0 possui área de corte simples de 61cm e leitura manual por mira laser, você posiciona o laser na marca de registro para cortes exatos.",
           "props": [
             {
+              "img": "/img/uploads/corte-simples.png",
+              "text": "Área útil no corte de contorno: <b>61cm</b>"
+            },
+            {
+              "img": "/img/uploads/corte-contorno.png",
+              "text": "Área útil no corte de contorno: <b>59cm</b>"
+            },
+            {
               "img": "/img/uploads/bases.png",
               "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b>, <b>A3</b>, <b>A2</b> e <b>A1</b>"
             },
@@ -171,14 +179,6 @@
             {
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>500gr</b>"
-            },
-            {
-              "img": "/img/uploads/corte-contorno.png",
-              "text": "Área útil no corte de contorno: <b>59cm</b>"
-            },
-            {
-              "img": "/img/uploads/corte-simples.png",
-              "text": "Área útil no corte de contorno: <b>61cm</b>"
             }
           ]
         }
