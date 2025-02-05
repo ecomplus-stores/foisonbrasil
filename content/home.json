@@ -192,7 +192,7 @@
       "section_secondary_color": "#b9a9ff"
     },
     {
-      "description_color": "#ffffff",
+      "description_color": "#332b69",
       "spacing": {
         "container": "container",
         "desktop": {
@@ -221,8 +221,8 @@
       "title_text": "A única com <b>2 anos de garantia</b><div><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></div>",
       "type": "apx-image-section",
       "cta_text": "",
-      "title_color": "#ffffff",
-      "section_secondary_color": "#332b69"
+      "title_color": "#332b69",
+      "section_secondary_color": "#000000"
     },
     {
       "description_color": "#131313",
