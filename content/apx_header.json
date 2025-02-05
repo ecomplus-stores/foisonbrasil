@@ -9,11 +9,11 @@
     "title": "Ano novo, site novo com promoções pra você!",
     "end": "2025-02-28T03:00:00.000Z",
     "cta_text": "APROVEITE AQUI",
-    "cta_background": "#9089ff"
+    "cta_background": "#5c52ab"
   },
   "topbar_1": {
-    "background": "#9089ff",
-    "color": "#ffffff",
+    "background": "#b9a9ff",
+    "color": "#332b69",
     "topbar_1": [
       {
         "title": "A única com <b>2 anos de garantia</b>",
