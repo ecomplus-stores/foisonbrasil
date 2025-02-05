@@ -117,6 +117,10 @@
             {
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>1kg</b>"
+            },
+            {
+              "img": "/img/uploads/corte-contorno.png",
+              "text": "Área útil no corte de contorno: <b>36,5cm</b>"
             }
           ]
         },
