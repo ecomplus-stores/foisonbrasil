@@ -1,13 +1,13 @@
 {
   "topbar_timer": {
     "cta_url": "/promo",
-    "start": "2025-02-05T02:59:00.000Z",
+    "start": "",
     "color": "#332b69",
     "background_image": "",
     "background_color": "#b9a9ff",
     "cta_color": "#ffffff",
     "title": "Vem conferir nosso novo site com promoções especiais pra você!",
-    "end": "2025-03-01T02:59:00.000Z",
+    "end": "",
     "cta_text": "APROVEITE AQUI",
     "cta_background": "#5c52ab"
   },
