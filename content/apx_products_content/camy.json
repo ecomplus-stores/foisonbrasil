@@ -1,0 +1,29 @@
+{
+  "title": "CAMY",
+  "identificador": [
+    "cat_65b7c0f72cd6b65959181879"
+  ],
+  "upselling": [
+    {
+      "title": "Software",
+      "empty_text": "Sem Software",
+      "empty_pop_title": "Atenção",
+      "empty_pop_description": "Ao adquirir um equipamento sem software, sua máquina será enviada sem um sistema operacional. Sem a instalação de um software adequado, não será possível utilizar o equipamento.",
+      "empty_pop_button": "Entendi, desejo prosseguir sem a aquisição de um software.",
+      "upselling_list": [
+        {
+          "item_name": "Signmaster Craft",
+          "products_sku": "SOFT0001"
+        },
+        {
+          "products_sku": "CNC0041",
+          "item_name": "Signmaster Cut+Arms"
+        },
+        {
+          "item_name": "Signmaster Pro",
+          "products_sku": "FO0023"
+        }
+      ]
+    }
+  ]
+}
