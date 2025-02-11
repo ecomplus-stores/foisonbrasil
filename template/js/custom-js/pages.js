@@ -315,3 +315,39 @@ if ($timers.length) {
 }
 
 
+$("body").on("submit", "#apx_newsletter", function (e) {
+  e.preventDefault();
+  let form = $(this);
+  let mail = form.find('[type="email"]');
+  let name = form.find('[type="text"]');
+  //detecta se mail é email de forma consistente
+  if(name.val().length < 3){
+    alert("Por favor, insira seu nome completo.");
+    return;
+  }
+  if (!mail.val().includes("@") || !mail.val().includes(".")) {
+    alert("Por favor, insira um e-mail válido.");
+    return;
+  }
+  
+  
+  axios
+    .post(
+      "https://us-central1-marketingtools-ecomplus.cloudfunctions.net/app/alpix/apx_newsletter",
+      {
+        storeId: storefront.settings.store_id,
+        mail: mail.val(),
+        fullname: name.val(),   
+      }
+    )
+    .then(
+      function (response) {
+        alert(response.data.msg);
+        mail.val("");
+        name.val("");
+      },
+      function (error) {
+        alert(error);
+      }
+    );
+});
