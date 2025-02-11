@@ -1,0 +1,11 @@
+<div class="shipping-line">
+  <strong class="mr-2">
+    {{ deadlineStr }}
+  </strong>
+  <span class="mr-2">
+    {{ freightValueStr }}
+  </span>
+  <small class="shipping__details" v-if="shippingLine.delivery_instructions">
+    <i>?</i><span>{{ shippingLine.delivery_instructions }}</span>
+  </small>
+</div>

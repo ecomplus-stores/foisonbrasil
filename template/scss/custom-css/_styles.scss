@@ -34,7 +34,8 @@ body{
   --wht:#fff;
   --color1:#9089FF;
   //--color2:#FF970A;
-  --color2:#8570a7;
+  // --color2:#8570a7;
+  --color2:#b9a9ff;
   --color3:#3A1F42;
   --color4:#85FFDC;
   --color-border:#F2F2F2;
@@ -408,8 +409,8 @@ header#header{
     .card-body{
       display: flex;
       flex-direction: column;
-      padding: 0;
-      gap: 1rem;
+      padding: 1rem 0 0 0;
+      gap: .5rem;
       *{margin: 0;}
       *:hover{text-decoration: none;}
       .blog-post-date{
@@ -431,9 +432,9 @@ header#header{
 
 .newsletter{
   .bg{
-    background: #D7CBE8;
+    background: #b9a9ff;
     border-radius: 2rem;
-    --secondary_color:var(--color1);
+    --secondary_color:#5c52ab;
     position: relative;
     .apx-title-section{
       small{display: block;}
@@ -620,7 +621,7 @@ main ~ iframe{display: none;}
     
     
     .fa-star{
-      color: var(--color2);
+      color: #b3e0ff;
 
     }
     p{
@@ -780,7 +781,8 @@ nav{
         border: 2px solid;
         border-radius: 50px;
         box-shadow: 5px 5px 0 var(--blk);
-        background: var(--color4);
+        // background: var(--color4);
+        background: #b3e0ff;
         color: var(--blk);
         display: inline-block;
         font-size: var(--font-size);
@@ -3685,3 +3687,51 @@ ul.app_contacts{
 
 .product-item .product-card .product-card__pictures picture{aspect-ratio: 1;}
 #page-products #product-block .gallery .product__picture{max-width: 100%!important;}
+
+
+.shipping-line{
+  .shipping__details{
+    position: relative;
+    overflow: visible;
+    i{
+      background: var(--color2);
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 11px !important;
+      font-style: normal;
+      font-weight: 700;
+      height: 16px;
+      line-height: 16px !important;
+      text-align: center;
+      width: 16px;
+    }
+    i:hover + span {
+      display: block;
+    }
+    i + span{
+      display: none;
+      position: absolute;
+      background: #000;
+      color: #fff !important;
+      padding: .75rem;
+      border-radius: 5px;
+      right: -13px;
+      top: calc(100% + 9px);
+      white-space: normal;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300 !important;
+      width: 300px;
+    }
+    i + span:after{
+      border: 6px solid;
+      border-color: #0000 #0000 #000;
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: -12px;
+    }
+  }
+}
