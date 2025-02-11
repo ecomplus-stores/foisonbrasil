@@ -696,6 +696,7 @@ main ~ iframe{display: none;}
           display: flex;
           gap: .5rem;
           align-items: center;
+          img{max-height: 22px;}
           *{margin: 0;}
         }
       }
