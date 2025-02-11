@@ -760,7 +760,7 @@ nav{
         s{color: var(--txt);}
       }
       .prices__value{
-        font-family: "Voltage";
+        // font-family: "Voltage";
         position: relative;
         width: fit-content;
       }
@@ -1212,9 +1212,10 @@ nav{
     display: flex;
     gap: .5rem;
     align-items: center;
+    font-size: 14px;
     i{
-      width: 24px;
-      height: 24px;
+      width: 14px;
+      height: 14px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1523,7 +1524,7 @@ nav.header__submenu{
       .prices__value{
         font-size: var(--h5);
         text-transform: uppercase;
-        font-family: "Voltage";
+        // font-family: "Voltage";
         color: var(--blk);
         font-weight: bold;
       }
@@ -1997,7 +1998,7 @@ body{overflow-y:auto!important}
 
 .product-card{
   .prices__value{
-    font-family: "Voltage";
+    // font-family: "Voltage";
     position: relative;
     line-height: initial;
     width: fit-content;
@@ -3678,7 +3679,7 @@ ul.app_contacts{
   opacity: 1;
   padding: 0;
   width: 64px;
-  z-index:999999999;
+  z-index:99;
   i{
     font-size: 36px;
     color: #fff;
@@ -3734,4 +3735,29 @@ ul.app_contacts{
       top: -12px;
     }
   }
+}
+
+@media(max-width:990px){
+  // #search-engine[data-categories="[\"Equipamentos\"]"] .row > .col-6 {
+  //   width: 100%;
+  //   flex: 0 0 100%;
+  //   max-width: 100%;
+  // }
+  .product-card .product-card__buy{
+    opacity: 1;
+    margin: 1rem .5rem 2rem .5rem!important;
+    button{padding: .5rem!important;}
+  }
+}
+
+#product-gallery{
+  position: relative;
+  z-index: 0;
+}
+
+.upselling__empty_pop button.fs_btn{
+  max-width: 100%;
+  text-wrap: wrap;
+  line-height: initial;
+  font-size: 12px;
 }

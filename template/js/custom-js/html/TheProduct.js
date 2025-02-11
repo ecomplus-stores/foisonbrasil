@@ -100,7 +100,7 @@ export default {
       }
     },
     product: Object,
-    product_cms: Object,
+    //product_cms: Object,
     headingTag: {
       type: String,
       default: 'h1'
@@ -174,6 +174,7 @@ export default {
       variationImagesKey : null,
       variationImages: [],      
       variantGalleryImages:[],
+      product_cms:null
     }
   },
 
@@ -532,7 +533,8 @@ export default {
     },
 
     getUpsellingProduct(){
-      if(this.product_cms && this.product_cms.upselling[0] && this.product_cms.upselling[0].upselling_list){
+      console.log('product_cms',this.product_cms)
+      if(this.product_cms && this.product_cms.upselling && this.product_cms.upselling[0] && this.product_cms.upselling[0].upselling_list){
       const ecomSearch = new EcomSearch()
       ecomSearch
         .setSkus(this.product_cms.upselling[0].upselling_list.map(item => item.products_sku))
@@ -710,6 +712,7 @@ export default {
     }
     this.isFavorite = checkFavorite(this.body._id || this.productId, this.ecomPassport)
     this.product_cms = window.product_cms_content
+    console.log('this.product_cms',this.product_cms)
     this.getUpsellingProduct()
   },
 

@@ -72,7 +72,7 @@
           :is="isSSR ? 'portal' : 'div'"
           selector="#product-actions"
         >
-        <div class="apx_tags" :key="rng" v-if="getTags()">
+        <div class="apx_tags"  v-if="getTags()">
           <div v-for="(item, index) in getTags()" :key="index" :class="index">
             <div v-for="(item_, index_) in item">                
               <span class="text_tag" v-if="!item_.img" :style="'--bg_:' + item_.background_color +'; --cl_:' + item_.color + ';--bd_:' + item_.border">

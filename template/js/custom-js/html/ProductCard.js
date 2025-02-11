@@ -254,7 +254,12 @@ export default {
       return''
     },
     storefrontSpecImage(grid_title){
-      return window.apx_properties.find(el => el.title == grid_title).img || ''
+      let q = window.apx_properties.find(el => el.title == grid_title)
+      if(q){
+        return q.img
+      }
+      return ''
+      //return window.apx_properties.find(el => el.title == grid_title).img || ''
     }
   },
 
