@@ -3749,6 +3749,8 @@ ul.app_contacts{
     margin: 1rem .5rem 2rem .5rem!important;
     button{padding: .5rem!important;}
   }
+
+  .specs_compare-product-list{flex-wrap: nowrap;}
 }
 
 #product-gallery{
@@ -3761,4 +3763,26 @@ ul.app_contacts{
   text-wrap: wrap;
   line-height: initial;
   font-size: 12px;
+}
+.aviso-meio-pagamento:before{
+  background: red;
+  border-radius: 3rem;
+  color: #fff;
+  content: "Atenção";
+  display: block;
+  font-weight: 700;
+  margin: -20px 0 1rem 0;
+  padding: .5rem 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #ccc;
+}
+.aviso-meio-pagamento{
+  background: #f2f2f2;
+  border-radius: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  border: 1px solid #ccc;
+  color: #000;
+  font-size: 16px;
+  margin: 3rem 0 2rem 0;
 }
