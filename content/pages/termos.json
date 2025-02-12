@@ -2,6 +2,12 @@
   "title": "Termos de garantia",
   "meta_title": "Termos de garantia",
   "meta_description": "Termos de garantia",
-  "body": "C﻿onfira aqui todos os detalhes dos termos de garantia.\n\n![](/img/uploads/termo-de-garantia_page-0001.jpg)\n\n![](/img/uploads/termo-de-garantia_page-0002.jpg)\n\n![](/img/uploads/termo-de-garantia_page-0003.jpg)\n\n![](/img/uploads/termo-de-garantia_page-0004.jpg)",
-  "sections": []
+  "body": "C﻿onfira aqui todos os detalhes dos termos de garantia.\n\n[bit.ly/termo-de-garantia-foisonbrasil](https://bit.ly/termo-de-garantia-foisonbrasil)",
+  "sections": [
+    {
+      "type": "responsive-banner",
+      "img": "/img/uploads/termos-de-garantia.png",
+      "link": "https://bit.ly/termo-de-garantia-foisonbrasil"
+    }
+  ]
 }
