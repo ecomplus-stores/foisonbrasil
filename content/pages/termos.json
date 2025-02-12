@@ -1,6 +1,39 @@
 {
   "title": "Termos de garantia",
-  "meta_title": "Termos de serviço",
-  "meta_description": "Termos de serviço",
-  "body": "Acesse aqui nosso termo de garantia\n\n[bit.ly/termo-de-garantia-foisonbrasil](bit.ly/termo-de-garantia-foisonbrasil)"
+  "meta_title": "Termos de garantia",
+  "meta_description": "Termos de garantia",
+  "body": "\n\n![]()",
+  "sections": [
+    {
+      "type": "banner-slider",
+      "autoplay": 9000,
+      "full_width": false,
+      "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/termo-de-garantia_page-0001.jpg",
+          "mobile_img": "/img/uploads/termo-de-garantia_page-0001.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/termo-de-garantia_page-0002.jpg",
+          "mobile_img": "/img/uploads/termo-de-garantia_page-0002.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/termo-de-garantia_page-0003.jpg",
+          "mobile_img": "/img/uploads/termo-de-garantia_page-0003.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/termo-de-garantia_page-0004.jpg",
+          "mobile_img": "/img/uploads/termo-de-garantia_page-0004.jpg"
+        }
+      ]
+    }
+  ]
 }
