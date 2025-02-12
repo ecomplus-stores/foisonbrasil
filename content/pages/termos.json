@@ -6,8 +6,9 @@
   "sections": [
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/termos-de-garantia.png",
-      "link": "https://bit.ly/termo-de-garantia-foisonbrasil"
+      "img": "/img/uploads/garantia-desktop.png",
+      "link": "https://bit.ly/termo-de-garantia-foisonbrasil",
+      "mobile_img": "/img/uploads/garantia-mobile.png"
     }
   ]
 }
