@@ -54,6 +54,10 @@ const hasAllDepartments = header.menu_all_departments
 %>
 
 <div id="overlay" class="fade"></div>
+
+<div style="" class="aviso-migracao">
+  <b>NOSSO SITE MUDOU!</b> Consulte seus pedidos antigos <a href="https://foisoasil.commercesuite.com.br/my-account/login" target="_blank"><u>clicando aqui</u></a> e qualquer dúvida, basta chamar nossa equipe de atendimento.
+</div>
 <% if(apx_header?.topbar_timer?.start && apx_header?.topbar_timer?.end){ %>
   <div class="apx_topbar_timer py-md-2" style="background-image:url(<%= apx_header?.topbar_timer?.background_image %>);--background_color:<%= apx_header?.topbar_timer?.background_color %>;">
     <div class="container">
@@ -142,6 +146,7 @@ const hasAllDepartments = header.menu_all_departments
     </div>           
   </div>
 <%  } %>
+
 <header class="header" id="header">
   
   <div class="header__container container-fluid">
