@@ -20,6 +20,13 @@
           "img": "/img/uploads/banner-desktop.png",
           "link": "https://loja.foison.com.br/equipamentos",
           "mobile_img": "/img/uploads/banner-mob.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-desktop-2.png",
+          "link": "https://loja.foison.com.br/foison-camy",
+          "mobile_img": "/img/uploads/banner-mob-2.png"
         }
       ]
     },
