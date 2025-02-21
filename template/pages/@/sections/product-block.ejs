@@ -393,28 +393,97 @@ const productProperties = [];
 
             
           </div>
-          <div class="product-cms-content d-block d-md-none">
+          <div class="product-cms-content d-md-none d-block">
             <% if (_.state.short_description) { %>
               <div class="content-block my-5">
-                <h4>Sobre o produto</h4>
-                <p class="product__info mt-3 lead">
+                <div class="d-flex align-items-center gap-1">
+                  <img class="mr-2" src="/img/file-06.svg"/>
+                  <h4 class="m-0"><b>Sobre</b> o produto</h4>
+                </div>
+                <p class="html-clearfix">
                   <%= _.state.short_description %>
                 </p>
+              </div>              
+            <% } %>
+            <% if (_.state.specifications) { %>
+              <div class="content-block my-5">
+                <div class="d-flex align-items-center gap-1">
+                  <img class="mr-2" src="/img/certificate-01.svg"/>
+                  <h4 class="m-0"><b>Características</b></h4>
+                </div>
+                <div class="row specifications mt-4">
+                  <% for (const gridId in _.state.specifications) {
+                    if (_.state.specifications[gridId]) {
+                      %>
+                      <div class="col-md-4 col-6">
+                        <% if (productProperties.find(el => el.title == _.ecomUtils.gridTitle(gridId, _.grids))) {%>
+                        <div class="cms-icon">
+                          <img src="<%= productProperties.find(el => el.title == _.ecomUtils.gridTitle(gridId, _.grids)).img %>"/>
+                        </div>
+                        <% } %>
+                        <div class="text-muted">
+                          <%= _.ecomUtils.gridTitle(gridId, _.grids) %>
+                        </div>
+                        <div class="text">
+                          <%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %>
+                        </div>
+                      </div>
+                      <%
+                    }
+                  } %>
+                </div>
               </div>
               
             <% } %>
+            <% if (_.state.body_html) { %>
+              <div class="content-block my-5">
+                <div class="d-flex align-items-center gap-1">
+                  <img class="mr-2" src="/img/file-06.svg"/>
+                  <h4 class="m-0"><b>Detalhes</b> do produto</h4>
+                </div>
+                <div class="html-clearfix">
+                 <%- _.state.body_html.replace(
+                  /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,
+                  '<img class="lozad" data-src="$2" $1 $3>'
+                ).replace(
+                  /<img class="lozad" data-src="([^'"]+)"([^>]+)class=['"]([^'"]+)['"]([^/>]+)?>/g,
+                  '<img class="lozad $3" data-src="$1" $2 $4>'
+                ) %>
+                </div>
+              </div> 
+            <% } %>
+            <div>
+            <%- await include('@/helpers/widgets-append', {
+              _, opt: {}, field: 'productDescriptionAppend'
+            }) %>
+            </div>
+            
+            
+            
             <% if (cms_content) { %>
               <%
               if(cms_content.list && cms_content.list.length > 0){
-              cms_content.list.forEach(item => { 
+              
+                cms_content.list.forEach(item => { 
                   %>
                   <div class="content-block my-5">
-                    <h4><%- item.title %></h4>
+                    <div class="d-flex align-items-center gap-1">
+                      <% let icon_cms = {
+                        "Sobre o <b>Produto</b>" : "/img/file-06.svg",
+                        "<b>Avaliações</b>" : "/img/message-check-circle.svg",
+                        "<b>Como</b> Usar" : "/img/graduation-hat-02.svg",
+                        "<b>Perguntas</b> Frequentes" : ""
+                      }
+                      %>
+                      <img class="mr-2" src="<%= icon_cms[item.title] || ''%>"/>
+                      <h4 class="m-0"><%- item.title %></h4>
+                    </div>
                     <div class="html-clearfix">
-                      <%- item.content %>
+                      <%- _.md.render(item.content) %>
                     </div>
                   </div>
                   <%
+                
                 })
               }
               %>

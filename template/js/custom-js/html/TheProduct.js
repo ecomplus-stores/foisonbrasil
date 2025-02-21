@@ -497,9 +497,19 @@ export default {
       return total
     },
 
+    kitAlreadyAtCart(){
+      let q = ecomCart && ecomCart.data && ecomCart.data.items.find(el => el.kit_product && el.kit_product._id == this.body._id)
+      console.log('kitAlreadyAtCart',q)
+      if(q){
+        return true
+      }
+      return false
+    },
+
     buy_kit () {
+      
       this.alertVariant = 'warning'
-  
+      
       const items = []
       const composition = this.kitItems.map(item => ({
         _id: item.product_id,
@@ -512,23 +522,40 @@ export default {
           const newItem = { ...item, quantity }
           delete newItem.customizations
           //if (this.kitProductId) {
+          console.log('aaa',this)
             newItem.kit_product = {
               _id: this.body._id,
               name: this.body.name,
-              pack_quantity: this.totalQuantity()+1,
-              price: this.fixedPrice,
-              composition
+              pack_quantity: this.totalQuantity(),
+              price: this.body.price,
+              composition,
+              picture: this.body.picture,
+              pictures: this.body.pictures,
             }
+
+            console.log(newItem)
           //}
           if (this.slug) {
             newItem.slug = this.slug
           }
           items.push(newItem)
           if (this.canAddToCart) {
+            //console.log('add',newItem)
             ecomCart.addItem(newItem)
           }
         //}
       })
+
+      if(this.productUpselling){
+        this.productUpselling.forEach( upsell => {
+          let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
+          if(q){
+            ecomCart.addProduct(q)
+          }
+        })
+      }
+
+      //console.log(items)
       this.$emit('buy', { items })       
     },
 
@@ -558,7 +585,7 @@ export default {
           return
         }
       }
-      product.pictures = this.productToGallery.pictures
+      //product.pictures = this.productToGallery.pictures
       const customizations = [...this.customizations]
       this.$emit('buy', { product, variationId, customizations })
       if (this.canAddToCart) {
@@ -662,6 +689,7 @@ export default {
             .fetch(true)
             .then(() => {
               ecomSearch.getItems().forEach(product => {
+                console.log('kit_product',product)
                 const { quantity } = kitComposition.find(({ _id }) => _id === product._id)
                 const addKitItem = variationId => {
                   const item = ecomCart.parseProduct(product, variationId, quantity)

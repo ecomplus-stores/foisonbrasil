@@ -49,7 +49,8 @@ export default {
   data () {
     return {
       quantity: 1,
-      canInputSelect: false
+      canInputSelect: false,
+      kitPhotoUrl: null
     }
   },
 
@@ -104,12 +105,30 @@ export default {
       return typeof maxQuantity === 'number' && maxQuantity >= 0
         ? maxQuantity
         : 9999999
-    }
+    },
+
+    
   },
 
   methods: {
     formatMoney,
+    getKitPhoto (){
 
+      if(this.item.kit_product){
+        const ecomSearch = new EcomSearch()
+        ecomSearch
+          .setPageSize(1)
+          .setProductIds([this.item.kit_product._id])
+          .fetch(true)
+          .then(() => {
+            ecomSearch.getItems().forEach(product => {              
+              this.kitPhotoUrl = product.pictures[0].normal.url
+            })
+          })
+          .catch(console.error)
+      }
+      
+    },
     formatName (name) {
       if (name) {
         if (name.length <= this.nameMaxLength) {
@@ -156,6 +175,9 @@ export default {
   },
 
   watch: {
+    kitPhotoUrl (newUrl) {
+      console.log('kitPhotoUrl updated:', newUrl)
+    },
     'item.quantity': {
       handler(qnt) {
         console.log('Watcher - item.quantity:', qnt);
@@ -196,5 +218,7 @@ export default {
 
   created () {
     this.updateInputType()
+    this.getKitPhoto()
+    console.log('cartitem',this.item)
   }
 }

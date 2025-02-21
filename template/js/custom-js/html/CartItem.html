@@ -9,9 +9,11 @@
         :is="item.slug ? 'a-link' : 'span'"
         :href="`/${item.slug}`"
       >
-        <a-picture
-          :src="img.url"
+
+        <a-picture          
+          :src="kitPhotoUrl || img.url"
           :alt="img.alt || item.name"
+          :key="kitPhotoUrl"
         />
       </component>
 

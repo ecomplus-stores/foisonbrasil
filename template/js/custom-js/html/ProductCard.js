@@ -210,6 +210,11 @@ export default {
 
     buy () {
       const product = this.body
+
+      if(this.showEquipmentSpecs()){
+        window.location = `/${product.slug}`
+        return false
+      }
       this.$emit('buy', { product })
       if (this.canAddToCart) {
         this.isWaitingBuy = true

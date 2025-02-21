@@ -45,10 +45,14 @@
                   <% for (let i = 0; i < opt.banners.length; i++) { %>
                     <li class="glide__slide list-carousel__item">
                      <div class="item px-4">
-                      <div class="image">
-                        <img src="<%= opt.banners[i].img %>" class="w-100"/>
-                      </div>
-                      <h4 class="d-block my-4"><%= opt.banners[i].title %></h4>
+                      <a href="<%= opt.banners[i].link %>" class="d-block">                        
+                        <div class="image">
+                          <img src="<%= opt.banners[i].img %>" class="w-100"/>
+                        </div>
+                      </a>
+                      <a href="<%= opt.banners[i].link %>" class="d-block">
+                        <h4 class="d-block my-4"><%= opt.banners[i].title %></h4>
+                      </a>                      
                       <p class="text-center my-4 d-block"><%= opt.banners[i].description %></p>
                       <ul class="props">
                         <% for (let x = 0; x < opt.banners[i].props.length; x++) {%>
