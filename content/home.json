@@ -77,7 +77,8 @@
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>1kg</b>"
             }
-          ]
+          ],
+          "link": "/plotter-de-recorte-profissional-foison-camy"
         },
         {
           "img": "/img/uploads/c24.png",
@@ -104,7 +105,8 @@
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>1kg</b>"
             }
-          ]
+          ],
+          "link": "/plotter-de-recorte-profissional-foison-c24-pro-cam-multimark"
         },
         {
           "img": "/img/uploads/e24.png",
@@ -131,7 +133,8 @@
               "img": "/img/uploads/forca.png",
               "text": "Força de corte: <b>500gr</b>"
             }
-          ]
+          ],
+          "link": "/plotter-de-recorte-profissional-foison-e24-l-20"
         }
       ],
       "cta_link": "/equipamentos",
