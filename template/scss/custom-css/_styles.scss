@@ -3815,3 +3815,46 @@ ul.app_contacts{
     display: inline-block;
     border-radius: 2rem;
 }
+
+
+.cart-item.cart-item--summary{
+  .summary__item{align-items: flex-start!important;}
+  .cart-item__name-subtitle{
+    color: var(--blk);
+    font-size: var(--smallest);
+    font-weight: 600;
+    margin-top: .25rem;
+  }
+  .kit_item-list{padding: 0;border: 0;}
+}
+
+
+.kit__item{
+  .variations.kit-product-variations--show{
+    flex:1 1 50%;
+    .variations__grid{
+      margin: 0!important;
+      .mb-2{margin-bottom: 0px!important;}
+    }
+    .variations__grid-title{font-size: 12px;}
+    .variations__value{font-size: 12px;}
+    .variations__select{font-size: 12px;}
+  }
+}
+.quantity-selector__item.with_variations{
+  flex: 0 0 100%;
+}
+
+@media(max-width:990px){
+  .kit__item{
+    .variations.kit-product-variations--show{
+      flex:0 0 40%;
+    }
+  }
+}
+
+#cart {
+  .cart__list{
+    .cart-item__price-un.fade:not(.show){display: none!important;}
+  }
+}

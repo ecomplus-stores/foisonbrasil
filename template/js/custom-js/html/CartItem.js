@@ -32,6 +32,7 @@ export default {
       required: true
     },
     minicart: Boolean,
+    summary: Boolean,
     nameMaxLength: {
       type: Number,
       default: 60

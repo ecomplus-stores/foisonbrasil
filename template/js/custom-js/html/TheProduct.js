@@ -52,6 +52,7 @@ import AAlert from '@ecomplus/storefront-components/src/AAlert.vue'
 import APicture from '@ecomplus/storefront-components/src/APicture.vue'
 import APrices from '@ecomplus/storefront-components/src/APrices.vue'
 import AShare from '@ecomplus/storefront-components/src/AShare.vue'
+import KitProductVariations from '@ecomplus/storefront-components/src/KitProductVariations.vue'
 import ProductVariations from '@ecomplus/storefront-components/src/ProductVariations.vue'
 import ProductGallery from '@ecomplus/storefront-components/src/ProductGallery.vue'
 import QuantitySelector from '@ecomplus/storefront-components/src/QuantitySelector.vue'
@@ -85,6 +86,7 @@ export default {
     APicture,
     APrices,
     AShare,
+    KitProductVariations,
     ProductVariations,
     ProductGallery,
     QuantitySelector,
@@ -165,6 +167,7 @@ export default {
       paymentOptions: [],
       customizations: [],
       kitItems: [],
+      kitItemsVariations:[],
       currentTimer: null,
       productUpselling:[],
       upselling_pop_visibility:[],
@@ -322,11 +325,21 @@ export default {
       return this.body
     },
     isKitWithVariations () {
+      console.log('xxxx',this.kitItems.some(item => item.variations && item.variations.length))
       return this.kitItems.some(item => item.variations && item.variations.length)
     }
   },
 
   methods: {
+    handleKitVariation(items){
+      let q = this.kitItemsVariations.find(el => el.index == items.index)
+      if(q){
+        q = items
+      }else{
+        this.kitItemsVariations.push(items)
+      }
+      console.log(this.kitItemsVariations)
+    },
     getTags(){
       return this.apx_productTags
     },
@@ -516,13 +529,30 @@ export default {
         variation_id: item.variation_id,
         quantity: item.quantity
       }))
+      
+      this.kitItemsVariations.forEach(option => {  
+        this.kitItems.forEach(item => {
+          if(item.variations){
+            let q = item.variations.find(el => el._id === option.variation[0])              
+            if(q){
+              console.log('qqqq',q)
+              composition.push({
+                _id: item.product_id,
+                variation_id: q._id,
+                quantity: 1
+              })
+            }    
+          }
+         
+        })           
+                    
+      })
       this.kitItems.forEach(item => {
         const quantity = item.quantity
         //if (quantity > 0) {
           const newItem = { ...item, quantity }
           delete newItem.customizations
           //if (this.kitProductId) {
-          console.log('aaa',this)
             newItem.kit_product = {
               _id: this.body._id,
               name: this.body.name,
@@ -538,7 +568,28 @@ export default {
           if (this.slug) {
             newItem.slug = this.slug
           }
+          console.log(this.kitItemsVariations,newItem)
+          if(newItem.variations){
+            this.kitItemsVariations.forEach(option => {             
+              let q = newItem.variations.find(variation => variation._id === option.variation[0])              
+              if(q){
+                console.log('addVariation',option.variation[0])
+                newItem.variation_id = q._id
+                newItem.name = q.name
+                newItem.sku = q.sku
+                newItem.specifications = q.specifications
+                newItem.price = q.price
+                newItem.picture_id = q.picture_id
+                newItem.quantity = q.quantity
+                return
+              }                
+            })
+          }
+
+          
+          
           items.push(newItem)
+          console.log(items,newItem)
           if (this.canAddToCart) {
             //console.log('add',newItem)
             ecomCart.addItem(newItem)

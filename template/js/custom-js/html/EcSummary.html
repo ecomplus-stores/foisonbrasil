@@ -8,47 +8,22 @@
       v-if="items"
       class="summary__list"
     >
-      <div
-        class="summary__item"
-        v-for="item in items"
-        v-if="item.quantity > 0"
-        :key="item._id"
-      >
-        <a-picture
-          v-if="getImg(item)"
-          :src="getImg(item).url"
-          :alt="getImg(item).alt || item.name"
-        />
-
-        <div>
-          <span class="badge badge-secondary">
-            {{ item.quantity }}
-          </span>
-          <template v-if="Array.isArray(item.flags) && item.flags.includes('freebie')">
-            <s>{{ formatMoney(getPrice(item)) }}</s>
-            <small class="text-muted">
-              <i class="i-gift ml-2 mr-1"></i>
-              {{ i19freebie }}
-            </small>
-          </template>
-          <template v-else>
-            {{ formatMoney(getPrice(item)) }}
-          </template>
-          <br>
-
-          <a-link
-            v-if="item.slug"
-            :href="`/${item.slug}`"
-            target="_blank"
-          >
-            <small>{{ getName(item) }}</small>
-          </a-link>
-          <small v-else>
-            {{ getName(item) }}
-          </small>
-          <item-customizations :item="item"/>
-        </div>
-      </div>
+    <cart-item
+      v-for="item in uniqueKitProducts"
+      :minicart="true"
+      :key="item._id"
+      :item="item"
+      :isKit="true"
+      :summary="true"
+    />
+    <cart-item
+      v-for="item in nonKitProducts"
+      :minicart="true"
+      :key="item._id"
+      :item="item"
+      :summary="true"
+    />  
+      
     </div>
   </slot>
 

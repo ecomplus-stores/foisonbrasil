@@ -1,8 +1,73 @@
 <section
   class="cart-item"
-  :class="isFreebie ? 'cart-item--freebie' : null"
+  :class="{
+    'cart-item--freebie': isFreebie,
+    'cart-item--summary': summary
+  }"
+
 >
-  <div class="cart-item__container">
+  <div v-if="summary" class="summary__item">
+    
+        <a-picture          
+        :src="kitPhotoUrl || img.url"
+        :alt="img.alt || item.name"
+        :key="kitPhotoUrl"
+      />
+
+      <div>
+        <span class="badge badge-secondary">
+          {{ quantity }}
+        </span>
+        <template v-if="Array.isArray(item.flags) && item.flags.includes('freebie')">
+          <s>{{ formatMoney(getPrice(item)) }}</s>
+          <small class="text-muted">
+            <i class="i-gift ml-2 mr-1"></i>
+            {{ i19freebie }}
+          </small>
+        </template>
+        <template v-if="item.kit_product">
+        
+            <span
+            v-if="item.kit_product">
+              {{ formatMoney(item.kit_product.price)}}
+            </span>
+        </template>
+        <template v-else>
+          
+            <span>
+                {{ formatMoney(price * quantity) }}
+            </span>
+          
+          
+        </template>
+        <br>
+        <a-link
+            v-if="item.slug"
+            :href="`/${item.slug}`"
+            target="_blank"
+          >
+          <small
+            v-if="item.kit_product"
+          >
+          {{ formatName(item.kit_product.name) }}
+          </small>
+          <small v-else>{{ formatName(item.name) }}</small>
+        </a-link>
+        <item-customizations :item="item"/>
+
+        <div
+          v-if="item.kit_product"
+          class="kit_item-list">
+            <b>Itens do Kit:</b>
+            <div class="item" v-for="item_ in item.kit_product.composition">
+              
+              {{item_.quantity}}x {{ itemKitData(item_._id).name}}
+            </div>
+          </div>          
+      </div>
+    </div>
+  </div>
+  <div v-else class="cart-item__container">
     <div class="cart-item__thumb">
       <component
         v-if="img"
@@ -255,7 +320,7 @@
         </template>
       </div>
       <div :class="!minicart ? 'topper' : ''">
-        <div class="w-100 d-flex justify-content-end">
+        <div class="w-100 d-flex justify-content-end" v-if="!summary">
           <button
           v-if="!isFreebie"
           type="button"

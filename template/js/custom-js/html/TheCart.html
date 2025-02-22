@@ -16,12 +16,22 @@
               enter-active-class="animated fadeInDown"
               leave-active-class="animated fadeOutUp faster position-absolute"
             >
+              
               <cart-item
-                v-for="item in cart.items"
-                :key="item._id"
-                :item="item"
-                :name-max-length="80"
-              />
+                  v-for="item in uniqueKitProducts"
+                  :minicart="true"
+                  :key="item._id"
+                  :item="item"
+                  :isKit="true"
+                  :name-max-length="80"
+                />
+                <cart-item
+                  v-for="item in nonKitProducts"
+                  :minicart="true"
+                  :key="item._id"
+                  :item="item"
+                  :name-max-length="80"
+                />  
             </transition-group>
           </slot>
         </div>

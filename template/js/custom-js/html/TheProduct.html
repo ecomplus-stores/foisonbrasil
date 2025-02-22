@@ -252,6 +252,7 @@
                     :kit-name="name"
                     :kit-price="fixedPrice"
                     :max-options-btns="maxVariationOptionsBtns"
+                    @variation="handleKitVariation"
                   >
                     <template #buy-button-content>
                       <slot name="buy-button-content"/>
@@ -365,11 +366,15 @@
                   :has-buy-button="false"
                   @set-quantity="({ quantity }) => qntToBuy = quantity"
                 >
+               
+                
                 <span v-if="isKit && kitAlreadyAtCart()" class="kitAtCart">
                   Você já adicionou este kit ao carrinho
                 </span>
-                <span v-else-if="isKit" @click="buy_kit">
-                  
+                <span class="kitAtCart mb-3" v-else-if="isKitWithVariations && (kitItemsVariations.length !== kitItems.filter(el => el.variations !== undefined).length)">
+                  Selecione as variações dos itens do kit para adicioná-los ao carrinho.
+                </span>                
+                <span v-else-if="isKit" @click="buy_kit" class="kitAddCartBtn">                  
                   
                     <slot
                       name="buy"
