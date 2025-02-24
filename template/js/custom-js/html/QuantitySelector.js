@@ -183,6 +183,6 @@ export default {
       this.items.forEach(item => this.changeQnt(item))
     }
     this.items.forEach(item => this.changeQnt(item, item.quantity))
-    console.log('selectedQntds',this.selectedQnts)
+    //console.log('selectedQntds',this.selectedQnts)
   }
 }

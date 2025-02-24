@@ -154,6 +154,7 @@ export default {
 
   data () {
     return {
+      refreshShipping:0,
       body: {},
       fixedPrice: null,
       selectedVariationId: null,
@@ -280,11 +281,11 @@ export default {
           })
         }
         if(this.productUpselling){
-          //console.log(`add upsell a`,this.productUpselling)
+          //////console.log(`add upsell a`,this.productUpselling)
           this.productUpselling.forEach( upsell => {
-            //console.log(`add upsell`, upsell,this.upsellingProductData)
+            //////console.log(`add upsell`, upsell,this.upsellingProductData)
             let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
-            //console.log(q)
+            //////console.log(q)
             if(q){
               price += q.price
             }
@@ -315,7 +316,7 @@ export default {
       if (this.variationImages.length) {
         window.mainProductGallery = [...this.variationImages]
         this.variationImagesKey = Math.random().toString()
-        //console.log('update',window.mainProductGallery)
+        //////console.log('update',window.mainProductGallery)
         return {
           ...this.body,
           pictures: this.variationImages
@@ -325,12 +326,16 @@ export default {
       return this.body
     },
     isKitWithVariations () {
-      console.log('xxxx',this.kitItems.some(item => item.variations && item.variations.length))
       return this.kitItems.some(item => item.variations && item.variations.length)
     }
   },
 
   methods: {
+    updateKitItemWeight(product_id,weight){
+      this.kitItems.find(el => el.product_id == product_id).weight = weight
+      this.refreshShipping++
+      ////console.log(this.kitItems,refreshShipping)
+    },
     handleKitVariation(items){
       let q = this.kitItemsVariations.find(el => el.index == items.index)
       if(q){
@@ -338,7 +343,7 @@ export default {
       }else{
         this.kitItemsVariations.push(items)
       }
-      console.log(this.kitItemsVariations)
+      ////console.log(this.kitItemsVariations)
     },
     getTags(){
       return this.apx_productTags
@@ -358,7 +363,7 @@ export default {
 
         this.apx_productTags = {...this.apx_productTags}
       }
-      console.log(`tagssss`,this.apx_productTags)
+      ////console.log(`tagssss`,this.apx_productTags)
     },
     setPopVisibility(key, action){
       let upselling_pop_visibility = [...this.upselling_pop_visibility]
@@ -512,7 +517,7 @@ export default {
 
     kitAlreadyAtCart(){
       let q = ecomCart && ecomCart.data && ecomCart.data.items.find(el => el.kit_product && el.kit_product._id == this.body._id)
-      console.log('kitAlreadyAtCart',q)
+      ////console.log('kitAlreadyAtCart',q)
       if(q){
         return true
       }
@@ -535,7 +540,6 @@ export default {
           if(item.variations){
             let q = item.variations.find(el => el._id === option.variation[0])              
             if(q){
-              console.log('qqqq',q)
               composition.push({
                 _id: item.product_id,
                 variation_id: q._id,
@@ -563,17 +567,16 @@ export default {
               pictures: this.body.pictures,
             }
 
-            console.log(newItem)
+            ////console.log(newItem)
           //}
           if (this.slug) {
             newItem.slug = this.slug
           }
-          console.log(this.kitItemsVariations,newItem)
+          
           if(newItem.variations){
             this.kitItemsVariations.forEach(option => {             
               let q = newItem.variations.find(variation => variation._id === option.variation[0])              
               if(q){
-                console.log('addVariation',option.variation[0])
                 newItem.variation_id = q._id
                 newItem.name = q.name
                 newItem.sku = q.sku
@@ -589,9 +592,8 @@ export default {
           
           
           items.push(newItem)
-          console.log(items,newItem)
+          ////console.log(items,newItem)
           if (this.canAddToCart) {
-            //console.log('add',newItem)
             ecomCart.addItem(newItem)
           }
         //}
@@ -606,12 +608,12 @@ export default {
         })
       }
 
-      //console.log(items)
+      //////console.log(items)
       this.$emit('buy', { items })       
     },
 
     getUpsellingProduct(){
-      console.log('product_cms',this.product_cms)
+      ////console.log('product_cms',this.product_cms)
       if(this.product_cms && this.product_cms.upselling && this.product_cms.upselling[0] && this.product_cms.upselling[0].upselling_list){
       const ecomSearch = new EcomSearch()
       ecomSearch
@@ -643,13 +645,13 @@ export default {
         ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
 
         if(this.productUpselling){
-          //console.log(`add upsell a`,this.productUpselling)
+          //////console.log(`add upsell a`,this.productUpselling)
           this.productUpselling.forEach( upsell => {
-            //console.log(`add upsell`, upsell,this.upsellingProductData)
+            //////console.log(`add upsell`, upsell,this.upsellingProductData)
             let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
-            //console.log(q)
+            //////console.log(q)
             if(q){
-              //console.log(`add upsell x`,q)
+              //////console.log(`add upsell x`,q)
               ecomCart.addProduct(q)
             }
           })
@@ -739,8 +741,9 @@ export default {
             .setProductIds(kitComposition.map(({ _id }) => _id))
             .fetch(true)
             .then(() => {
+              ////console.log('aaa',ecomSearch.getItems())
               ecomSearch.getItems().forEach(product => {
-                console.log('kit_product',product)
+                ////console.log('kit_product',product)
                 const { quantity } = kitComposition.find(({ _id }) => _id === product._id)
                 const addKitItem = variationId => {
                   const item = ecomCart.parseProduct(product, variationId, quantity)
@@ -749,10 +752,28 @@ export default {
                   } else {
                     item.quantity = 0
                   }
+                  ////console.log('kitItem',item)
+                  
                   this.kitItems.push({
                     ...item,
+                    
                     _id: genRandomObjectId()
                   })
+
+                  
+
+                  store({
+                    url: `/products/${item._id}.json`,
+                    axiosConfig: {
+                      timeout: 6000
+                    }
+                  }).then(response => {
+                    ////console.log('response', response.data)
+                    this.updateKitItemWeight(response.data._id, response.data.weight)
+                  }).catch(console.error)
+
+                  
+                  
                 }
                 addKitItem()
               })
@@ -791,7 +812,7 @@ export default {
     }
     this.isFavorite = checkFavorite(this.body._id || this.productId, this.ecomPassport)
     this.product_cms = window.product_cms_content
-    console.log('this.product_cms',this.product_cms)
+    ////console.log('this.product_cms',this.product_cms)
     this.getUpsellingProduct()
   },
 

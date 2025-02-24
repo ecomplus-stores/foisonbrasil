@@ -117,8 +117,8 @@ export default {
 
 
   created(){
-    console.log(this.uniqueKitProducts)
-    console.log(this.nonKitProducts)
-    console.log(this.items)
+    //console.log(this.uniqueKitProducts)
+    //console.log(this.nonKitProducts)
+    //console.log(this.items)
   }
 }

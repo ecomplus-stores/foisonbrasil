@@ -249,11 +249,11 @@ export default {
       }
     },
     storefrontGrids(grid_id){
-      //console.log('storefrontGrids', grid_id,window.storefront.data.grids.find(el => el.grid_id == grid_id))
+      ////console.log('storefrontGrids', grid_id,window.storefront.data.grids.find(el => el.grid_id == grid_id))
       let q = window.storefront.data.grids.find(el => el.grid_id == grid_id)
 
       if(q != undefined){
-        //console.log('aaaa')
+        ////console.log('aaaa')
         return q.title
       }
       return''

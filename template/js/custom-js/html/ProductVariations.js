@@ -75,7 +75,7 @@ import {
           : `background:${rgbs[0]}`
       },
       getVariantImage (optionText){
-        console.log(this.product.variations)
+        //console.log(this.product.variations)
         let hasImg = this.product.variations.find(el => el.specifications.colors[0].text.includes(optionText))
         if(window.mainProductGallery_.length > 0 && hasImg && hasImg.picture_id){
           let inGalleryPictureId = window.mainProductGallery_.find(el_ => el_._id == hasImg.picture_id)

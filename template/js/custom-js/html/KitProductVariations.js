@@ -170,14 +170,14 @@ export default {
               })
             }
           })
-          console.log(this.items, items)
+          //console.log(this.items, items)
           this.items.forEach(item => {
             if(!items.find(el => el.product_id == item.product_id)){
               items.push(item)
             }
           })
 
-          console.log('finalItems', items)
+          //console.log('finalItems', items)
           items.forEach(item => {
             const newItem = { ...item, quantity: 1 }
             delete newItem.customizations
@@ -194,7 +194,7 @@ export default {
               newItem.slug = this.slug
             }
             if (this.canAddToCart) {
-              console.log('adddddd',newItem)
+              //console.log('adddddd',newItem)
               ecomCart.addItem(newItem)
             }
           })
@@ -211,13 +211,13 @@ export default {
         this.variationKit[this.activeIndex] = current
         this.variationKitReady = this.variationKit.filter(n => n)
         this.$emit('variation', {index: this.activeIndex, variation : this.variationKitReady})
-        //console.log(this.variationKitReady)
+        ////console.log(this.variationKitReady)
       }
     }
   },
 
   mounted () {
-   console.log(this.localItems.filter(item => item.variations !== undefined))
+   //console.log(this.localItems.filter(item => item.variations !== undefined))
   },
 
   beforeDestroy () {

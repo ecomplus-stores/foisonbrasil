@@ -107,7 +107,7 @@ $(document).ready(function(){
 //     })
     
 //   }catch(e){
-//     console.log(e)
+//     //console.log(e)
 //   }
 // }
 
@@ -121,7 +121,7 @@ $(document).ready(function(){
 //     $(el).closest('.item').remove();
     
 //   }catch(e){
-//     console.log(e)
+//     //console.log(e)
 //   }
 // }
 
@@ -137,14 +137,14 @@ window.compare.init = function(){
   });
   $(`body`).on(`click`,`.product-compare-remove`,function(){
     let product = $(this).attr('data') ? JSON.parse($(this).attr('data')) : {};
-    console.log(product)
+    //console.log(product)
     window.compare.toggleItem(product)
   });
   $(`body`).on(`click`,`.specs_compare-trigger, .specs_compare .close`,function(){
     $(`.specs_compare`).toggleClass(`active`);
   });
   // window.compare.updateList();
-  // console.log(`compare initialized`)
+  // //console.log(`compare initialized`)
   // if(window.compare.db.length > 1){
   //   $('body').addClass('compare-is-active');    
   // }else{
@@ -153,7 +153,7 @@ window.compare.init = function(){
 };
 window.compare.db = sessionStorage.getItem('apx_window.compare_specs') ? JSON.parse(sessionStorage.getItem('apx_window.compare_specs')) : [];
 window.compare.toggleItem = function(product){
-  console.log(product)
+  //console.log(product)
   if(!window.compare.db.find(el => el._id == product._id)){
     window.compare.db.push(product)
   }else{
@@ -184,7 +184,7 @@ window.compare.updateList = function(){
 
   
   $.each(window.compare.extractSpecs(), function(k,i){
-    console.log(k,i)
+    //console.log(k,i)
     let r = $(`<div class="specs_row"><div class="row list"><div class="col-md-3 d-none d-md-block"><span class="spec_compare-specs-title">`+ (window.storefront.data.grids.find(el => el.grid_id == k).title || 'N/A') +`</span></div></div></div>`);
     $.each(i, function(k_, i_){
       
