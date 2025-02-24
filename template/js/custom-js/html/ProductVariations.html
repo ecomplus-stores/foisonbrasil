@@ -37,14 +37,14 @@
           selectedOptions[grid] === optionText ? 'variations__option--selected' : null, 
           `variations__option--${optionText}`, 
           filteredGrids[grid].includes(optionText) ? null : 'disabled',
-          getVariantImage(optionText) ? 'with-image' : ''
+          grid === 'colors' && getVariantImage(optionText) ? 'with-image' : ''
         ]"
         :style="grid === 'colors' ? getColorOptionBg(optionText) : null"
         @click="selectOption(optionText, grid, index)"
       > 
-      
+        
         <img 
-          v-if="getVariantImage(optionText)"
+          v-if="grid === 'colors'  && getVariantImage(optionText)"
           :src="getVariantImage(optionText)"
         />
         

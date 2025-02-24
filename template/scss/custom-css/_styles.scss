@@ -3858,3 +3858,16 @@ ul.app_contacts{
     .cart-item__price-un.fade:not(.show){display: none!important;}
   }
 }
+
+.variations__grid:not(.variations__grid--colors){
+  button{
+    background: #fff;
+    color: var(--blk);
+    border-radius: 3rem;
+    box-shadow: 0px 0px 0px;
+  }
+  .variations__option--selected{
+    background: var(--color3);
+    color: #fff;
+  }
+}
