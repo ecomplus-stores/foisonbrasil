@@ -52,12 +52,14 @@
             </div>
           </div>
           <div class="search__input-group">
+            <form action="/search" method="get" autocomplete="off">
             <input
               type="search"
               autocomplete="off"
               class="search__input form-control form-control-lg"
               placeholder="O que você procura?..."
               ref="input"
+              name="term"
               v-model="localTerm"
             >
             <button
@@ -67,6 +69,7 @@
             >
               <span>Buscar</span>
             </button>
+            </form>
           </div>
 
           

@@ -3871,3 +3871,21 @@ ul.app_contacts{
     color: #fff;
   }
 }
+
+#page-products{
+  .shipping-calculator{
+    .shipping-line{
+      display: flex;
+      flex-wrap:nowrap;
+      gap:10px;
+    }
+    .shipping-line:hover{z-index:2}
+  }
+}
+
+.search__input-group{
+  > form{
+    width: 100%;
+    display: flex;
+  }
+}

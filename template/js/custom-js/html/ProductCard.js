@@ -285,6 +285,6 @@ export default {
   mounted(){
     this.apx_tags = [...window.apx_tags]
     this.setTags()
-    
+    console.log(this.body)
   }
 }
