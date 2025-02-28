@@ -33,6 +33,12 @@
           "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
           "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
           "link": "https://loja.foison.com.br/equipamentos"
+        },
+        {
+          "start": "2025-03-06T03:00:00.000Z",
+          "end": "2025-03-10T02:59:00.000Z",
+          "img": "/img/uploads/semana-da-mulher-banner-desktop.png",
+          "mobile_img": "/img/uploads/semana-da-mulher-banner-mobile.png"
         }
       ]
     },
