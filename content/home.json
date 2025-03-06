@@ -17,6 +17,13 @@
         {
           "start": "",
           "end": "",
+          "img": "/img/uploads/site_banner-desktop-camy.png",
+          "mobile_img": "/img/uploads/site_banner-mobile-camy.png",
+          "link": "https://loja.foison.com.br/foison-camy"
+        },
+        {
+          "start": "",
+          "end": "",
           "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
           "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
           "link": "https://loja.foison.com.br/equipamentos"
@@ -24,9 +31,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/site_banner-desktop-camy.png",
-          "mobile_img": "/img/uploads/site_banner-mobile-camy.png",
-          "link": "https://loja.foison.com.br/foison-camy"
+          "img": "/img/uploads/site_banner-desktop-fc350.png",
+          "link": "https://loja.foison.com.br/foison-fc350",
+          "mobile_img": "/img/uploads/site_banner-mobile-fc350.png"
         }
       ]
     },
