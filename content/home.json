@@ -20,6 +20,13 @@
           "img": "/img/uploads/semana-da-mulher-banner-desktop.png",
           "mobile_img": "/img/uploads/semana-da-mulher-banner-mobile.png",
           "link": "https://loja.foison.com.br/equipamentos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/site_banner-desktop-camy.png",
+          "mobile_img": "/img/uploads/site_banner-mobile-camy.png",
+          "link": "https://loja.foison.com.br/foison-camy"
         }
       ]
     },
