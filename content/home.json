@@ -41,6 +41,13 @@
           "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
           "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
           "link": "https://loja.foison.com.br/equipamentos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/site_banner-desktop-serie-e.png",
+          "link": "https://loja.foison.com.br/foison-serie-e",
+          "mobile_img": "/img/uploads/site_banner-mobile-serie-e.png"
         }
       ]
     },
