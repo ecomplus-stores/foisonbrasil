@@ -1,0 +1,22 @@
+{
+  "title": "CAMY 2+",
+  "upselling": [
+    {
+      "title": "Software",
+      "upselling_list": [
+        {
+          "item_name": "Signmaster Cut + Arms",
+          "products_sku": "CNC0041"
+        },
+        {
+          "item_name": "Signmaster Pro",
+          "products_sku": "FO0023"
+        }
+      ],
+      "empty_text": "T"
+    }
+  ],
+  "identificador": [
+    "CNC2315"
+  ]
+}
