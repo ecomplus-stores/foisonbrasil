@@ -13,6 +13,13 @@
           "img": "/img/uploads/banner-lancamentos_banner-desktop-acessorios.png",
           "link": "loja.foison.com.br/equipamentos",
           "mobile_img": "/img/uploads/banner-lancamentos_banner-mobile-acessorios.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-lancamentos_banner-desktop-camy.png",
+          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-camy-2",
+          "mobile_img": "/img/uploads/banner-lancamentos_banner-mobile-camy.png"
         }
       ]
     },
