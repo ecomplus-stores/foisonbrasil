@@ -6,64 +6,7 @@
       "type": "banner-slider",
       "autoplay": 6000,
       "full_width": false,
-      "slides": [
-        {
-          "start": "2025-03-15T03:00:00.000Z",
-          "end": "2025-03-17T02:59:00.000Z",
-          "img": "/img/uploads/48-horas-de-frete-gratis-banner-desktop.png",
-          "mobile_img": "/img/uploads/48-horas-de-frete-gratis-banner-mobile.png",
-          "link": "loja.foison.com.br/equipamentos"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-camy.png",
-          "mobile_img": "/img/uploads/site_banner-mobile-camy.png",
-          "link": "https://loja.foison.com.br/foison-camy"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-fc350.png",
-          "link": "https://loja.foison.com.br/foison-fc350",
-          "mobile_img": "/img/uploads/site_banner-mobile-fc350.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-serie-c.png",
-          "link": "https://loja.foison.com.br/foison-serie-c",
-          "mobile_img": "/img/uploads/site_banner-mobile-serie-c.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-acessorios.png",
-          "link": "https://loja.foison.com.br/acessorios",
-          "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-pagamento-facilitado_banner-desktop.png",
-          "mobile_img": "/img/uploads/banner-pagamento-facilitado_banner-mobile.png",
-          "link": "https://loja.foison.com.br/equipamentos"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-serie-e.png",
-          "link": "https://loja.foison.com.br/foison-serie-e",
-          "mobile_img": "/img/uploads/site_banner-mobile-serie-e.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-serie-s.png",
-          "link": "https://loja.foison.com.br/404?url=%2Ffoison-serie-s",
-          "mobile_img": "/img/uploads/site_banner-mobile-serie-s.png"
-        }
-      ]
+      "slides": []
     },
     {
       "spacing": {
