@@ -5,7 +5,7 @@
       "title": "Software",
       "upselling_list": [
         {
-          "item_name": "Signmaster Cut + Arms",
+          "item_name": "Signmaster Cut+Arms",
           "products_sku": "CNC0041"
         },
         {
@@ -13,7 +13,10 @@
           "products_sku": "FO0023"
         }
       ],
-      "empty_text": "T"
+      "empty_text": "Sem Software",
+      "empty_pop_title": "Atenção",
+      "empty_pop_description": "Ao adquirir um equipamento sem software, sua máquina será enviada sem um sistema operacional. Sem a instalação de um software adequado, não será possível utilizar o equipamento.",
+      "empty_pop_button": "Entendi, desejo prosseguir sem a aquisição de um software."
     }
   ],
   "identificador": [
