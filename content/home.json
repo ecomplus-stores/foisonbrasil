@@ -6,7 +6,15 @@
       "type": "banner-slider",
       "autoplay": 6000,
       "full_width": false,
-      "slides": []
+      "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-lancamentos_banner-desktop-acessorios.png",
+          "link": "loja.foison.com.br/equipamentos",
+          "mobile_img": "/img/uploads/banner-lancamentos_banner-mobile-acessorios.png"
+        }
+      ]
     },
     {
       "spacing": {
