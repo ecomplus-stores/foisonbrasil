@@ -55,6 +55,13 @@
           "img": "/img/uploads/banner-aniversario-foison-2_banner-desktop-serie-e.png",
           "link": "https://loja.foison.com.br/foison-serie-e",
           "mobile_img": "/img/uploads/banner-aniversario-foison-2_banner-mobile-serie-e.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-aniversario-foison-2_banner-desktop-serie-s.png",
+          "link": "https://loja.foison.com.br/foison-serie-s",
+          "mobile_img": "/img/uploads/banner-aniversario-foison-2_banner-mobile-serie-s.png"
         }
       ]
     },
