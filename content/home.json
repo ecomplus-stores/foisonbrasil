@@ -62,6 +62,13 @@
           "img": "/img/uploads/banner-aniversario-foison-2_banner-desktop-serie-s.png",
           "link": "https://loja.foison.com.br/foison-serie-s",
           "mobile_img": "/img/uploads/banner-aniversario-foison-2_banner-mobile-serie-s.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-aniversario-foison-2_banner-desktop-fc350.png",
+          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350",
+          "mobile_img": "/img/uploads/banner-aniversario-foison-2_banner-mobile-fc350.png"
         }
       ]
     },
