@@ -10,9 +10,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-lancamentos_banner-desktop-acessorios.png",
+          "img": "/img/uploads/banner-aniversario-foison-2_banner-desktop-acessorios.png",
           "link": "https://loja.foison.com.br/equipamentos",
-          "mobile_img": "/img/uploads/banner-lancamentos_banner-mobile-acessorios.png"
+          "mobile_img": "/img/uploads/banner-aniversario-foison-2_banner-mobile-acessorios.png"
         },
         {
           "start": "",
@@ -34,13 +34,6 @@
           "img": "/img/uploads/banner-lancamentos_banner-desktop-serie-c-copia.png",
           "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350-c910",
           "mobile_img": "/img/uploads/banner-lancamentos_banner-mobile-serie-c-copia.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-aniversario-foison-2_banner-desktop-acessorios.png",
-          "link": "https://loja.foison.com.br/equipamentos",
-          "mobile_img": "/img/uploads/banner-aniversario-foison-2_banner-mobile-acessorios.png"
         }
       ]
     },
