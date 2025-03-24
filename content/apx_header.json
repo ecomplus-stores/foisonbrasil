@@ -1,15 +1,15 @@
 {
   "topbar_timer": {
     "cta_url": "/promo",
-    "start": "",
+    "start": "2025-03-24T03:00:00.000Z",
     "color": "#332b69",
     "background_image": "",
     "background_color": "#b9a9ff",
-    "cta_color": "#ffffff",
-    "title": "Vem conferir nosso novo site com promoções especiais pra você!",
-    "end": "",
+    "cta_color": "#332c69",
+    "title": "APROVEITE O ANIVERSÁRIO FOISON COM PROMOÇÕES IMPERDÍVEIS!",
+    "end": "2025-04-01T02:59:00.000Z",
     "cta_text": "APROVEITE AQUI",
-    "cta_background": "#5c52ab"
+    "cta_background": "#a2d9f7"
   },
   "topbar_1": {
     "background": "#5c52ab",
