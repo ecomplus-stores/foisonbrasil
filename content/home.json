@@ -31,16 +31,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/site_banner-desktop-serie-e.png",
-          "link": "https://loja.foison.com.br/foison-serie-e",
-          "mobile_img": "/img/uploads/site_banner-mobile-serie-e.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-serie-s.png",
-          "link": "https://loja.foison.com.br/foison-serie-s",
-          "mobile_img": "/img/uploads/site_banner-desktop-serie-s.png"
+          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-serie-c-red.png",
+          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350-c910",
+          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-serie-c-copia.png"
         },
         {
           "start": "",
@@ -52,13 +45,6 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/site_banner-desktop-acessorios.png",
-          "link": "https://loja.foison.com.br/acessorios",
-          "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
-        },
-        {
-          "start": "",
-          "end": "",
           "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy-2-.png",
           "link": "https://loja.foison.com.br/foison-camy-2",
           "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-serie-c.png"
@@ -66,9 +52,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-serie-c-red.png",
-          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350-c910",
-          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-serie-c-copia.png"
+          "img": "/img/uploads/site_banner-desktop-acessorios.png",
+          "link": "https://loja.foison.com.br/acessorios",
+          "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
         }
       ]
     },
