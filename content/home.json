@@ -159,6 +159,10 @@
             {
               "img": "/img/uploads/area-de-corte-simples.png",
               "text": "Área útil no corte simples: <b>31cm</b>"
+            },
+            {
+              "img": "/img/uploads/area-de-corte-de-contorno.png",
+              "text": "Área útil no corte de contorno: <b>26,5cm</b>"
             }
           ]
         }
