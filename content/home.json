@@ -171,6 +171,10 @@
             {
               "img": "/img/uploads/velocidade.png",
               "text": "Velocidade de corte: <b>800mm/s</b>"
+            },
+            {
+              "img": "/img/uploads/forca.png",
+              "text": "Força de corte: <b>1kg</b>"
             }
           ]
         }
