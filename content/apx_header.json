@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "/aniversario-foison",
-    "start": "2025-04-01T03:00:00.000Z",
+    "cta_url": "",
+    "start": "",
     "color": "#332b69",
     "background_image": "",
     "background_color": "#b9a9ff",
     "cta_color": "#332c69",
-    "title": "OFERTAS DE ANIVERSÁRIO DA FOISON PRORROGADAS ATÉ 06.04!",
-    "end": "2025-04-07T02:59:00.000Z",
-    "cta_text": "APROVEITE AGORA",
+    "title": "",
+    "end": "",
+    "cta_text": "",
     "cta_background": "#000000"
   },
   "topbar_1": {
