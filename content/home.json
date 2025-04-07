@@ -149,6 +149,18 @@
             }
           ],
           "link": "/plotter-de-recorte-profissional-foison-e24-l-20"
+        },
+        {
+          "img": "/img/uploads/camy-2.png",
+          "title": "Camy 2",
+          "description": "A Foison Camy 2 trouxe novas funções para elevar sua produtividade e precisão: com um novo sistema de leitura por câmera, painel 100% touchscreen, conexão Wi-Fi e sensor automático de folhas.",
+          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-camy-2",
+          "props": [
+            {
+              "img": "/img/uploads/area-de-corte-simples.png",
+              "text": "Área útil no corte simples: <b>31cm</b>"
+            }
+          ]
         }
       ],
       "cta_link": "/equipamentos",
