@@ -163,6 +163,10 @@
             {
               "img": "/img/uploads/area-de-corte-de-contorno.png",
               "text": "Área útil no corte de contorno: <b>26,5cm</b>"
+            },
+            {
+              "img": "/img/uploads/bases.png",
+              "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
             }
           ]
         }
