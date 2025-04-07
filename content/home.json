@@ -13,6 +13,13 @@
           "img": "/img/uploads/site_banner-desktop-camy.png",
           "link": "https://loja.foison.com.br/foison-camy",
           "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/site_banner-desktop-serie-c.png",
+          "link": "https://loja.foison.com.br/foison-serie-c",
+          "mobile_img": "/img/uploads/site_banner-mobile-serie-c.png"
         }
       ]
     },
