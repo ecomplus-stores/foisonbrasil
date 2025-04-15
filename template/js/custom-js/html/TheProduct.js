@@ -627,7 +627,10 @@ export default {
     },
 
     buy () {
-      
+      if(this.product_cms.upselling && this.productUpselling && this.productUpselling.length == 0){
+        alert(`Selecione uma opção de "${this.product_cms.upselling[0].title}" para prosseguir com sua compra.`)
+        return false
+      }
       this.hasClickedBuy = true
       const product = sanitizeProductBody(this.body)
       let variationId

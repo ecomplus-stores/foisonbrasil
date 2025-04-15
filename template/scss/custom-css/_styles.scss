@@ -804,6 +804,7 @@ nav{
     .col-right{
       position: relative;
       padding-left: 4rem;
+      z-index: 2;
     }
     .col-right:before{
       position: absolute;
