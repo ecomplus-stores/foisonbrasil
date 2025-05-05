@@ -5,6 +5,15 @@
       "type": "banners-grid",
       "banners": [
         {
+          "img": "/img/uploads/downloads-importantes-04.png",
+          "mobile_img": "/img/uploads/downloads-importantes-04.png"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
           "img": "/img/uploads/downloads-importantes-03.png",
           "link": "https://signmaster.estore.software/downloads",
           "mobile_img": "/img/uploads/downloads-importantes-03.png"
