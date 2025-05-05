@@ -1,6 +1,22 @@
 {
   "title": "Downloads",
-  "sections": [],
+  "sections": [
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/downloads-importantes-03.png",
+          "link": "https://signmaster.estore.software/downloads",
+          "mobile_img": "/img/uploads/downloads-importantes-03.png"
+        },
+        {
+          "img": "/img/uploads/downloads-importantes_prancheta-1.png",
+          "link": "https://drive.google.com/drive/folders/1XurQ_T9swIzXex-MDDjyPCbYUCytpq0T?usp=drive_link",
+          "mobile_img": "/img/uploads/downloads-importantes_prancheta-1.png"
+        }
+      ]
+    }
+  ],
   "body": "Seu ponto de partida com a Foison começa por aqui: baixe tudo o que precisa.",
   "meta_title": ""
 }
