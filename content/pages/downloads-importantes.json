@@ -33,6 +33,18 @@
             "img": "/img/uploads/downloads-importantes_prancheta-1.png",
             "link": "https://drive.google.com/drive/folders/1XurQ_T9swIzXex-MDDjyPCbYUCytpq0T?usp=drive_link"
           }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/downloads-importantes-02.png",
+            "link": "https://drive.google.com/drive/folders/1-JWbHaKg9uQXqqOJpVmgEeaVOg1amEQ8?usp=drive_link"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/downloads-importantes-02.png",
+            "link": "https://drive.google.com/drive/folders/1-JWbHaKg9uQXqqOJpVmgEeaVOg1amEQ8?usp=drive_link"
+          }
         }
       ]
     }
