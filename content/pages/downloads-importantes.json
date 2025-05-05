@@ -1,0 +1,16 @@
+{
+  "title": "Downloads Importantes",
+  "body": "Seu ponto de partida com a Foison começa por aqui: baixe tudo o que precisa.",
+  "sections": [
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/downloads-importantes-03.png",
+          "mobile_img": "/img/uploads/downloads-importantes-03.png",
+          "link": "https://signmaster.estore.software/downloads"
+        }
+      ]
+    }
+  ]
+}
