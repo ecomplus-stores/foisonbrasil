@@ -17,7 +17,9 @@
             "link": "https://signmaster.estore.software/downloads"
           },
           "mobile": {
-            "mask_opacity": 0
+            "mask_opacity": 0,
+            "img": "/img/uploads/downloads-importantes-03.png",
+            "link": "https://signmaster.estore.software/downloads"
           }
         },
         {
