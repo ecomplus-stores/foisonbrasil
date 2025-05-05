@@ -3,24 +3,38 @@
   "body": "Seu ponto de partida com a Foison começa por aqui: baixe tudo o que precisa.",
   "sections": [
     {
-      "type": "banners-grid",
+      "type": "apx_banners-grid",
+      "visibility": "d-block d-md-block",
+      "spacing": {
+        "container": "container_90"
+      },
+      "grid": "5",
       "banners": [
         {
-          "img": "/img/uploads/downloads-importantes-03.png",
-          "mobile_img": "/img/uploads/downloads-importantes-03.png",
-          "link": "https://signmaster.estore.software/downloads"
-        },
-        {
-          "img": "/img/uploads/downloads-importantes_prancheta-1.png",
-          "link": "https://drive.google.com/drive/folders/1XurQ_T9swIzXex-MDDjyPCbYUCytpq0T?usp=drive_link",
-          "mobile_img": "/img/uploads/downloads-importantes_prancheta-1.png"
-        },
-        {
-          "img": "/img/uploads/downloads-importantes-02.png",
-          "mobile_img": "/img/uploads/downloads-importantes-02.png",
-          "link": "https://drive.google.com/drive/folders/1-JWbHaKg9uQXqqOJpVmgEeaVOg1amEQ8?usp=drive_link"
+          "desktop": {
+            "animate": "backInDown",
+            "img": "/img/uploads/downloads-importantes-03.png",
+            "btn_url": "https://signmaster.estore.software/downloads",
+            "btn_text": "BAIXE AQUI",
+            "btn_background": "#a3d9f7",
+            "btn_text_color": "#000000",
+            "mask_opacity": 0,
+            "title": "DOWNLOAD SIGNMASTER",
+            "link": "",
+            "title_color": "#000000",
+            "description": ""
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "animate": "backInDown",
+            "link": "",
+            "title": "DOWNLOAD SIGNMASTER",
+            "btn_text": "BAIXE AQUI",
+            "btn_url": "https://signmaster.estore.software/downloads"
+          }
         }
-      ]
+      ],
+      "breakline": "false"
     }
   ]
 }
