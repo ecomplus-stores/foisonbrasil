@@ -1,0 +1,27 @@
+{
+  "title": "Downloads Importantes",
+  "sections": [
+    {
+      "type": "apx_banners-grid",
+      "visibility": "d-block d-md-block",
+      "spacing": {
+        "container": "container"
+      },
+      "grid": "5",
+      "breakline": "false",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/downloads-importantes-03.png",
+            "link": "https://signmaster.estore.software/downloads"
+          },
+          "mobile": {
+            "mask_opacity": 0
+          }
+        }
+      ]
+    }
+  ],
+  "body": "<!--StartFragment-->\n\nSeu ponto de partida com a Foison começa por aqui: baixe tudo o que precisa.\n\n<!--EndFragment-->"
+}
