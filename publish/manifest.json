@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.e42477b931b9e69ff37360e0db484e84.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.37152596c8ed28b320d861ae067541ff.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.552185d1db763af9a88f0ec1d140fd90.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.db0eab708c2cc670054e2dfb60eda3fe.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.67a325def308fceeb749f832e0d82b9e.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Foison Brasil",
+  "short_name": "Foison Brasil",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Foison Brasil. ",
+  "background_color": "#ffffff",
+  "theme_color": "#131313"
+}
