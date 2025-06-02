@@ -55,6 +55,13 @@
           "img": "/img/uploads/site_banner-desktop-acessorios.png",
           "link": "https://loja.foison.com.br/acessorios",
           "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/mes-dos-namorados-04.png",
+          "link": "https://loja.foison.com.br/equipamentos",
+          "mobile_img": "/img/uploads/mes-dos-namorados-05.png"
         }
       ]
     },
