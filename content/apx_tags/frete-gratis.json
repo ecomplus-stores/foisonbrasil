@@ -1,9 +1,10 @@
 {
   "identificador": [
-    "C24-2212H015"
+    "CNC2417-C820"
   ],
   "title": "FRETE GRÁTIS",
   "color": "#058625",
   "border": "#058625",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "img": "/img/uploads/area-de-corte-de-contorno.png"
 }
