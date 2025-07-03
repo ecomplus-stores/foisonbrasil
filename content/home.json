@@ -13,6 +13,13 @@
           "img": "/img/uploads/banners_banner-desktop.png",
           "link": "https://loja.foison.com.br/search?term=camy",
           "mobile_img": "/img/uploads/banners_banner-mobile.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banners_banner-desktop-2.png",
+          "mobile_img": "/img/uploads/banners_banner-mobile-2.png",
+          "link": "https://loja.foison.com.br/foison-camy"
         }
       ]
     },
