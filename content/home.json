@@ -6,36 +6,7 @@
       "type": "banner-slider",
       "autoplay": 6000,
       "full_width": false,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banners_banner-desktop.png",
-          "link": "https://loja.foison.com.br/search?term=camy",
-          "mobile_img": "/img/uploads/banners_banner-mobile.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banners_banner-desktop-2.png",
-          "mobile_img": "/img/uploads/banners_banner-mobile-2.png",
-          "link": "https://loja.foison.com.br/foison-camy"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banners_banner-desktop-3.png",
-          "link": "https://loja.foison.com.br/camy-2",
-          "mobile_img": "/img/uploads/banners_banner-mobile-3.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banners_banner-desktop-4.png",
-          "link": "https://loja.foison.com.br/foison-camy-2",
-          "mobile_img": "/img/uploads/banners_banner-mobile-4.png"
-        }
-      ]
+      "slides": []
     },
     {
       "spacing": {
