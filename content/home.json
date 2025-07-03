@@ -6,7 +6,15 @@
       "type": "banner-slider",
       "autoplay": 6000,
       "full_width": false,
-      "slides": []
+      "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banners_banner-desktop.png",
+          "link": "https://loja.foison.com.br/search?term=CAMY",
+          "mobile_img": "/img/uploads/banners_banner-mobile.png"
+        }
+      ]
     },
     {
       "spacing": {
