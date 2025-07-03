@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "",
-    "start": "2025-06-25T20:50:00.000Z",
+    "cta_url": "https://loja.foison.com.br/search?term=CAMY",
+    "start": "2025-07-03T03:00:00.000Z",
     "color": "#332b69",
-    "background_image": "",
+    "background_image": "/img/uploads/banners_tarja.png",
     "background_color": "#b9a9ff",
     "cta_color": "#332c69",
     "title": "",
-    "end": "2025-07-01T02:59:00.000Z",
-    "cta_text": "",
+    "end": "2025-08-01T02:59:00.000Z",
+    "cta_text": "APROVEITE AGORA",
     "cta_background": "#000000"
   },
   "topbar_1": {
