@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/search?term=CAMY",
+    "cta_url": "https://loja.foison.com.br/foison-camy",
     "start": "2025-07-01T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "/img/uploads/banners_tarja.png",
     "background_color": "#5d549f",
     "cta_color": "#332c69",
-    "title": "Começou o Mês da Camy com SUPER OFERTAS!",
+    "title": "Aproveite as últimas unidades da Foison Camy por apenas R$ 3.790,00 ou 12x de 315,83!",
     "end": "2025-07-02T02:59:00.000Z",
-    "cta_text": "APROVEITE AGORA",
+    "cta_text": "COMPRAR AGORA",
     "cta_background": "#000000"
   },
   "topbar_1": {
