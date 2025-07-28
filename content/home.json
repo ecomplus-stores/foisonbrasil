@@ -289,7 +289,7 @@
       },
       "img": "/img/uploads/ativo-1.png",
       "title_order": "d-flex flex-column",
-      "cta_link": "/equipamentos",
+      "cta_link": "https://escola-foison.memberkit.com.br/",
       "background_image": "",
       "image_order": "d-flex flex-column flex-md-row",
       "custom_css_class": "banner-turma",
