@@ -34,6 +34,13 @@
           "img": "/img/uploads/banners_banner-desktop-4.png",
           "link": "https://loja.foison.com.br/foison-camy-2",
           "mobile_img": "/img/uploads/banners_banner-mobile-4.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banners-frete-gratis-linha-24-03.png",
+          "mobile_img": "/img/uploads/banners-frete-gratis-linha-24-05.png",
+          "link": "https://loja.foison.com.br/search?term=c24"
         }
       ]
     },
