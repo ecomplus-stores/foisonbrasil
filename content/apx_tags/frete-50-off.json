@@ -5,5 +5,7 @@
     "E24-Kit-Rose",
     "C24",
     "E24L2.0"
-  ]
+  ],
+  "background_color": "#b6a8d3",
+  "color": "#000000"
 }
