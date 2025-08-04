@@ -2,17 +2,17 @@
   "topbar_timer": {
     "cta_url": "",
     "start": "2025-07-25T03:00:00.000Z",
-    "color": "#ffffff",
+    "color": "#000000",
     "background_image": "",
-    "background_color": "#5d549f",
+    "background_color": "#a2d9f7",
     "cta_color": "#332c69",
-    "title": "",
+    "title": "Dia dos Pais é na Foison com promoções super especiais em toda a nossa linha de Plotter de Recorte!",
     "end": "2025-08-01T02:59:00.000Z",
     "cta_text": "",
     "cta_background": "#000000"
   },
   "topbar_1": {
-    "background": "#a3d9f7",
+    "background": "#5d539f",
     "color": "#000000",
     "topbar_1": [
       {
