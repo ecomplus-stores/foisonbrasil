@@ -4,50 +4,46 @@
     "text": "A Foison é muito mais do que uma plotter de recorte – somos uma vibrante comunidade de empreendedores criativos e apaixonados. Combinamos tecnologia de ponta e uma dose generosa de criatividade para desenvolver produtos incríveis. Junte-se a nós nessa jornada de aprendizado contínuo, crescimento e evolução. Explore nossa loja online e descubra como podemos transformar suas ideias em realidade!"
   },
   "links_1": {
-    "list_pages": true,
+    "list_pages": false,
     "title": "Institucional",
     "list": [
       {
-        "url": "https://www.foison.com.br/",
-        "text": "Quem somos"
+        "url": "/pages/sobre-nos",
+        "text": "Sobre nós"
       },
       {
         "text": "Política de privacidade",
-        "url": "/politica-de-privacidade"
+        "url": "/pages/privacidade"
       },
       {
-        "text": "Termos e condições de compra",
-        "url": "/termos-de-uso"
+        "text": "Política de entrega",
+        "url": "/pages/entrega"
       },
       {
         "text": "Política de troca",
-        "url": "/politica-de-troca"
+        "url": "/pages/troca"
+      },
+      {
+        "text": "Contato",
+        "url": "/pages/contato"
       }
     ]
   },
   "links_2": {
     "list_categories": false,
-    "title": "Produtos",
+    "title": "Ajuda e Suporte",
     "list": [
       {
-        "url": "https://foisonbrasil.netlify.app/equipamentos",
-        "text": "Equipamentos"
+        "url": "/pages/downloads-importantes",
+        "text": "Downloads importantes"
       },
       {
-        "text": "Software",
-        "url": "https://foisonbrasil.netlify.app/software"
+        "text": "Termos de garantia",
+        "url": "/pages/termos"
       },
       {
-        "text": "Acessórios",
-        "url": "https://foisonbrasil.netlify.app/acessorios"
-      },
-      {
-        "text": "Peças de reposição",
-        "url": "https://foisonbrasil.netlify.app/pecas-de-reposicao"
-      },
-      {
-        "text": "Cursos",
-        "url": "https://foisonbrasil.netlify.app/cursos"
+        "text": "Dúvidas frequentes",
+        "url": "/pages/faq"
       }
     ]
   },

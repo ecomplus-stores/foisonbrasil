@@ -23,7 +23,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
     })
   }
 %>
-<% if (contacts.whatsapp) { %>   
+<% if (contacts.whatsapp && 1 != 1) { %>   
   <a
     href="https://wa.me/55<%= contacts.whatsapp.replace(/\D/g, '') %>"
     target="_blank"
@@ -33,7 +33,205 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
   >
     <i class="i-whatsapp"></i>
   </a>
+  
+<% } %>
 
+<% if (contacts.whatsapp ) { %>   
+  <a
+    href="javascript:void(0)"
+    class="floating-whatsapp-link"
+    data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
+    onclick="toggleWhatsappPopover()"
+  >
+    <i class="i-whatsapp"></i>
+  </a>
+  
+  <!-- Popover de Atendentes WhatsApp -->
+  <div class="popover" id="whatsapp-popover">
+    <div class="suporte-header"> 
+      <svg class="suporte-header-a" width="512pt" height="512pt" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="m435.92 74.352c-48.098-47.918-112.08-74.324-180.18-74.352-67.945 0-132.03 26.383-180.45 74.289-48.5 47.988-75.234 111.76-75.297 179.34v0.125c0.0078125 40.902 10.754 82.164 31.152 119.83l-30.453 138.42 140.01-31.848c35.461 17.871 75.027 27.293 114.93 27.309h0.10156c67.934 0 132.02-26.387 180.44-74.297 48.543-48.027 75.289-111.72 75.32-179.34 0.019532-67.145-26.82-130.88-75.586-179.47zm-180.18 393.15h-0.089844c-35.832-0.015625-71.336-9.0117-102.67-26.023l-6.6211-3.5938-93.102 21.176 20.223-91.906-3.8984-6.7227c-19.383-33.426-29.625-70.324-29.625-106.72 0.074218-117.8 96.863-213.75 215.77-213.75 57.445 0.023437 111.42 22.293 151.98 62.699 41.176 41.031 63.844 94.711 63.824 151.15-0.046875 117.83-96.855 213.69-215.8 213.69z"></path>
+        <path d="m186.15 141.86h-11.211c-3.9023 0-10.238 1.4609-15.598 7.293-5.3633 5.8359-20.477 19.941-20.477 48.629s20.965 56.406 23.887 60.301c2.9258 3.8906 40.469 64.641 99.93 88.012 49.418 19.422 59.477 15.559 70.199 14.586 10.727-0.96875 34.613-14.102 39.488-27.715s4.875-25.285 3.4141-27.723c-1.4648-2.4297-5.3672-3.8867-11.215-6.8008-5.8516-2.918-34.523-17.262-39.887-19.211-5.3633-1.9414-9.2617-2.9141-13.164 2.9258-3.9023 5.8281-15.391 19.312-18.805 23.203-3.4102 3.8945-6.8242 4.3828-12.676 1.4648-5.8516-2.9258-24.5-9.1914-46.848-29.051-17.395-15.457-29.465-35.168-32.879-41.004-3.4102-5.832-0.36328-8.9883 2.5703-11.898 2.6289-2.6094 6.1797-6.1797 9.1055-9.582 2.9219-3.4062 3.7539-5.8359 5.707-9.7266 1.9492-3.8906 0.97266-7.2969-0.48828-10.211-1.4648-2.918-12.691-31.75-17.895-43.281h0.003906c-4.3828-9.7109-8.9961-10.039-13.164-10.211z"></path>
+      </svg> 
+      <div class="suporte-header-b"> 
+        <strong>Está com Dúvidas?</strong> 
+        <span>Escolha um de nossos atendentes</span> 
+      </div>
+      <div class="close-button" onclick="toggleWhatsappPopover()">×</div>
+    </div>
+    <ul class="atendente-list">
+      <li>
+        <span class="whats-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fcf7f7" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm39.1,131.79a47.84,47.84,0,0,0,0-55.58l28.5-28.49a87.83,87.83,0,0,1,0,112.56ZM96,128a32,32,0,1,1,32,32A32,32,0,0,1,96,128Zm88.28-67.6L155.79,88.9a47.84,47.84,0,0,0-55.58,0L71.72,60.4a87.83,87.83,0,0,1,112.56,0ZM60.4,71.72l28.5,28.49a47.84,47.84,0,0,0,0,55.58L60.4,184.28a87.83,87.83,0,0,1,0-112.56ZM71.72,195.6l28.49-28.5a47.84,47.84,0,0,0,55.58,0l28.49,28.5a87.83,87.83,0,0,1-112.56,0Z"></path></svg>
+        </span>
+        <div class="apx-infos">
+          <p><strong>Suporte</strong></p>          
+          <button class="apx-send-wpp" onclick="window.open('https://wa.me/5521990366154', '_blank')">Enviar mensagem</button>
+        </div>
+      </li>
+      
+      <li>
+        <span class="whats-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fcf7f7" viewBox="0 0 256 256"><path d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88.12,88.12,0,0,1,190.54,65.93,87.39,87.39,0,0,1,215.65,120H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h24a24,24,0,0,1-24,24H136a8,8,0,0,0,0,16h56a40,40,0,0,0,40-40V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm128,56a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24v56Z"></path></svg>
+        </span>
+        <div class="apx-infos">
+          <p><strong>Atendimento</strong></p>
+          <button class="apx-send-wpp" onclick="window.open('https://wa.me/5521997515409', '_blank')">Enviar mensagem</button>
+        </div>
+      </li>
+      
+    </ul>
+  </div>
+
+  <script>
+    function toggleWhatsappPopover() {
+      const popover = document.getElementById('whatsapp-popover');
+      popover.classList.toggle('active');
+    }
+
+    // Fecha o popover ao clicar fora dele
+    document.addEventListener('click', function(event) {
+      const popover = document.getElementById('whatsapp-popover');
+      const whatsappLink = document.querySelector('.floating-whatsapp-link');
+      
+      if (!popover.contains(event.target) && !whatsappLink.contains(event.target)) {
+        popover.classList.remove('active');
+      }
+    });
+  </script>
+
+  <style>
+    .popover {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.8);
+      transition: all 0.3s ease;
+      z-index: 9999;
+      right: 0;
+      left: auto;
+      height: fit-content;
+      top: auto;
+      max-height: 50dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .popover.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    .suporte-header {
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .suporte-header-a {
+      width: 30px;
+      height: 30px;
+      fill: white;
+      margin-right: 10px;
+    }
+
+    .suporte-header-b strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .suporte-header-b span {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .atendente-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .atendente-list li {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .atendente-list li:last-child {
+      border-bottom: none;
+    }
+
+    .atendente-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .apx-infos {
+      flex: 1;
+    }
+
+    .apx-infos p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .apx-setor {
+      color: #666;
+      font-size: 12px !important;
+    }
+
+    .apx-send-wpp {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .apx-send-wpp:hover {
+      background: #1ebe57;
+    }
+
+    .floating-whatsapp-link {
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .popover {
+        width: 280px;
+        right: 10px;
+        bottom: 70px;
+      }
+    }
+  </style>
 <% } %>
 <!-- <script>
   (function (o, c, t, a, d, e, s, k) {
@@ -154,7 +352,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
               <% if (contacts.whatsapp) { %>
                 <li>
                   <span class="footer__list-icon">
-                    <img src="./assets/footer_whatsapp.svg"/>
+                    <img src="../assets/footer_whatsapp.svg"/>
                   </span>
                   <a
                     href="javascript:;"
@@ -171,7 +369,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
               <% if (contacts.phone) { %>
                 <li>
                   <span class="footer__list-icon">
-                    <img src="./assets/footer_phone.svg"/>
+                    <img src="../assets/footer_phone.svg"/>
                   </span>
                   <a
                     href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
@@ -187,7 +385,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
             <% if (footer.contacts.email) { %>
               <li>
                 <span class="footer__list-icon">
-                  <img src="./assets/footer_mail.svg"/>
+                  <img src="../assets/footer_mail.svg"/>
                 </span>
                 <a href="mailto:<%= contacts.email %>" target="_blank" rel="noopener">
                   <small>E-mail</small>
@@ -198,7 +396,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
             <% if (footer.contacts.address) { %>
               <li class="d-md-flex d-none">
                 <span class="footer__list-icon">
-                  <img src="./assets/footer_address.svg"/>
+                  <img src="../assets/footer_address.svg"/>
                 </span>
                 <address>
                   <small>Endereço</small>
@@ -208,7 +406,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
             <% } %>
             <li>
               <span class="footer__list-icon">
-                <img src="./assets/footer_clock.svg"/>
+                <img src="../assets/footer_clock.svg"/>
               </span>
               <p>
                 <small>Atendimento</small>
@@ -221,7 +419,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
         </div>
       </div>
       <hr class="mt-1 d-md-none d-block">
-      <div class="col-12 col-md-8 offset-md-1">
+      <div class="col-12 col-md-9">
         <div class="row">
           <% if (footer.links_1.list_pages || footer.links_1.list.find(({ url }) => url)) { %>
             <div class="col-12 col-md">
@@ -272,17 +470,17 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
                 <a
                   class="footer__title"
                   data-toggle="collapse"
-                  href="#footer-categories"
+                  href="#footer-categories1"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="footer-categories"
+                  aria-controls="footer-categories1"
                 >
                   <%= footer.links_2.title || _.dictionary('categories') %>
                   <button type="button" class="d-inline d-md-none">                    
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   </button>
                 </a>
-                <div class="collapse" id="footer-categories">
+                <div class="collapse" id="footer-categories1">
                   <% if (footer.links_2.list_categories) { %>
                     <ul class="footer__links">
                       <% _.categories.slice(0,3).forEach(({ name, slug, parent }) => { %>
@@ -311,6 +509,38 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
                 </div>
               </div>
             <% } %>
+            
+              <div class="col-12 col-md">
+                <a
+                  class="footer__title"
+                  data-toggle="collapse"
+                  href="#footer-categories2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="footer-categories2"
+                >
+                  Produtos
+                  <button type="button" class="d-inline d-md-none">                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                </a>
+                <div class="collapse" id="footer-categories2">
+                    <ul class="footer__links">
+                      <% _.categories.forEach(({ name, slug, parent }) => { %>
+                        <% if (!parent) { %>
+                          <li>
+                            <i class="i-chevron-right"></i>
+                            <a href="/<%= slug %>">
+                              <%= name %>
+                            </a>
+                          </li>
+                        <% } %>
+                      <% }) %>
+                    </ul>
+                  
+                </div>
+              </div>
+            
       
             <div class="col-12 col-md">
               <div class="">

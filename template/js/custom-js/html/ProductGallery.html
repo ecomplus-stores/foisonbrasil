@@ -1,15 +1,15 @@
 <section class="gallery">
+  <div
+    v-if="videoSrc"
+    class="video-item"
+    :class=""
+    @click="activeIndex = localPictures.length"
+  >
+    
+    <i class="i-play"></i>
+    <span>Veja o vídeo do produto</span>
+  </div>
   <div class="gallery__thumbs">
-    <div
-      v-if="videoSrc"
-      class="gallery__item gallery__item--video"
-      :class="{ 'gallery__item--selected': localPictures.length === activeIndex }"
-      @click="activeIndex = localPictures.length"
-    >
-      <i class="i-play"></i>
-      <span>{{ i19video }}</span>
-    </div>
-
     <div
       v-for="(picture, i) in localPictures.slice(0,5)"
       :key="'img-' + i"
@@ -95,7 +95,7 @@
               <iframe
                 class="embed-responsive-item"
                 v-if="activeIndex === localPictures.length"
-                :src="videoSrc"
+                :src="videoSrc.replace(`shorts`, `embed`) "
                 allowfullscreen
               ></iframe>
             </div>
