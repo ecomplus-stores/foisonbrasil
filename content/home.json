@@ -10,7 +10,8 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-01.png"
+          "img": "/img/uploads/banner-01.png",
+          "mobile_img": "/img/uploads/banner-02.png"
         },
         {
           "start": "",
