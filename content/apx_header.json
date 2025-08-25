@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/foison-fc350",
+    "cta_url": "",
     "start": "2025-07-25T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
     "cta_color": "#000000",
-    "title": "Frete grátis para todo o Brasil na compra das plotters de recorte automáticas: FC350 e FS350!",
+    "title": "",
     "end": "2025-08-01T02:59:00.000Z",
-    "cta_text": "COMPRAR AGORA",
+    "cta_text": "",
     "cta_background": "#f5f5f5"
   },
   "topbar_1": {
