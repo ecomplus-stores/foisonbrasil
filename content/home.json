@@ -48,6 +48,13 @@
           "img": "/img/uploads/site_banner-desktop-acessorios.png",
           "link": "https://loja.foison.com.br/acessorios",
           "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/linha-rose-base-a1-banner-01.png",
+          "link": "https://loja.foison.com.br/search?term=24",
+          "mobile_img": "/img/uploads/linha-rose-base-a1-banner-03.png"
         }
       ]
     },
