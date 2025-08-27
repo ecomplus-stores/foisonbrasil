@@ -1,15 +1,15 @@
 {
   "topbar_timer": {
-    "cta_url": "",
+    "cta_url": "https://loja.foison.com.br/search?term=24",
     "start": "2025-07-25T03:00:00.000Z",
-    "color": "",
+    "color": "#b6a8d3",
     "background_image": "",
-    "background_color": "",
-    "cta_color": "",
-    "title": "",
+    "background_color": "#000000",
+    "cta_color": "#000000",
+    "title": "BASE A1 GRÁTIS NA COMPRA DA LINHA ROSE",
     "end": "2025-08-01T02:59:00.000Z",
-    "cta_text": "",
-    "cta_background": ""
+    "cta_text": "GARANTA A SUA",
+    "cta_background": "#ffffff"
   },
   "topbar_1": {
     "background": "#5d539f",
