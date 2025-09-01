@@ -18,6 +18,10 @@
         {
           "item_name": "Signmaster Pro",
           "products_sku": "FO0023"
+        },
+        {
+          "products_sku": "TDL8451",
+          "item_name": "Plug-in FoisonCut"
         }
       ]
     }
