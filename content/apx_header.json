@@ -1,18 +1,18 @@
 {
   "topbar_timer": {
-    "cta_url": "",
+    "cta_url": "https://loja.foison.com.br/search?term=camy",
     "start": "2025-07-25T03:00:00.000Z",
-    "color": "",
+    "color": "#ffffff",
     "background_image": "",
-    "background_color": "#b6a8d3",
+    "background_color": "#5d539f",
     "cta_color": "",
-    "title": "",
+    "title": "Começou o Mês do Cliente da Foison: Linha Camy com brindes especiais e parcelamento em até 18x sem juros",
     "end": "2025-08-01T02:59:00.000Z",
     "cta_text": "",
     "cta_background": ""
   },
   "topbar_1": {
-    "background": "#5d539f",
+    "background": "#332c69",
     "color": "#ffffff",
     "topbar_1": [
       {
