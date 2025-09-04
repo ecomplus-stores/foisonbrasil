@@ -10,37 +10,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/site_banner-desktop-camy.png",
+          "img": "/img/uploads/banners-01.png",
           "link": "https://loja.foison.com.br/foison-camy",
-          "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-2_banner-desktop-serie-c.png",
-          "link": "https://loja.foison.com.br/foison-serie-c",
-          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-c.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-2_banner-desktop-serie-e.png",
-          "link": "https://loja.foison.com.br/foison-serie-e",
-          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-e.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy.png",
-          "link": "https://loja.foison.com.br/camy-2",
-          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-camy.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-01.png",
-          "link": "https://loja.foison.com.br/plug-in",
-          "mobile_img": "/img/uploads/banner-02.png"
+          "mobile_img": "/img/uploads/banners-04.png"
         }
       ]
     },
