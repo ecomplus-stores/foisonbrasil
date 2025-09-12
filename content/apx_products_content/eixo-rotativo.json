@@ -1,0 +1,18 @@
+{
+  "title": "EIXO ROTATIVO",
+  "identificador": [
+    "CNC2511"
+  ],
+  "upselling": [
+    {
+      "title": "Eixo",
+      "empty_text": "Sem Eixo Rotativo",
+      "upselling_list": [
+        {
+          "item_name": "Eixo Rotativo",
+          "products_sku": "MQ00253"
+        }
+      ]
+    }
+  ]
+}
