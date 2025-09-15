@@ -27,6 +27,13 @@
           "img": "/img/uploads/banners-03.png",
           "link": "https://loja.foison.com.br/foison-camy-2",
           "mobile_img": "/img/uploads/banners-06.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banners-acessorios-01.png",
+          "link": "https://loja.foison.com.br/kit-de-acessorios",
+          "mobile_img": "/img/uploads/banners-acessorios-02.png"
         }
       ]
     },
