@@ -1,6 +1,6 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/search?term=camy",
+    "cta_url": "",
     "start": "2025-07-25T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
@@ -8,7 +8,7 @@
     "cta_color": "",
     "title": "Mês do cliente com brindes e descontos em acessórios! Aproveite!",
     "end": "2025-08-01T02:59:00.000Z",
-    "cta_text": "COMPRAR AGORA",
+    "cta_text": "",
     "cta_background": ""
   },
   "topbar_1": {
