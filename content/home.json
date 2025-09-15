@@ -34,6 +34,13 @@
           "img": "/img/uploads/banners-acessorios-01.png",
           "link": "https://loja.foison.com.br/kit-de-acessorios",
           "mobile_img": "/img/uploads/banners-acessorios-02.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banners-linha-24-01.png",
+          "mobile_img": "/img/uploads/banners-linha-24-04.png",
+          "link": "https://loja.foison.com.br/foison-serie-c"
         }
       ]
     },
