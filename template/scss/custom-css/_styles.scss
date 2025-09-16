@@ -3931,3 +3931,138 @@ ul.app_contacts{
 }
 
 [data-mbz-button-wrapper]{display: none;}
+
+.popover {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.8);
+      transition: all 0.3s ease;
+      z-index: 9999;
+      right: 0;
+      left: auto;
+      height: fit-content;
+      top: auto;
+      max-height: 50dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .popover.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    .suporte-header {
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .suporte-header-a {
+      width: 30px;
+      height: 30px;
+      fill: white;
+      margin-right: 10px;
+    }
+
+    .suporte-header-b strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .suporte-header-b span {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .atendente-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .atendente-list li {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .atendente-list li:last-child {
+      border-bottom: none;
+    }
+
+    .atendente-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .apx-infos {
+      flex: 1;
+    }
+
+    .apx-infos p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .apx-setor {
+      color: #666;
+      font-size: 12px !important;
+    }
+
+    .apx-send-wpp {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .apx-send-wpp:hover {
+      background: #1ebe57;
+    }
+
+    .floating-whatsapp-link {
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .popover {
+        width: 280px;
+        right: 10px;
+        bottom: 70px;
+      }
+    }
+
+.upselling__row:not(:first-child){
+  margin-top: 2rem;
+}

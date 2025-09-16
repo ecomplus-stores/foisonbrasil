@@ -269,40 +269,80 @@ export default {
         Date.now() < new Date(body.price_effective_date.end).getTime()
     },
 
+    // ghostProductForPrices () {
+    //   const prices = {}
+    //   ;['price', 'base_price'].forEach(field => {
+    //     let price = this.selectedVariation[field] || this.body[field]
+    //     if (price !== undefined) {
+    //       this.customizations.forEach(customization => {
+    //         if (customization.add_to_price) {
+    //           price += this.getAdditionalPrice(customization.add_to_price)
+    //         }
+    //       })
+    //     }
+    //     if(this.productUpselling){
+    //       //////console.log(`add upsell a`,this.productUpselling)
+    //       this.productUpselling.forEach( upsell => {
+    //         //////console.log(`add upsell`, upsell,this.upsellingProductData)
+    //         let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
+    //         //////console.log(q)
+    //         if(q){
+    //           price += q.price
+    //         }
+    //       })
+    //     }
+        
+    //     prices[field] = price
+    //   })
+    //   const ghostProduct = { ...this.body }
+    //   if (this.selectedVariationId) {
+    //     Object.assign(ghostProduct, this.selectedVariation)
+    //     delete ghostProduct.variations
+    //   }
+    //   return {
+    //     ...ghostProduct,
+    //     ...prices
+    //   }
+    // },
+
     ghostProductForPrices () {
-      const prices = {}
-      ;['price', 'base_price'].forEach(field => {
-        let price = this.selectedVariation[field] || this.body[field]
+      const prices = {};
+      ['price', 'base_price'].forEach(field => {
+        let price = this.selectedVariation[field] || this.body[field];
         if (price !== undefined) {
           this.customizations.forEach(customization => {
             if (customization.add_to_price) {
-              price += this.getAdditionalPrice(customization.add_to_price)
+              price += this.getAdditionalPrice(customization.add_to_price);
             }
-          })
-        }
-        if(this.productUpselling){
-          //////console.log(`add upsell a`,this.productUpselling)
-          this.productUpselling.forEach( upsell => {
-            //////console.log(`add upsell`, upsell,this.upsellingProductData)
-            let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
-            //////console.log(q)
-            if(q){
-              price += q.price
-            }
-          })
+          });
         }
         
-        prices[field] = price
-      })
-      const ghostProduct = { ...this.body }
+        if (this.productUpselling && this.productUpselling.length > 0) {
+          
+          this.productUpselling.forEach(upsell => {
+            // Verificar se o elemento não é null e tem a propriedade sku
+            if (upsell && upsell.sku) {
+              let q = this.upsellingProductData.find(el => el.sku == upsell.sku);
+              if (q) {
+                price += q.price;
+              }
+            }
+          });
+        }
+        
+        prices[field] = price;
+      });
+      
+      const ghostProduct = { ...this.body };
       if (this.selectedVariationId) {
-        Object.assign(ghostProduct, this.selectedVariation)
-        delete ghostProduct.variations
+        Object.assign(ghostProduct, this.selectedVariation);
+        delete ghostProduct.variations;
       }
+      
       return {
         ...ghostProduct,
         ...prices
-      }
+      };
     },
 
     hasVariations () {
@@ -375,6 +415,7 @@ export default {
       this.upselling_pop_visibility = [...upselling_pop_visibility]
     },
     setUpsellingProduct(key,product, item_name, action){
+      console.log(this.productUpselling,key,product, item_name, action)
       let productUpselling = [...this.productUpselling]
       if(action == "add"){
         productUpselling[key] = {sku: product, name: item_name}
@@ -384,6 +425,7 @@ export default {
       }      
       
       this.productUpselling = [...productUpselling]
+      console.log('after',this.productUpselling,key,product, item_name, action)
       
     },
     getVariationsGrids,
@@ -612,56 +654,142 @@ export default {
       this.$emit('buy', { items })       
     },
 
+    // getUpsellingProduct(){
+    //   ////console.log('product_cms',this.product_cms)
+    //   if(this.product_cms && this.product_cms.upselling && this.product_cms.upselling[0] && this.product_cms.upselling[0].upselling_list){
+    //   const ecomSearch = new EcomSearch()
+    //   ecomSearch
+    //     .setSkus(this.product_cms.upselling[0].upselling_list.map(item => item.products_sku))
+    //     .fetch(true)
+    //     .then(() => {
+    //       this.upsellingProductData = [...ecomSearch.getItems()]
+    //     })
+    //     .catch(console.error)
+    //   }
+    // },
+
     getUpsellingProduct(){
-      ////console.log('product_cms',this.product_cms)
-      if(this.product_cms && this.product_cms.upselling && this.product_cms.upselling[0] && this.product_cms.upselling[0].upselling_list){
-      const ecomSearch = new EcomSearch()
+  if(this.product_cms && this.product_cms.upselling && Array.isArray(this.product_cms.upselling)){
+    // Coletar todos os SKUs de todos os grupos de upselling
+    const allSkus = [];
+    
+    this.product_cms.upselling.forEach(upsellingGroup => {
+      if(upsellingGroup.upselling_list && Array.isArray(upsellingGroup.upselling_list)){
+        upsellingGroup.upselling_list.forEach(item => {
+          if(item.products_sku && !allSkus.includes(item.products_sku)){
+            allSkus.push(item.products_sku);
+          }
+        });
+      }
+    });
+
+    // Se há SKUs para buscar, fazer a busca
+    if(allSkus.length > 0){
+      const ecomSearch = new EcomSearch();
       ecomSearch
-        .setSkus(this.product_cms.upselling[0].upselling_list.map(item => item.products_sku))
+        .setSkus(allSkus)
         .fetch(true)
         .then(() => {
-          this.upsellingProductData = [...ecomSearch.getItems()]
+          this.upsellingProductData = [...ecomSearch.getItems()];
+          console.log('Todos os produtos de upselling carregados:', this.upsellingProductData);
         })
-        .catch(console.error)
-      }
-    },
+        .catch(console.error);
+    }
+  }
+},
 
+    // buy () {
+    //   if(this.product_cms.upselling && this.productUpselling && this.productUpselling.length == 0){
+    //     alert(`Selecione uma opção de "${this.product_cms.upselling[0].title}" para prosseguir com sua compra.`)
+    //     return false
+    //   }
+    //   this.hasClickedBuy = true
+    //   const product = sanitizeProductBody(this.body)
+    //   let variationId
+    //   if (this.hasVariations) {
+    //     if (this.selectedVariationId) {
+    //       variationId = this.selectedVariationId
+    //     } else {
+    //       return
+    //     }
+    //   }
+    //   //product.pictures = this.productToGallery.pictures
+    //   const customizations = [...this.customizations]
+    //   this.$emit('buy', { product, variationId, customizations })
+    //   if (this.canAddToCart) {
+    //     ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
+
+    //     if(this.productUpselling){
+    //       //////console.log(`add upsell a`,this.productUpselling)
+    //       this.productUpselling.forEach( upsell => {
+    //         //////console.log(`add upsell`, upsell,this.upsellingProductData)
+    //         let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
+    //         //////console.log(q)
+    //         if(q){
+    //           //////console.log(`add upsell x`,q)
+    //           ecomCart.addProduct(q)
+    //         }
+    //       })
+    //     }
+        
+    //   }
+    //   this.isOnCart = true
+    // },
     buy () {
-      if(this.product_cms.upselling && this.productUpselling && this.productUpselling.length == 0){
-        alert(`Selecione uma opção de "${this.product_cms.upselling[0].title}" para prosseguir com sua compra.`)
-        return false
+      // Verificar todos os grupos de upselling
+      if (this.product_cms.upselling && Array.isArray(this.product_cms.upselling)) {
+        for (let i = 0; i < this.product_cms.upselling.length; i++) {
+          const upsellingGroup = this.product_cms.upselling[i];
+          
+          if (upsellingGroup.upselling_list && upsellingGroup.upselling_list.length > 0) {
+            // Verificar se há algum item deste grupo selecionado
+            const hasSelectedFromGroup = this.productUpselling.some(upsell => {
+              if (!upsell || !upsell.sku) return false;
+              return upsellingGroup.upselling_list.some(item => item.products_sku === upsell.sku);
+            });
+            
+            // Se nenhum item deste grupo foi selecionado, mostrar alerta
+            if (!hasSelectedFromGroup) {
+              alert(`Selecione uma opção de "${upsellingGroup.title}" para prosseguir com sua compra.`);
+              return false;
+            }
+          }
+        }
       }
-      this.hasClickedBuy = true
-      const product = sanitizeProductBody(this.body)
-      let variationId
+      
+      this.hasClickedBuy = true;
+      const product = sanitizeProductBody(this.body);
+      let variationId;
+      
       if (this.hasVariations) {
         if (this.selectedVariationId) {
-          variationId = this.selectedVariationId
+          variationId = this.selectedVariationId;
         } else {
-          return
+          return;
         }
       }
-      //product.pictures = this.productToGallery.pictures
-      const customizations = [...this.customizations]
-      this.$emit('buy', { product, variationId, customizations })
+      
+      const customizations = [...this.customizations];
+      this.$emit('buy', { product, variationId, customizations });
+      
       if (this.canAddToCart) {
-        ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
+        ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy);
 
-        if(this.productUpselling){
-          //////console.log(`add upsell a`,this.productUpselling)
-          this.productUpselling.forEach( upsell => {
-            //////console.log(`add upsell`, upsell,this.upsellingProductData)
-            let q = this.upsellingProductData.find(el => el.sku == upsell.sku)
-            //////console.log(q)
-            if(q){
-              //////console.log(`add upsell x`,q)
-              ecomCart.addProduct(q)
+        if (this.productUpselling && this.productUpselling.length > 0) {
+          console.log(`add upsell xd`, this.productUpselling, this.upsellingProductData);
+          this.productUpselling.forEach(upsell => {
+            if (upsell && upsell.sku) {
+              let q = this.upsellingProductData.find(el => el.sku == upsell.sku);
+              if (q) {
+                console.log(`add upsell x`, q);
+                ecomCart.addProduct(q);
+              }
             }
-          })
+          });
         }
-        
       }
-      this.isOnCart = true
+      
+      this.isOnCart = true;
     },
 
     buyOrScroll () {
