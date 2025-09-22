@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "",
+    "cta_url": "https://loja.foison.com.br/search?term=24",
     "start": "2025-07-25T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
     "cta_color": "",
-    "title": "Mês do cliente com brindes e descontos em acessórios! Aproveite!",
+    "title": "Últimos dias de ofertas do Mês do Cliente!",
     "end": "2025-08-01T02:59:00.000Z",
-    "cta_text": "",
+    "cta_text": "APROVEITE",
     "cta_background": ""
   },
   "topbar_1": {
