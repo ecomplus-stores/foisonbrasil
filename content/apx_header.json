@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/search?term=24",
+    "cta_url": "https://loja.foison.com.br/equipamentos",
     "start": "2025-07-25T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
     "cta_color": "#000000",
-    "title": "Últimos dias de ofertas do Mês do Cliente!",
+    "title": "Agora você pode parcelar sua Foison em até 18x sem juros ",
     "end": "2025-08-01T02:59:00.000Z",
-    "cta_text": "APROVEITE",
+    "cta_text": "Comprar agora",
     "cta_background": "#ffffff"
   },
   "topbar_1": {
