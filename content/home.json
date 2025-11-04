@@ -20,6 +20,13 @@
           "img": "/img/uploads/black-foison-acessorios-banner-01.png",
           "link": "https://loja.foison.com.br/acessorios",
           "mobile_img": "/img/uploads/black-foison-acessorios-banner-02.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/black-foison-e24l-2.0-banner-01-red.png",
+          "link": "https://loja.foison.com.br/foison-serie-e",
+          "mobile_img": "/img/uploads/black-foison-e24l-2.0-banner-02.png"
         }
       ]
     },
