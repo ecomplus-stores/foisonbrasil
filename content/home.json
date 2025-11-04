@@ -10,32 +10,8 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy.png",
-          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-camy.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-camy.png",
-          "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-2_banner-desktop-serie-c.png",
-          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-c.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-2_banner-desktop-serie-e.png",
-          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-e.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/site_banner-desktop-acessorios.png",
-          "mobile_img": "/img/uploads/site_banner-mobile-acessorios.png"
+          "img": "/img/uploads/black-foison-plug-in-banner-01.png",
+          "mobile_img": "/img/uploads/black-foison-plug-in-banner-02.png"
         }
       ]
     },
