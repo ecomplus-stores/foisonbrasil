@@ -13,6 +13,13 @@
           "img": "/img/uploads/black-foison-plug-in-banner-01.png",
           "mobile_img": "/img/uploads/black-foison-plug-in-banner-02.png",
           "link": "https://loja.foison.com.br/plug-in"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/black-foison-acessorios-banner-01.png",
+          "link": "https://loja.foison.com.br/acessorios",
+          "mobile_img": "/img/uploads/black-foison-acessorios-banner-02.png"
         }
       ]
     },
