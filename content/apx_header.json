@@ -1,18 +1,18 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/equipamentos",
+    "cta_url": "https://loja.foison.com.br/black-foison",
     "start": "2025-07-25T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#000000",
     "cta_color": "#000000",
-    "title": "Agora você pode parcelar sua Foison em até 18x sem juros ",
+    "title": "COMEÇOU A BLACK FOISON!",
     "end": "2025-08-01T02:59:00.000Z",
-    "cta_text": "Comprar agora",
+    "cta_text": "CONFERIR OFERTAS",
     "cta_background": "#ffffff"
   },
   "topbar_1": {
-    "background": "#332c69",
+    "background": "#000000",
     "color": "#ffffff",
     "topbar_1": [
       {
