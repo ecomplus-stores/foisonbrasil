@@ -745,7 +745,7 @@ export default {
             // Verificar se há algum item deste grupo selecionado
             const hasSelectedFromGroup = this.productUpselling.some(upsell => {
               if (!upsell || !upsell.sku) return false;
-              return upsellingGroup.upselling_list.some(item => item.products_sku === upsell.sku);
+              return upsellingGroup.upselling_list.some(item => item.products_sku === upsell.sku || upsell.sku == "empty");
             });
             
             // Se nenhum item deste grupo foi selecionado, mostrar alerta
@@ -776,12 +776,12 @@ export default {
         ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy);
 
         if (this.productUpselling && this.productUpselling.length > 0) {
-          console.log(`add upsell xd`, this.productUpselling, this.upsellingProductData);
+          //console.log(`add upsell xd`, this.productUpselling, this.upsellingProductData);
           this.productUpselling.forEach(upsell => {
-            if (upsell && upsell.sku) {
+            if (upsell && upsell.sku && upsell.sku != "empty") {
               let q = this.upsellingProductData.find(el => el.sku == upsell.sku);
               if (q) {
-                console.log(`add upsell x`, q);
+                
                 ecomCart.addProduct(q);
               }
             }
