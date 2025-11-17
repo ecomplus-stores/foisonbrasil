@@ -10,6 +10,13 @@
         {
           "start": "",
           "end": "",
+          "img": "/img/uploads/black-foison-camy-banner-01.png",
+          "link": "https://loja.foison.com.br/foison-camy",
+          "mobile_img": "/img/uploads/black-foison-camy-banner-02.png"
+        },
+        {
+          "start": "",
+          "end": "",
           "img": "/img/uploads/black-foison-linha-48-e-59-banner-01-red.png",
           "mobile_img": "/img/uploads/black-foison-linha-48-e-59-banner-02-red.png",
           "link": "https://loja.foison.com.br/search?term=c59+c48+s59+s48"
@@ -38,9 +45,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/black-foison-camy-banner-01.png",
-          "link": "https://loja.foison.com.br/foison-camy",
-          "mobile_img": "/img/uploads/black-foison-camy-banner-02.png"
+          "img": "/img/uploads/black-foison-camy-2-banner-01.png",
+          "link": "https://loja.foison.com.br/camy-2",
+          "mobile_img": "/img/uploads/black-foison-camy-2-banner-02.png"
         }
       ]
     },
