@@ -17,6 +17,13 @@
         {
           "start": "",
           "end": "",
+          "mobile_img": "/img/uploads/black-foison-fc-fs-banner-05.png",
+          "img": "/img/uploads/black-foison-fc-fs-banner-04.png",
+          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350-c910"
+        },
+        {
+          "start": "",
+          "end": "",
           "img": "/img/uploads/black-foison-camy-banner-01.png",
           "link": "https://loja.foison.com.br/foison-camy",
           "mobile_img": "/img/uploads/black-foison-camy-banner-02.png"
@@ -66,9 +73,9 @@
         {
           "start": "",
           "end": "",
-          "mobile_img": "/img/uploads/black-foison-fc-fs-banner-05.png",
-          "img": "/img/uploads/black-foison-fc-fs-banner-04.png",
-          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350-c910"
+          "img": "/img/uploads/black-foison-s24-banner-01.png",
+          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-s24-pro-cam-multimark-servo",
+          "mobile_img": "/img/uploads/black-foison-s24-banner-02.png"
         }
       ]
     },
