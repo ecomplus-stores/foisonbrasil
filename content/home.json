@@ -10,79 +10,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/black-foison-c24-banner-01.png",
-          "mobile_img": "/img/uploads/black-foison-c24-banner-02.png",
-          "link": "https://loja.foison.com.br/foison-serie-c"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-s24-banner-01.png",
-          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-s24-pro-cam-multimark-servo",
-          "mobile_img": "/img/uploads/black-foison-s24-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-fc-fs-banner-01.png",
-          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350",
-          "mobile_img": "/img/uploads/black-foison-fc-fs-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "mobile_img": "/img/uploads/black-foison-fc-fs-banner-05.png",
-          "img": "/img/uploads/black-foison-fc-fs-banner-04.png",
-          "link": "https://loja.foison.com.br/plotter-profissional-foison-fc350-c910"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-camy-banner-01.png",
-          "link": "https://loja.foison.com.br/foison-camy",
-          "mobile_img": "/img/uploads/black-foison-camy-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-camy-2-banner-01.png",
-          "link": "https://loja.foison.com.br/camy-2",
-          "mobile_img": "/img/uploads/black-foison-camy-2-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-camy-2-plus-banner-01.png",
-          "link": "https://loja.foison.com.br/foison-camy-2",
-          "mobile_img": "/img/uploads/black-foison-camy-2-plus-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-linha-48-e-59-banner-01-red.png",
-          "mobile_img": "/img/uploads/black-foison-linha-48-e-59-banner-02-red.png",
-          "link": "https://loja.foison.com.br/search?term=c59+c48+s59+s48"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-e24l-2.0-banner-01-red.png",
-          "link": "https://loja.foison.com.br/foison-serie-e",
-          "mobile_img": "/img/uploads/black-foison-e24l-2.0-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-plug-in-banner-01.png",
-          "mobile_img": "/img/uploads/black-foison-plug-in-banner-02.png",
-          "link": "https://loja.foison.com.br/plug-in"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/black-foison-acessorios-banner-01.png",
-          "link": "https://loja.foison.com.br/acessorios",
-          "mobile_img": "/img/uploads/black-foison-acessorios-banner-02.png"
+          "img": "/img/uploads/site_banner-desktop-camy.png",
+          "alt": "https://loja.foison.com.br/foison-camy",
+          "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
         }
       ]
     },
