@@ -20,6 +20,13 @@
           "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy.png",
           "link": "https://loja.foison.com.br/camy-2",
           "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-camy.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-2_banner-desktop-serie-e.png",
+          "link": "https://loja.foison.com.br/foison-serie-e",
+          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-e.png"
         }
       ]
     },
