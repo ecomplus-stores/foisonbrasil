@@ -1,15 +1,15 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/black-foison",
+    "cta_url": "https://loja.foison.com.br/equipamentos",
     "start": "2025-11-04T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
-    "background_color": "#000000",
-    "cta_color": "#000000",
-    "title": "Últimos dias de Black Foison! Corre pra garantir a sua nova Plotter Profissional!!",
+    "background_color": "#5d539f",
+    "cta_color": "",
+    "title": "Garanta a sua nova Plotter de Recorte Profissional pra encerrar o ano com o pé direito!",
     "end": "2025-12-01T02:59:00.000Z",
     "cta_text": "",
-    "cta_background": "#ffffff"
+    "cta_background": ""
   },
   "topbar_1": {
     "background": "#332c69",
@@ -20,11 +20,11 @@
         "url": "/"
       },
       {
-        "title": "A Plotter de Recorte Profissional perfeita para você",
-        "url": "https://loja.foison.com.br/equipamentos"
+        "title": "Parcele sua Foison em <b>até 18x sem juros</b>"
       },
       {
-        "title": "Parcele sua Foison em <b>até 18x sem juros</b>"
+        "title": "A Plotter de Recorte Profissional perfeita para você",
+        "url": "https://loja.foison.com.br/equipamentos"
       }
     ]
   },
