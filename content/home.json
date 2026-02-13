@@ -10,6 +10,12 @@
         {
           "start": "",
           "end": "",
+          "img": "/img/uploads/recesso-de-carnaval-banner-instagram-04.png",
+          "mobile_img": "/img/uploads/recesso-de-carnaval-banner-instagram-03.png"
+        },
+        {
+          "start": "",
+          "end": "",
           "img": "/img/uploads/site_banner-desktop-camy.png",
           "link": "https://loja.foison.com.br/foison-camy",
           "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
@@ -55,12 +61,6 @@
           "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-serie-c-red.png",
           "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-serie-c-copia.png",
           "link": "https://loja.foison.com.br/foison-fc350"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/recesso-de-carnaval-banner-instagram-04.png",
-          "mobile_img": "/img/uploads/recesso-de-carnaval-banner-instagram-03.png"
         }
       ]
     },
