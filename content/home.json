@@ -39,7 +39,7 @@
           "start": "",
           "end": "",
           "img": "/img/uploads/c24-banner-01.png",
-          "link": "https://loja.foison.com.br/search?term=C24+PRO+CAM",
+          "link": "https://loja.foison.com.br/foison-serie-c",
           "mobile_img": "/img/uploads/c24-600x360.png"
         },
         {
@@ -69,6 +69,13 @@
           "img": "/img/uploads/linha-s-banner-01.png",
           "mobile_img": "/img/uploads/linha-s-600x360.png",
           "link": "https://loja.foison.com.br/foison-serie-s"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/acessorios-banner-01.png",
+          "mobile_img": "/img/uploads/acessorios-600x360.png",
+          "link": "https://loja.foison.com.br/acessorios"
         }
       ]
     },
