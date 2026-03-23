@@ -1,15 +1,15 @@
 {
   "topbar_timer": {
     "cta_url": "https://loja.foison.com.br/equipamentos",
-    "start": "2025-11-04T03:00:00.000Z",
+    "start": "2026-03-23T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
-    "cta_color": "#000000",
+    "cta_color": "#ffffff",
     "title": "Começou o Aniversário Foison: Aproveite a oportunidade perfeita pra investir, crescer e turbinar a produção!",
-    "end": "2025-12-01T02:59:00.000Z",
-    "cta_text": "",
-    "cta_background": "#ffffff"
+    "end": "2026-04-01T02:59:00.000Z",
+    "cta_text": "Últimos dias do aniversário Foison, garanta a sua já!",
+    "cta_background": "#5d539f"
   },
   "topbar_1": {
     "background": "#332c69",
