@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
     "cta_url": "https://loja.foison.com.br/equipamentos",
-    "start": "2026-03-23T03:00:00.000Z",
+    "start": "2026-04-01T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
     "cta_color": "#ffffff",
-    "title": "Corre pra aproveitar os últimos dias do Aniversário Foison!",
-    "end": "2026-04-01T02:59:00.000Z",
-    "cta_text": "Garanta a sua",
+    "title": "Prorrogação das ofertas do Aniversário Foison! ",
+    "end": "2026-04-06T02:59:00.000Z",
+    "cta_text": "Corre pra aproveitar",
     "cta_background": "#5d539f"
   },
   "topbar_1": {
