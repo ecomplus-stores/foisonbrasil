@@ -10,72 +10,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/camy-banners-01.png",
-          "mobile_img": "/img/uploads/camy-banners-02.png",
+          "img": "/img/uploads/site_banner-desktop-camy.png",
+          "mobile_img": "/img/uploads/site_banner-mobile-camy.png",
           "link": "https://loja.foison.com.br/foison-camy"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/camy-002-banners-01.png",
-          "mobile_img": "/img/uploads/camy-002-banners-02.png",
-          "link": "https://loja.foison.com.br/camy-2"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/camy-2-banners-01.png",
-          "mobile_img": "/img/uploads/camy-2-banners-02.png",
-          "link": "https://loja.foison.com.br/foison-camy-2"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/e24l-2.0-banner-01.png",
-          "link": "https://loja.foison.com.br/foison-serie-e",
-          "mobile_img": "/img/uploads/e24l-2.0-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/c24-banner-01.png",
-          "link": "https://loja.foison.com.br/foison-serie-c",
-          "mobile_img": "/img/uploads/c24-banner-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/c48-e-c59-banner-01.png",
-          "mobile_img": "/img/uploads/c48-e-c59-banner-02-red.png",
-          "link": "https://loja.foison.com.br/search?term=C48+C59"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/linha-s-banner-01.png",
-          "mobile_img": "/img/uploads/linha-s-banner-02-red.png",
-          "link": "https://loja.foison.com.br/foison-serie-s"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/fc-fs-banner-04.png",
-          "link": "https://loja.foison.com.br/foison-fc350",
-          "mobile_img": "/img/uploads/fc-fs-banner-05.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/fc-fs-banner-01.png",
-          "mobile_img": "/img/uploads/fc-fs-banner-02.png",
-          "link": "https://loja.foison.com.br/foison-fc350"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/acessorios-banner-01.png",
-          "mobile_img": "/img/uploads/acessorios-banner-02.png",
-          "link": "https://loja.foison.com.br/acessorios"
         }
       ]
     },
