@@ -34,6 +34,13 @@
           "img": "/img/uploads/banner-acessorios-02.png",
           "link": "https://loja.foison.com.br/acessorios",
           "mobile_img": "/img/uploads/banner-acessorios-03.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-dh350-01.png",
+          "link": "https://loja.foison.com.br/plotter-profissional-foison-dh350",
+          "mobile_img": "/img/uploads/banner-dh350-02.png"
         }
       ]
     },
