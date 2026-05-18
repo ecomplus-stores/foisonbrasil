@@ -10,6 +10,27 @@
         {
           "start": "",
           "end": "",
+          "img": "/img/uploads/promo-kit-de-acessorios-02.png",
+          "mobile_img": "/img/uploads/promo-kit-de-acessorios-03.png",
+          "link": "https://loja.foison.com.br/equipamentos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/promo-kit-de-laminas-02.png",
+          "link": "https://loja.foison.com.br/search?term=FC350+FS350+DH350",
+          "mobile_img": "/img/uploads/promo-kit-de-laminas-03.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-acessorios-02.png",
+          "link": "https://loja.foison.com.br/acessorios",
+          "mobile_img": "/img/uploads/banner-acessorios-03.png"
+        },
+        {
+          "start": "",
+          "end": "",
           "img": "/img/uploads/banner-lancamentos-01.png",
           "mobile_img": "/img/uploads/banner-lancamentos-02.png",
           "link": "https://loja.foison.com.br/foison-dh"
@@ -34,27 +55,6 @@
           "img": "/img/uploads/banner-camy-dh-01.png",
           "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-camydh",
           "mobile_img": "/img/uploads/banner-camy-dh-02.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/promo-kit-de-acessorios-02.png",
-          "mobile_img": "/img/uploads/promo-kit-de-acessorios-03.png",
-          "link": "https://loja.foison.com.br/equipamentos"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/promo-kit-de-laminas-02.png",
-          "link": "https://loja.foison.com.br/search?term=FC350+FS350+DH350",
-          "mobile_img": "/img/uploads/promo-kit-de-laminas-03.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-acessorios-02.png",
-          "link": "https://loja.foison.com.br/acessorios",
-          "mobile_img": "/img/uploads/banner-acessorios-03.png"
         }
       ]
     },
