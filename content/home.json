@@ -46,6 +46,18 @@
           "end": "",
           "img": "/img/uploads/banner-2_banner-desktop-serie-c.png",
           "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-c.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy-2-.png",
+          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-serie-c.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy.png",
+          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-camy.png"
         }
       ]
     },
