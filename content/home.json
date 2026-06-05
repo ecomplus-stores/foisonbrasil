@@ -10,60 +10,32 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-lancamentos-01.png",
-          "mobile_img": "/img/uploads/banner-lancamentos-02.png",
-          "link": "https://loja.foison.com.br/foison-dh"
+          "img": "/img/uploads/banner-geral-01.png",
+          "mobile_img": "/img/uploads/banner-geral-06.png"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-dh350-01.png",
-          "link": "https://loja.foison.com.br/plotter-profissional-foison-dh350",
-          "mobile_img": "/img/uploads/banner-dh350-02.png"
+          "img": "/img/uploads/banner-geral-02.png",
+          "mobile_img": "/img/uploads/banner-geral-07.png"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-dh24-01.png",
-          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-dh24",
-          "mobile_img": "/img/uploads/banner-dh24-02.png"
+          "img": "/img/uploads/banner-geral-03.png",
+          "mobile_img": "/img/uploads/banner-geral-08.png"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-camy-dh-01.png",
-          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-camydh",
-          "mobile_img": "/img/uploads/banner-camy-dh-02.png"
+          "img": "/img/uploads/banner-geral-04.png",
+          "mobile_img": "/img/uploads/banner-geral-09.png"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/site_banner-desktop-camy.png",
-          "mobile_img": "/img/uploads/site_banner-mobile-camy.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy.png",
-          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-camy.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-lancamentos-geral_banner-desktop-camy-2-.png",
-          "mobile_img": "/img/uploads/banner-lancamentos-geral_banner-mobile-serie-c.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-2_banner-desktop-serie-e.png",
-          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-e.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-2_banner-desktop-serie-c.png",
-          "mobile_img": "/img/uploads/banner-2_banner-mobile-serie-c.png"
+          "img": "/img/uploads/banner-geral-05.png",
+          "mobile_img": "/img/uploads/banner-geral-10.png"
         }
       ]
     },
