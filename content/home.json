@@ -13,6 +13,13 @@
           "img": "/img/uploads/banner-frete-gratis-01.png",
           "mobile_img": "/img/uploads/banner-frete-gratis-03.png",
           "link": "https://loja.foison.com.br/equipamentos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-camy-01.png",
+          "mobile_img": "/img/uploads/banner-camy-03.png",
+          "link": "https://loja.foison.com.br/search?term=camy"
         }
       ]
     },
