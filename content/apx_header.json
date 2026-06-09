@@ -1,13 +1,13 @@
 {
   "topbar_timer": {
     "cta_url": "https://loja.foison.com.br/equipamentos",
-    "start": "2026-05-26T03:00:00.000Z",
+    "start": "",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
     "cta_color": "#ffffff",
     "title": "Toda a linha de Plotter de Recorte com FRETE GRÁTIS PARA TODO O BRASIL!",
-    "end": "2026-06-01T02:59:00.000Z",
+    "end": "",
     "cta_text": "APROVEITAR AGORA",
     "cta_background": "#5d539f"
   },
