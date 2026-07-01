@@ -18,22 +18,15 @@
           "start": "",
           "end": "",
           "img": "/img/uploads/banner-camy-01.png",
-          "mobile_img": "/img/uploads/banner-camy-03.png",
+          "mobile_img": "/img/uploads/esquenta-1200x1200-02.png",
           "link": "https://loja.foison.com.br/search?term=camy"
         },
         {
           "start": "",
           "end": "",
           "img": "/img/uploads/banner-e24-01.png",
-          "mobile_img": "/img/uploads/banner-e24-03.png",
+          "mobile_img": "/img/uploads/esquenta-1200x1200-03.png",
           "link": "https://loja.foison.com.br/foison-serie-e"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-acessorios-01.png",
-          "mobile_img": "/img/uploads/banner-acessorios-03.png",
-          "link": "https://loja.foison.com.br/acessorios"
         }
       ]
     },
