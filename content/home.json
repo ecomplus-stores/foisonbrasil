@@ -10,23 +10,37 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/7-7-banner-frete-gratis-01.png",
-          "mobile_img": "/img/uploads/7-7-1200x1200-01.png",
-          "link": "https://loja.foison.com.br/equipamentos"
+          "img": "/img/uploads/banner-geral-01.png",
+          "mobile_img": "/img/uploads/banner-geral-06.png",
+          "link": "https://loja.foison.com.br/search?term=CAMY"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/7.7-banner-camy-01.png",
-          "mobile_img": "/img/uploads/7-7-1200x1200-02.png",
-          "link": "https://loja.foison.com.br/search?term=camy"
+          "img": "/img/uploads/banner-geral-02.png",
+          "mobile_img": "/img/uploads/banner-geral-07.png",
+          "link": "https://loja.foison.com.br/foison-dh"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/7-7-banner-e24-01.png",
-          "mobile_img": "/img/uploads/7-7-1200x1200-03.png",
-          "link": "https://loja.foison.com.br/foison-serie-e"
+          "img": "/img/uploads/banner-geral-03.png",
+          "mobile_img": "/img/uploads/banner-geral-08.png",
+          "link": "https://loja.foison.com.br/search?term=C24+E24+S24+DH24"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-geral-04.png",
+          "mobile_img": "/img/uploads/banner-geral-09.png",
+          "link": "https://loja.foison.com.br/foison-fc350"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-geral-05.png",
+          "mobile_img": "/img/uploads/banner-geral-10.png",
+          "link": "https://loja.foison.com.br/acessorios"
         }
       ]
     },
