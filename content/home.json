@@ -10,37 +10,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-geral-01.png",
-          "mobile_img": "/img/uploads/banner-geral-06.png",
-          "link": "https://loja.foison.com.br/search?term=CAMY"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-geral-02.png",
-          "mobile_img": "/img/uploads/banner-geral-07.png",
-          "link": "https://loja.foison.com.br/foison-dh"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-geral-03.png",
-          "mobile_img": "/img/uploads/banner-geral-08.png",
-          "link": "https://loja.foison.com.br/search?term=C24+E24+S24+DH24"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-geral-04.png",
-          "mobile_img": "/img/uploads/banner-geral-09.png",
-          "link": "https://loja.foison.com.br/foison-fc350"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-geral-05.png",
-          "mobile_img": "/img/uploads/banner-geral-10.png",
-          "link": "https://loja.foison.com.br/acessorios"
+          "img": "/img/uploads/banners-mes-do-cliente-2026-01.png",
+          "mobile_img": "/img/uploads/banners-mes-do-cliente-2026-04.png",
+          "link": "https://loja.foison.com.br/foison-serie-c"
         }
       ]
     },
