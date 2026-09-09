@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/equipamentos",
+    "cta_url": "https://loja.foison.com.br/search?term=24",
     "start": "2026-06-25T03:00:00.000Z",
     "color": "#ffffff",
     "background_image": "",
     "background_color": "#5d539f",
     "cta_color": "#ffffff",
-    "title": "Sua nova Plotter de Recorte Profissional está te esperando aqui!",
+    "title": "Começou o Mês do Cliente com pedestal + software grátis na compra das plotters da Linha 24\"!",
     "end": "2026-07-01T02:59:00.000Z",
-    "cta_text": "GARANTA A SUA!",
+    "cta_text": "APROVEITE AGORA",
     "cta_background": "#5d539f"
   },
   "topbar_1": {
