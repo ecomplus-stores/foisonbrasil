@@ -247,7 +247,7 @@
           "nome": "Eu Monteiro"
         }
       ],
-      "title": "Quem usa, recomenda!"
+      "title": "Quem usa, <b>recomenda!</b>"
     },
     {
       "description_color": "#131313",
