@@ -271,6 +271,31 @@
       "section_secondary_color": "#b9a9ff"
     },
     {
+      "type": "banner-slider",
+      "autoplay": 6000,
+      "full_width": false,
+      "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/av-1.png",
+          "mobile_img": "/img/uploads/av-1.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/av-2.png",
+          "mobile_img": "/img/uploads/av-2.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/av-3.png",
+          "mobile_img": "/img/uploads/av-3.png"
+        }
+      ]
+    },
+    {
       "description_color": "#ffffff",
       "spacing": {
         "container": "container",
