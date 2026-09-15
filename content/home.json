@@ -1,6 +1,6 @@
 {
   "meta_title": "Foison Brasil - Plotter de Recorte Profissional",
-  "meta_description": "A Foison é muito mais do que uma plotter de recorte – somos uma vibrante comunidade de empreendedores criativos e apaixonados. Combinamos tecnologia de ponta e uma dose generosa de criatividade para desenvolver produtos incríveis. Junte-se a nós nessa jornada de aprendizado contínuo, crescimento e evolução. Explore nossa loja online e descubra como podemos transformar suas ideias em realidade!",
+  "meta_description": "A Foison tem a plotter de recorte profissional perfeita para a sua empresa de papelaria, personalizados e comunicação visual.",
   "sections": [
     {
       "type": "banner-slider",
@@ -269,43 +269,6 @@
       "title_color": "#131313",
       "sort": "sales",
       "section_secondary_color": "#b9a9ff"
-    },
-    {
-      "type": "banner-slider",
-      "autoplay": 6000,
-      "full_width": false,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/av-1.png",
-          "mobile_img": "/img/uploads/av-1.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/av-2.png",
-          "mobile_img": "/img/uploads/av-2.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/av-3.png",
-          "mobile_img": "/img/uploads/av-3.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/av-4.png",
-          "mobile_img": "/img/uploads/av-4.png"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/av-5.png",
-          "mobile_img": "/img/uploads/av-5.png"
-        }
-      ]
     },
     {
       "description_color": "#ffffff",
