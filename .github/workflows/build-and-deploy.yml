@@ -14,6 +14,12 @@ on:
       - '.github/build-and-deploy'
       - '.github/workflows/build-and-deploy.yml'
 
+# Um deploy por vez: execuções simultâneas (ex.: duas edições seguidas no CMS)
+# disputam a atualização da function ssr no Firebase e uma delas falha.
+concurrency:
+  group: build-and-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     name: Build Storefront and deploy
@@ -48,6 +54,9 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
+      - name: Validate content sections
+        run: node .github/check-sections.js
 
       - name: Install root dependencies
         run: npm ci --only=production
