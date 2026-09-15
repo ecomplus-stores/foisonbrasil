@@ -1,6 +1,6 @@
 {
-  "meta_title": "Avaliações",
-  "meta_description": "Quem usa, recomenda!",
+  "meta_title": "Foison Brasil - Plotter de Recorte Profissional",
+  "meta_description": "A Foison é muito mais do que uma plotter de recorte – somos uma vibrante comunidade de empreendedores criativos e apaixonados. Combinamos tecnologia de ponta e uma dose generosa de criatividade para desenvolver produtos incríveis. Junte-se a nós nessa jornada de aprendizado contínuo, crescimento e evolução. Explore nossa loja online e descubra como podemos transformar suas ideias em realidade!",
   "sections": [
     {
       "type": "banner-slider",
@@ -240,7 +240,7 @@
     },
     {
       "type": "review-carousel",
-      "autoplay": 9000,
+      "autoplay": 6000,
       "reviews": [
         {
           "texto": "",
