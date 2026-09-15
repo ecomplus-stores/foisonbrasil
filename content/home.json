@@ -315,11 +315,6 @@
       "type": "apx-blog",
       "cta_text": "Ver Todos",
       "section_secondary_color": "#b9a9ff"
-    },
-    {
-      "type": "apx_banner-slider",
-      "visibility": "d-block d-md-block",
-      "autoplay": 9000
     }
   ]
 }

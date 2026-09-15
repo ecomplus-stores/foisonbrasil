@@ -7,9 +7,14 @@
       for (let i = 0; i < sections.length; i++) {
         const opt = sections[i]
         if (opt && opt.enabled !== false) {
-          %>
-          <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
-          <%
+          // a section with an unknown type (no template file) must not break the whole page
+          try {
+            %>
+            <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
+            <%
+          } catch (err) {
+            console.error(`[sections] failed to render section #${i} of type "${opt.type}":`, err.message)
+          }
         }
       }
     }
