@@ -567,75 +567,6 @@ export default options => {
   let state_routes = [...options.state.routes];
   options.sections = getSections(options).concat([
     {
-      label: '[ALPIX] - Banner Responsivo',
-      name: 'apx_responsive-banner',
-      widget: 'object',
-      fields: [
-        ...spacer,
-        ...bannerFields]
-    },
-    
-    {
-      label: '[ALPIX] - Grid de Banners',
-      name: 'apx_banners-grid',
-      widget: 'object',
-      fields: [
-          
-        ...spacer, 
-        {
-          label: 'Formato',
-          required: true,
-          name: 'grid',
-          widget: 'select',
-          hint:'12 é a medida referente a um banner de ponta a ponta',
-          options: [
-            {
-              label: '[12]',
-              value: "1"
-            },
-            {
-              label: '[6][6]',
-              value: "2"
-            },
-            {
-              label: '[8][4]',
-              value: "3"
-            },
-            {
-              label: '[4][8]',
-              value: "4"
-            },
-            {
-              label: '[4][4][4]',
-              value: "5"
-            },            
-          ]
-        }, 
-        {
-          label: 'Ao exceder quantidade limite',
-          required: true,
-          name: 'breakline',
-          widget: 'select',
-          options: [
-            {
-              label: 'Rolar lateralmente',
-              value: "true"
-            },
-            {
-              label: 'Quebrar linha',
-              value: "false"
-            },
-          ]
-        },  
-        {
-          label: 'Banners',
-          name: 'banners',
-          widget: 'list',
-          fields: bannerFields
-        }
-      ]
-    },
-    {
       label: '[ALPIX] - Lista de Itens com Imagens',
       name: 'apx_list-images',
       widget: 'object',
@@ -691,46 +622,6 @@ export default options => {
             }
             
           ]
-        }
-      ]
-    },
-    {
-      label: '[ALPIX] - Slider de Banners',
-      name: 'apx_banner-slider',
-      widget: 'object',
-      fields: [
-        ...spacer, 
-        {
-          label: 'Slides',
-          name: 'slides',
-          widget: 'list',
-          fields: bannerFields.concat([
-            {
-              label: 'Data de início',
-              required: false,
-              name: 'start',
-              widget: 'datetime',
-              dateFormat: 'DD/MM/YYYY',
-              timeFormat: 'HH:mm'
-            },
-            {
-              label: 'Data de encerramento',
-              required: false,
-              name: 'end',
-              widget: 'datetime',
-              dateFormat: 'DD/MM/YYYY',
-              timeFormat: 'HH:mm'
-            }
-          ])
-        },
-        {
-          label: 'Slider autoplay',
-          name: 'autoplay',
-          hint: 'Exibição de cada slide em milisegundos, defina 0 para desabilitar autoplay',
-          min: 0,
-          step: 1000,
-          default: 9000,
-          widget: 'number'
         }
       ]
     },
