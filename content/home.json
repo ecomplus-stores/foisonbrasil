@@ -239,30 +239,6 @@
       "section_secondary_color": "#000000"
     },
     {
-      "type": "review-carousel",
-      "autoplay": 6000,
-      "reviews": [
-        {
-          "texto": "",
-          "nome": "",
-          "img": "/img/uploads/av-1.png"
-        },
-        {
-          "img": "/img/uploads/av-2.png"
-        },
-        {
-          "img": "/img/uploads/av-3.png"
-        },
-        {
-          "img": "/img/uploads/av-4.png"
-        },
-        {
-          "img": "/img/uploads/av-5.png"
-        }
-      ],
-      "title": "<b>Quem usa, recomenda!</b>"
-    },
-    {
       "description_color": "#131313",
       "spacing": {
         "container": "container",
