@@ -1,6 +1,6 @@
 {
-  "meta_title": "",
-  "meta_description": "",
+  "meta_title": "Avaliações",
+  "meta_description": "Quem usa, recomenda!",
   "sections": [
     {
       "type": "banner-slider",
@@ -237,6 +237,17 @@
       "cta_text": "",
       "title_color": "#ffffff",
       "section_secondary_color": "#000000"
+    },
+    {
+      "type": "review-carousel",
+      "autoplay": 9000,
+      "reviews": [
+        {
+          "texto": "O suporte da Foison é incrível. Minha 24 PRO CAM é simplesmente maravilhosa! Sempre atendem muito bem, com muita educação e só termina o atendimento quando a dúvida está sanada. Nunca de verdade eu vi um suporte assim, ainda mais no Brasil. Parabéns a toda equipe! Obrigada Sempre!!!",
+          "nome": "Eu Monteiro"
+        }
+      ],
+      "title": "Quem usa, recomenda!"
     },
     {
       "description_color": "#131313",
