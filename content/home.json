@@ -47,12 +47,12 @@
       "banners": [
         {
           "img": "/img/uploads/camy.png",
-          "title": "<b>Camy</b>",
+          "title": "Camy",
           "description": "Desenvolvida especialmente para o mercado da papelaria personalizada, a Camy possui leitura automática por câmera que possibilita otimizar sua produção ao máximo.",
           "props": [
             {
-              "img": "/img/uploads/corte-simples.png",
-              "text": "Área útil no corte simples: <b>31cm</b>"
+              "img": "/img/uploads/largura-corte-simples.svg",
+              "text": "Largura útil no corte simples: <b>31cm</b>"
             },
             {
               "img": "/img/uploads/corte-contorno.png",
