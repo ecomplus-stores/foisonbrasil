@@ -55,12 +55,12 @@
               "text": "Largura útil no corte simples: <b>31cm</b>"
             },
             {
-              "img": "/img/uploads/corte-contorno.png",
-              "text": "Área útil no corte de contorno: <b>26,5cm</b>"
+              "img": "/img/uploads/largura-corte-de-contorno.svg",
+              "text": "Largura útil no corte de contorno: <b>26,5cm</b>"
             },
             {
-              "img": "/img/uploads/bases.png",
-              "text": "Bases compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
+              "img": "/img/uploads/base-de-corte_1.svg",
+              "text": "Bases de corte compatíveis: <b>A4</b>, <b>A4x3</b> e <b>A3</b>"
             },
             {
               "img": "/img/uploads/velocidade.png",
