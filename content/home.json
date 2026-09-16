@@ -107,8 +107,8 @@
           "description": "A C24 Pro Cam é ideal para trabalhar com grandes formatos. Ela possui leitura automática por câmera e área útil de corte de até 61 cm.",
           "props": [
             {
-              "img": "/img/uploads/corte-simples.png",
-              "text": "Área útil no corte simples: <b>61cm</b>"
+              "img": "/img/uploads/largura-corte-simples.png",
+              "text": "Largura útil no corte simples: <b>61cm</b>"
             },
             {
               "img": "/img/uploads/corte-contorno.png",
