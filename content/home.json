@@ -297,19 +297,6 @@
       "section_secondary_color": "#9089ff"
     },
     {
-      "enabled": true,
-      "spacing": {
-        "container": "container"
-      },
-      "title_order": "d-flex flex-column",
-      "cta_link": "/blog",
-      "visibility": "d-block d-md-block",
-      "title_text": "Confira nosso <b>blog</b>",
-      "type": "apx-blog",
-      "cta_text": "Ver Todos",
-      "section_secondary_color": "#b9a9ff"
-    },
-    {
       "description_color": "#6051ae",
       "spacing": {
         "container": "container-fluid",
@@ -349,6 +336,19 @@
       "title_text": "Quem compra, <b>recomenda!</b>",
       "type": "apx_list-images",
       "title_color": "#000000"
+    },
+    {
+      "enabled": true,
+      "spacing": {
+        "container": "container"
+      },
+      "title_order": "d-flex flex-column",
+      "cta_link": "/blog",
+      "visibility": "d-block d-md-block",
+      "title_text": "Confira nosso <b>blog</b>",
+      "type": "apx-blog",
+      "cta_text": "Ver Todos",
+      "section_secondary_color": "#b9a9ff"
     }
   ]
 }
