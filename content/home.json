@@ -308,32 +308,6 @@
       "type": "apx-blog",
       "cta_text": "Ver Todos",
       "section_secondary_color": "#b9a9ff"
-    },
-    {
-      "description_color": "#6051ae",
-      "spacing": {
-        "container": "container",
-        "desktop": {
-          "margin_top": "5",
-          "margin_bottom": "5",
-          "padding_top": "5",
-          "padding_bottom": "5"
-        },
-        "mobile": {
-          "margin_top": "5",
-          "margin_bottom": "5",
-          "padding_top": "5",
-          "padding_bottom": "5"
-        }
-      },
-      "img": "/img/uploads/av-1.png",
-      "title_order": "d-block d-md-block",
-      "image_order": "d-flex flex-column flex-md-row",
-      "description_text": "O que nossos clientes dizem sobre nós.",
-      "visibility": "d-block d-md-block",
-      "title_text": "Quem compra, recomenda!",
-      "type": "apx-image-section",
-      "title_color": "#000000"
     }
   ]
 }
