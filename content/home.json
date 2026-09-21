@@ -312,7 +312,7 @@
     {
       "description_color": "#6051ae",
       "spacing": {
-        "container": "container",
+        "container": "container-fluid",
         "desktop": {
           "margin_top": "5",
           "margin_bottom": "5",
