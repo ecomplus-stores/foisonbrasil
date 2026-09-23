@@ -331,10 +331,12 @@
           "img": "/img/uploads/av-5.png"
         }
       ],
+      "cta_link": "https://loja.foison.com.br/equipamentos",
       "description_text": "O que nossos clientes dizem sobre nós.",
       "visibility": "d-block d-md-block",
       "title_text": "Quem compra, <b>recomenda!</b>",
       "type": "apx_list-images",
+      "cta_text": "FAÇA PARTE DA FAMÍLIA FOISON",
       "title_color": "#000000"
     },
     {
