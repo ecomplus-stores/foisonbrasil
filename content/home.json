@@ -308,6 +308,17 @@
       "type": "apx-blog",
       "cta_text": "Ver Todos",
       "section_secondary_color": "#b9a9ff"
+    },
+    {
+      "type": "review-carousel",
+      "autoplay": 9000,
+      "reviews": [
+        {
+          "texto": "Comprei uma plotter E24 na foison a 8 anos , ate hj nunca teve um problema , sempre que precisei de assistencia tecnica foram impecaveis e ageis, nao sei quem e o dono da empresa , mas esta de parabens pela a qualidade da equipe! Continuem nessa pegada! oss",
+          "nome": "Irmãos Maluquinhos"
+        }
+      ],
+      "title": "Quem usa, recomenda!"
     }
   ]
 }
