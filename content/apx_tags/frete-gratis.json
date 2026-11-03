@@ -1,6 +1,5 @@
 {
   "identificador": [
-    "kit-CNC2417-BF",
     "E24L2.0-C185",
     "CNC2423-C589",
     "Kit-CNC2553",
@@ -13,7 +12,11 @@
     "CNC2451",
     "CNC2422",
     "CNC2450",
-    "CNC0034"
+    "CNC0034",
+    "CNC2423",
+    "kit-CNC2417-BF",
+    "C24-Kit-Black",
+    "Kit-CNC2453"
   ],
   "title": "FRETE GRÁTIS",
   "color": "#ffffff",
