@@ -1,14 +1,14 @@
 {
   "topbar_timer": {
-    "cta_url": "https://loja.foison.com.br/black-foison",
+    "cta_url": "https://loja.foison.com.br/equipamentos",
     "start": "2026-09-25T03:00:00.000Z",
-    "color": "#ffffff",
+    "color": "#000000",
     "background_image": "",
-    "background_color": "#5d539f",
+    "background_color": "#b9a9ff",
     "cta_color": "#ffffff",
-    "title": "A Black Foison começou com ofertas e FRETE GRÁTIS em toda a nossa linha de Plotters!",
+    "title": "FRETE GRÁTIS ATÉ DIA 12.11, CORRE PRA APROVEITAR!",
     "end": "2026-10-01T02:59:00.000Z",
-    "cta_text": " Aproveite agora",
+    "cta_text": "COMPRAR AGORA",
     "cta_background": "#5d539f"
   },
   "topbar_1": {
