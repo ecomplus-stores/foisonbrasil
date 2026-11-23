@@ -17,20 +17,6 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-bf-26-banners-frete-50-off-01.png",
-          "mobile_img": "/img/uploads/banner-bf-26-banners-frete-50-off-02.png",
-          "link": "https://loja.foison.com.br/equipamentos"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-bf-26-banners-camy-2-e-2-_prancheta-1.png",
-          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-camy-2-c378",
-          "mobile_img": "/img/uploads/banner-bf-26-banners-camy-2-e-2-_prancheta-3.png"
-        },
-        {
-          "start": "",
-          "end": "",
           "img": "/img/uploads/banner-bf-26-banners-03.png",
           "mobile_img": "/img/uploads/banner-bf-26-banners-05.png",
           "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-e24-l-20-c699"
@@ -41,6 +27,20 @@
           "img": "/img/uploads/banner-bf-26-banners-04.png",
           "mobile_img": "/img/uploads/banner-bf-26-banners-06.png",
           "link": "https://loja.foison.com.br/kit-tudinho-foison-camy-c520"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-bf-26-banners-frete-50-off-01.png",
+          "mobile_img": "/img/uploads/banner-bf-26-banners-frete-50-off-02.png",
+          "link": "https://loja.foison.com.br/equipamentos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-bf-26-banners-camy-2-e-2-_prancheta-1.png",
+          "link": "https://loja.foison.com.br/plotter-de-recorte-profissional-foison-camy-2-c378",
+          "mobile_img": "/img/uploads/banner-bf-26-banners-camy-2-e-2-_prancheta-3.png"
         },
         {
           "start": "",
