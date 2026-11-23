@@ -2,9 +2,9 @@
   "topbar_timer": {
     "cta_url": "https://loja.foison.com.br/equipamentos",
     "start": "2026-11-22T03:00:00.000Z",
-    "color": "#000000",
+    "color": "#ffffff",
     "background_image": "",
-    "background_color": "#b9a9ff",
+    "background_color": "#000000",
     "cta_color": "#ffffff",
     "title": "ÚLTIMAS SEMANAS DE OFERTAS E FRETE PELA METADE!",
     "end": "2026-12-01T02:59:00.000Z",
